@@ -1,0 +1,3 @@
+dependencies:
+  esp32-component-ld2410c:
+    git: "https://github.com/jef-sure/esp32-component-ld2410c.git"
