@@ -5,5 +5,11 @@
   "idf.currentSetup": "C:\\esp\\v6.0.1\\esp-idf",
   "idf.openOcdConfigs": [
     "board/esp32-wrover-kit-3.3v.cfg"
+  ],
+  "clangd.path": "C:\\Espressif\\tools\\esp-clang\\esp-20.1.1_20250829\\esp-clang\\bin\\clangd.exe",
+  "clangd.arguments": [
+    "--background-index",
+    "--query-driver=**",
+    "--compile-commands-dir=c:\\Users\\remas\\Desktop\\PCBs\\DarkMagic\\Code\\HolyGrail\\build"
   ]
 }
