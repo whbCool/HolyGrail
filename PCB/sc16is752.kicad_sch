@@ -5294,7 +5294,7 @@
 	)
 	(rectangle
 		(start 192.786 121.92)
-		(end 247.904 134.62)
+		(end 284.226 134.62)
 		(stroke
 			(width 0)
 			(type solid)
@@ -5315,20 +5315,6 @@
 			(type none)
 		)
 		(uuid "468c3a44-35d8-4b7a-9c8b-f54426ab56cc")
-	)
-	(rectangle
-		(start 248.92 121.92)
-		(end 284.226 134.62)
-		(stroke
-			(width 0)
-			(type default)
-			(color 0 0 0 1)
-		)
-		(fill
-			(type cross_hatch)
-			(color 0 0 0 1)
-		)
-		(uuid "6cd17040-291a-4121-bc72-1bc9dc1888e2")
 	)
 	(rectangle
 		(start 192.786 135.89)
@@ -5366,7 +5352,7 @@
 	)
 	(text "Spare Decoupling\nCapacitors"
 		(exclude_from_sim no)
-		(at 202.438 129.794 0)
+		(at 201.93 128.778 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5407,16 +5393,16 @@
 		(uuid "078f4348-2867-4574-b340-aa48fe4ff50a")
 	)
 	(junction
+		(at 213.36 132.08)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0b3233df-95aa-47de-9ab7-0eaf0440a634")
+	)
+	(junction
 		(at 171.45 135.89)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1485f339-af5b-4300-91cb-6f754b93e530")
-	)
-	(junction
-		(at 227.33 132.08)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "177db466-fed6-4686-88f2-b0b9f480bc4a")
 	)
 	(junction
 		(at 146.05 135.89)
@@ -5539,7 +5525,7 @@
 		(uuid "fb77e52f-0e13-45d2-b13f-0d56e80dab7c")
 	)
 	(junction
-		(at 214.63 124.46)
+		(at 213.36 124.46)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fd64edb6-5f9b-4de4-bbde-37aba8ae5802")
@@ -6550,6 +6536,16 @@
 	)
 	(wire
 		(pts
+			(xy 213.36 132.08) (xy 226.06 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e8bb72e-e624-4083-8056-1cba652735e5")
+	)
+	(wire
+		(pts
 			(xy 149.86 175.26) (xy 149.86 180.34)
 		)
 		(stroke
@@ -6680,16 +6676,6 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 132.08) (xy 227.33 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5c86f94d-4f70-4b74-b301-49e2d4d6d253")
-	)
-	(wire
-		(pts
 			(xy 90.17 38.1) (xy 96.52 38.1)
 		)
 		(stroke
@@ -6790,7 +6776,7 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 132.08) (xy 238.76 132.08)
+			(xy 201.93 132.08) (xy 213.36 132.08)
 		)
 		(stroke
 			(width 0)
@@ -7750,7 +7736,7 @@
 	)
 	(wire
 		(pts
-			(xy 203.2 124.46) (xy 214.63 124.46)
+			(xy 201.93 124.46) (xy 213.36 124.46)
 		)
 		(stroke
 			(width 0)
@@ -8000,7 +7986,7 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 124.46) (xy 227.33 124.46)
+			(xy 213.36 124.46) (xy 226.06 124.46)
 		)
 		(stroke
 			(width 0)
@@ -10132,7 +10118,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 203.2 124.46 90)
+		(at 201.93 124.46 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10142,7 +10128,7 @@
 		(dnp no)
 		(uuid "29ab4e2d-78d9-496f-bb5b-6c166313e07f")
 		(property "Reference" "#PWR079"
-			(at 207.01 124.46 0)
+			(at 205.74 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10153,7 +10139,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 199.644 124.46 90)
+			(at 198.374 124.46 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10164,7 +10150,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 203.2 124.46 0)
+			(at 201.93 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10175,7 +10161,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 203.2 124.46 0)
+			(at 201.93 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10186,7 +10172,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 203.2 124.46 0)
+			(at 201.93 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11423,7 +11409,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 227.33 128.27 180)
+		(at 226.06 128.27 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11433,7 +11419,7 @@
 		(dnp no)
 		(uuid "4cc9d553-73bb-4680-9d08-f0026b59565d")
 		(property "Reference" "C47"
-			(at 231.14 126.9999 0)
+			(at 229.87 126.9999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11444,7 +11430,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 231.14 129.5399 0)
+			(at 229.87 129.5399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11455,7 +11441,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 226.3648 124.46 0)
+			(at 225.0948 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11466,7 +11452,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 227.33 128.27 0)
+			(at 226.06 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11477,7 +11463,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 227.33 128.27 0)
+			(at 226.06 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11488,7 +11474,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "CL21B104KCC5PNC "
-			(at 227.33 128.27 0)
+			(at 226.06 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11499,7 +11485,7 @@
 			)
 		)
 		(property "Mouser Part Number" "187-CL21B104KCC5PNC "
-			(at 227.33 128.27 0)
+			(at 226.06 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11510,7 +11496,7 @@
 			)
 		)
 		(property "Maunfacturer Part Number" ""
-			(at 227.33 128.27 0)
+			(at 226.06 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11521,7 +11507,7 @@
 			)
 		)
 		(property "AVAILABILITY" ""
-			(at 227.33 128.27 0)
+			(at 226.06 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11532,7 +11518,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 227.33 128.27 0)
+			(at 226.06 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11543,7 +11529,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 227.33 128.27 0)
+			(at 226.06 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11554,7 +11540,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 227.33 128.27 0)
+			(at 226.06 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11565,7 +11551,7 @@
 			)
 		)
 		(property "Maunfacturer_Part_Number" ""
-			(at 227.33 128.27 0)
+			(at 226.06 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11576,7 +11562,7 @@
 			)
 		)
 		(property "PACKAGE" ""
-			(at 227.33 128.27 0)
+			(at 226.06 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11587,7 +11573,7 @@
 			)
 		)
 		(property "PARTREV" ""
-			(at 227.33 128.27 0)
+			(at 226.06 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11598,7 +11584,7 @@
 			)
 		)
 		(property "PRICE" ""
-			(at 227.33 128.27 0)
+			(at 226.06 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11609,7 +11595,7 @@
 			)
 		)
 		(property "STANDARD" ""
-			(at 227.33 128.27 0)
+			(at 226.06 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11620,7 +11606,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 227.33 128.27 0)
+			(at 226.06 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13603,7 +13589,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 238.76 132.08 90)
+		(at 201.93 132.08 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13613,7 +13599,7 @@
 		(dnp no)
 		(uuid "7f37f08b-bf4e-4eb1-b459-160fbb83be5e")
 		(property "Reference" "#PWR030"
-			(at 245.11 132.08 0)
+			(at 195.58 132.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13624,7 +13610,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 242.062 132.08 90)
+			(at 198.628 132.08 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13635,7 +13621,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 238.76 132.08 0)
+			(at 201.93 132.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13646,7 +13632,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 238.76 132.08 0)
+			(at 201.93 132.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13657,7 +13643,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 238.76 132.08 0)
+			(at 201.93 132.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17147,7 +17133,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 214.63 128.27 180)
+		(at 213.36 128.27 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17157,7 +17143,7 @@
 		(dnp no)
 		(uuid "d352798e-ad91-47d8-b86f-3c15f51926f0")
 		(property "Reference" "C46"
-			(at 218.44 126.9999 0)
+			(at 217.17 126.9999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17168,7 +17154,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 218.44 129.5399 0)
+			(at 217.17 129.5399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17179,7 +17165,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 213.6648 124.46 0)
+			(at 212.3948 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17190,7 +17176,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 214.63 128.27 0)
+			(at 213.36 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17201,7 +17187,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 214.63 128.27 0)
+			(at 213.36 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17212,7 +17198,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "CL21B104KCC5PNC "
-			(at 214.63 128.27 0)
+			(at 213.36 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17223,7 +17209,7 @@
 			)
 		)
 		(property "Mouser Part Number" "187-CL21B104KCC5PNC "
-			(at 214.63 128.27 0)
+			(at 213.36 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17234,7 +17220,7 @@
 			)
 		)
 		(property "Maunfacturer Part Number" ""
-			(at 214.63 128.27 0)
+			(at 213.36 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17245,7 +17231,7 @@
 			)
 		)
 		(property "AVAILABILITY" ""
-			(at 214.63 128.27 0)
+			(at 213.36 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17256,7 +17242,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 214.63 128.27 0)
+			(at 213.36 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17267,7 +17253,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 214.63 128.27 0)
+			(at 213.36 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17278,7 +17264,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 214.63 128.27 0)
+			(at 213.36 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17289,7 +17275,7 @@
 			)
 		)
 		(property "Maunfacturer_Part_Number" ""
-			(at 214.63 128.27 0)
+			(at 213.36 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17300,7 +17286,7 @@
 			)
 		)
 		(property "PACKAGE" ""
-			(at 214.63 128.27 0)
+			(at 213.36 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17311,7 +17297,7 @@
 			)
 		)
 		(property "PARTREV" ""
-			(at 214.63 128.27 0)
+			(at 213.36 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17322,7 +17308,7 @@
 			)
 		)
 		(property "PRICE" ""
-			(at 214.63 128.27 0)
+			(at 213.36 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17333,7 +17319,7 @@
 			)
 		)
 		(property "STANDARD" ""
-			(at 214.63 128.27 0)
+			(at 213.36 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17344,7 +17330,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 214.63 128.27 0)
+			(at 213.36 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
