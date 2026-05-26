@@ -1,0 +1,30 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "83155c79-757e-4d91-92c8-5f8270523d95")
+	(paper "A4")
+	(lib_symbols)
+	(text "Components:\nESP32: Handles lighting, sound, and motor control IO, as well as processes signal responses.\n\nTI MAX3232: Serial I/O Communication\n\n"
+		(exclude_from_sim no)
+		(at 16.256 62.484 0)
+		(effects
+			(font
+				(size 1.905 1.905)
+			)
+			(justify left)
+		)
+		(uuid "ccaa8e9f-e603-42c3-9872-9b0e3eb06ad3")
+	)
+	(text "Dark Magic Controller\n\nA multipurpose controller designed to \nmanage lighting, sound, and motor control\nin one unit."
+		(exclude_from_sim no)
+		(at 16.002 32.004 0)
+		(effects
+			(font
+				(size 3.81 3.81)
+			)
+			(justify left)
+		)
+		(uuid "d8411990-4f7c-4088-8e53-d9fde42b99e3")
+	)
+)

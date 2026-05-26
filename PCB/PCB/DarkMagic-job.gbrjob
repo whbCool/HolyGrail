@@ -1,0 +1,160 @@
+{
+  "Header": {
+    "GenerationSoftware": {
+      "Vendor": "KiCad",
+      "Application": "Pcbnew",
+      "Version": "10.0.1"
+    },
+    "CreationDate": "2026-05-12T08:46:46-07:00"
+  },
+  "GeneralSpecs": {
+    "ProjectId": {
+      "Name": "DarkMagic",
+      "GUID": "4461726b-4d61-4676-9963-2e6b69636164",
+      "Revision": "rev?"
+    },
+    "Size": {
+      "X": 157.1,
+      "Y": 73.075
+    },
+    "LayerNumber": 4,
+    "BoardThickness": 1.6,
+    "Finish": "HAL lead-free"
+  },
+  "DesignRules": [
+    {
+      "Layers": "Outer",
+      "PadToPad": 0.175,
+      "PadToTrack": 0.175,
+      "TrackToTrack": 0.2,
+      "MinLineWidth": 0.2,
+      "TrackToRegion": 0.5,
+      "RegionToRegion": 0.5
+    },
+    {
+      "Layers": "Inner",
+      "PadToPad": 0.175,
+      "PadToTrack": 0.175,
+      "TrackToTrack": 0.2,
+      "MinLineWidth": 0.2,
+      "TrackToRegion": 0.5,
+      "RegionToRegion": 0.5
+    }
+  ],
+  "FilesAttributes": [
+    {
+      "Path": "DarkMagic-Top_Cu.gbr",
+      "FileFunction": "Copper,L1,Top",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "DarkMagic-GND_Cu.gbr",
+      "FileFunction": "Copper,L2,Inr",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "DarkMagic-5_3V3_Cu.gbr",
+      "FileFunction": "Copper,L3,Inr",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "DarkMagic-Sig_Cu.gbr",
+      "FileFunction": "Copper,L4,Bot",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "DarkMagic-F_Silkscreen.gbr",
+      "FileFunction": "Legend,Top",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "DarkMagic-B_Silkscreen.gbr",
+      "FileFunction": "Legend,Bot",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "DarkMagic-F_Mask.gbr",
+      "FileFunction": "SolderMask,Top",
+      "FilePolarity": "Negative"
+    },
+    {
+      "Path": "DarkMagic-B_Mask.gbr",
+      "FileFunction": "SolderMask,Bot",
+      "FilePolarity": "Negative"
+    }
+  ],
+  "MaterialStackup": [
+    {
+      "Type": "Legend",
+      "Name": "Top Silk Screen"
+    },
+    {
+      "Type": "SolderPaste",
+      "Name": "Top Solder Paste"
+    },
+    {
+      "Type": "SolderMask",
+      "Color": "Black",
+      "Thickness": 0.01,
+      "Name": "Top Solder Mask"
+    },
+    {
+      "Type": "Copper",
+      "Thickness": 0.035,
+      "Name": "Top.Cu"
+    },
+    {
+      "Type": "Dielectric",
+      "Color": "R109G116B75",
+      "Thickness": 0.1,
+      "Material": "FR4",
+      "Name": "Top.Cu/GND.Cu",
+      "Notes": "Type: dielectric layer 1 (from Top.Cu to GND.Cu)"
+    },
+    {
+      "Type": "Copper",
+      "Thickness": 0.035,
+      "Name": "GND.Cu"
+    },
+    {
+      "Type": "Dielectric",
+      "Color": "R109G116B75",
+      "Thickness": 1.24,
+      "Material": "FR4",
+      "Name": "GND.Cu/5_3V3.Cu",
+      "Notes": "Type: dielectric layer 2 (from GND.Cu to 5_3V3.Cu)"
+    },
+    {
+      "Type": "Copper",
+      "Thickness": 0.035,
+      "Name": "5_3V3.Cu"
+    },
+    {
+      "Type": "Dielectric",
+      "Color": "R109G116B75",
+      "Thickness": 0.1,
+      "Material": "FR4",
+      "Name": "5_3V3.Cu/Sig.Cu",
+      "Notes": "Type: dielectric layer 3 (from 5_3V3.Cu to Sig.Cu)"
+    },
+    {
+      "Type": "Copper",
+      "Thickness": 0.035,
+      "Name": "Sig.Cu"
+    },
+    {
+      "Type": "SolderMask",
+      "Color": "Black",
+      "Thickness": 0.01,
+      "Name": "Bottom Solder Mask"
+    },
+    {
+      "Type": "SolderPaste",
+      "Name": "Bottom Solder Paste"
+    },
+    {
+      "Type": "Legend",
+      "Name": "Bottom Silk Screen"
+    }
+  ]
+}
