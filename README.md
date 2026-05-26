@@ -1,14 +1,14 @@
-TEA@CPP Escape Room 2026: The Holy Grail
+# TEA@CPP Escape Room 2026: The Holy Grail
 
-The Holy Grail is a custom PCB that is designed to be used as a part of an escape room puzzle. 
+The _Holy Grail_ is a custom PCB that is designed to be used as a part of an escape room puzzle. 
 
-This board runs on an ESP32 and uses a CD74HC138QM96Q1 to decode address lines from the ESP32 to select between different UART channels.
+This board runs on an ESP32-WROOM-32UE and uses a CD74HC138QM96Q1 to decode address lines from the ESP32 to select between different UART channels.
 
 The CD74HC138QM96Q1 addresses six SC16IS752IPW_128 chips. Each SC16IS752IPW_128 chip has two UART channels.
 
 Each SC16IS752IPW_128 chip is connected to two LD2410C sensors, for a total of 12 sensors.
 
-The ESP will adress these SC16IS752IPW_128 chips using the CD74HC138QM96Q1, and the SC16IS752IPW_128 chips will communicate with the ESP using SPI
+The ESP will address these SC16IS752IPW_128 chips using the CD74HC138QM96Q1, and the SC16IS752IPW_128 chips will communicate with the ESP using SPI
 
 The ESP will take the incoming data from the SC16IS752IPW_128 chips, format it into a usable JSON payload, and send it to an MQTT broker.
 
