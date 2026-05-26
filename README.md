@@ -1,6 +1,7 @@
 # TEA@CPP Escape Room 2026: The Holy Grail
 
 <img width="7400" height="3061" alt="Holy Grail2" src="https://github.com/user-attachments/assets/53cdbbcb-ab72-403f-9037-f6201b524167" />
+
 <br/> <br/>
 The _Holy Grail_ is a custom PCB, designed for the Indiana Jones puzzle as a part of TEA@CPP's "Retro Rewind" 2026 Escape Room. 
 
