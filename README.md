@@ -14,6 +14,8 @@ The ESP will address these SC16IS752IPW_128 chips using the CD74HC138QM96Q1, and
 
 The ESP will take the incoming data from the SC16IS752IPW_128 chips, format it into a usable JSON payload, and send it to an MQTT broker.
 
+For more details, check out [walkthrough.md](walkthrough.md).
+
 Major Components:
 - ESP32-WROOM-32UE
 - SC16IS752IPW_128
