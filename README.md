@@ -30,6 +30,6 @@ Major Components:
 Design Requirements:
 1. Read data from 12 LD2410C sensors using SPI-to-UART converters.
 2. Aggregate sensor data and package it into a JSON payload to be sent to an MQTT broker.
-3. Has a port for programming and debugging.
+3. USB port for programming and debugging.
 
 More Info: https://drive.google.com/drive/folders/14Y64IZpTN127Q0mva5SdtTZ1QgllTaBJ
