@@ -2,7 +2,6 @@
 
 <img width="7400" height="3061" alt="Holy Grail2" src="https://github.com/user-attachments/assets/53cdbbcb-ab72-403f-9037-f6201b524167" />
 
- 
 The _Holy Grail_ is a custom PCB, designed for the Indiana Jones puzzle within TEA@CPP's "Retro Rewind" 2026 Escape Room. 
 
 This board runs on an ESP32-WROOM-32UE and uses a CD74HC138QM96Q1 to select between different UART channels.
@@ -34,9 +33,8 @@ Major Components:
 - LM393DR
 
 Design Requirements:
-1. The board will read data from 12 LD2410C sensors using SPI-to-UART converters.
-2. The board will aggregate sensor data and package it into a JSON payload to be sent to an MQTT broker.
-3. The board will be powered from a 12V DC supply.
-4. The board has a USB-C port for programming and debugging.
+1. Read data from 12 LD2410C sensors using SPI-to-UART converters.
+2. Aggregate sensor data and package it into a JSON payload to be sent to an MQTT broker.
+3. Has a port for programming and debugging.
 
-Link to Schematics: https://drive.google.com/drive/folders/14Y64IZpTN127Q0mva5SdtTZ1QgllTaBJ
+More Info: https://drive.google.com/drive/folders/14Y64IZpTN127Q0mva5SdtTZ1QgllTaBJ
