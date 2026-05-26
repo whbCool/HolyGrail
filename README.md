@@ -1,10 +1,10 @@
 # TEA@CPP Escape Room 2026: The Holy Grail
 
-The _Holy Grail_ is a custom PCB that is designed to be used as a part of an escape room puzzle. 
+The _Holy Grail_ is a custom PCB, designed for the Indiana Jones puzzle within TEA@CPP's "Retro Rewind" 2026 Escape Room. 
 
-This board runs on an ESP32-WROOM-32UE and uses a CD74HC138QM96Q1 to decode address lines from the ESP32 to select between different UART channels.
+This board runs on an ESP32-WROOM-32UE and uses a CD74HC138QM96Q1 to select between different UART channels.
 
-The CD74HC138QM96Q1 addresses six SC16IS752IPW_128 chips. Each SC16IS752IPW_128 chip has two UART channels.
+The CD74HC138QM96Q1 addresses one of six SC16IS752IPW_128 chips. Each SC16IS752IPW_128 chip has two UART channels.
 
 Each SC16IS752IPW_128 chip is connected to two LD2410C sensors, for a total of 12 sensors.
 
@@ -31,10 +31,9 @@ MF-MSMF250_16X-2
 LM393DR
 
 Design Requirements:
-1. The board will read data from 12 LD2410C sensors using an spi to uart converter.
-2. The board will aggregate sensor data and package it into a format that can be sent to an MQTT broker.
+1. The board will read data from 12 LD2410C sensors using SPI-to-UART converters.
+2. The board will aggregate sensor data and package it into a JSON payload to be sent to an MQTT broker.
 3. The board will be powered from a 12V DC supply.
 4. The board has a USB-C port for programming and debugging.
-5. The board has a reset button and a boot button.
 
 Link to Schematics: https://drive.google.com/drive/folders/14Y64IZpTN127Q0mva5SdtTZ1QgllTaBJ
