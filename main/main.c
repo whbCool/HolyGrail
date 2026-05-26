@@ -9,7 +9,7 @@
 
 #include "esp_log.h"
 #include "esp_err.h"
-#include "freertos/FreeRTOS.h"
+#include "freertos/FreeRTOS.h" // IWYU pragma: keep
 #include "freertos/task.h"
 #include "freertos/semphr.h"
 #include "sc16is752.h"
