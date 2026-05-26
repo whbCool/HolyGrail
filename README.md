@@ -1,20 +1,12 @@
 # TEA@CPP Escape Room 2026: The Holy Grail
 
 <img width="7400" height="3061" alt="Holy Grail2" src="https://github.com/user-attachments/assets/53cdbbcb-ab72-403f-9037-f6201b524167" />
+<br/> <br/>
+The _Holy Grail_ is a custom PCB, designed for the Indiana Jones puzzle as a part of TEA@CPP's "Retro Rewind" 2026 Escape Room. 
 
-The _Holy Grail_ is a custom PCB, designed for the Indiana Jones puzzle within TEA@CPP's "Retro Rewind" 2026 Escape Room. 
+This repository includes the KiCad schematic, as well as the code database for the board.
 
-This board runs on an ESP32-WROOM-32UE and uses a CD74HC138QM96Q1 to select between different UART channels.
-
-The CD74HC138QM96Q1 addresses one of six SC16IS752IPW_128 chips. Each SC16IS752IPW_128 chip has two UART channels.
-
-Each SC16IS752IPW_128 chip is connected to two LD2410C sensors, for a total of 12 sensors.
-
-The ESP will address these SC16IS752IPW_128 chips using the CD74HC138QM96Q1, and the SC16IS752IPW_128 chips will communicate with the ESP using SPI
-
-The ESP will take the incoming data from the SC16IS752IPW_128 chips, format it into a usable JSON payload, and send it to an MQTT broker.
-
-For more details, check out [walkthrough.md](walkthrough.md).
+For more details on the code, check out [the introductory walkthrough here](walkthrough.md).
 
 Major Components:
 - ESP32-WROOM-32UE
