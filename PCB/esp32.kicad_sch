@@ -151553,10 +151553,10 @@
 		)
 		(uuid "50458c62-7854-4b50-b3d4-b27e0fd5e9db")
 	)
-	(text_box "ESP32 Programming\nGPIO Pins\n\nInterrupt: 4\nSCLK: 18\nMISO: 19\nMOSI: 23\nReset: 24\n\nEthernet Chip Select:\n5 (Active Low)\n\nStatus LED: 21\n\nLine Decoder\nA0: 25\nA1: 26\nA2: 32\nEnable: 33\n\nUART Clock Frequency:\n14.7456 MHz\n\nSPI speed: <20MHz\n(16 Mhz recommended)\n\nUse Static IP Addressing\n\nUse MQTT (Need a spare\ncomputer)\n\nThermal management is\nhardware triggered. See\npage 7 for more info."
+	(text_box "ESP32 Programming\nGPIO Pins\n\nInterrupt: 4\nSCLK: 18\nMISO: 19\nMOSI: 23\nReset: 24\nOE: 27\n\nEthernet Chip Select:\n5 (Active Low)\n\nStatus LED: 21\n\nLine Decoder\nA0: 25\nA1: 26\nA2: 32\nEnable: 33\n\nUART Clock Frequency:\n14.7456 MHz\n\nSPI speed: <20MHz\n(16 Mhz recommended)\n\nUse Static IP Addressing\n\nUse MQTT (Need a spare\ncomputer)\n\nThermal management is\nhardware triggered. See\npage 7 for more info."
 		(exclude_from_sim no)
 		(at 13.462 13.462 0)
-		(size 23.114 57.6579)
+		(size 23.114 59.1534)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
 			(width 0.381)
@@ -153696,7 +153696,7 @@
 	)
 	(polyline
 		(pts
-			(xy 14.732 46.228) (xy 33.528 46.228)
+			(xy 14.478 47.498) (xy 33.274 47.498)
 		)
 		(stroke
 			(width 0)
