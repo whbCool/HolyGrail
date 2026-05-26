@@ -2,7 +2,7 @@
 
 <img width="7400" height="3061" alt="Holy Grail2" src="https://github.com/user-attachments/assets/53cdbbcb-ab72-403f-9037-f6201b524167" />
 
-
+ 
 The _Holy Grail_ is a custom PCB, designed for the Indiana Jones puzzle within TEA@CPP's "Retro Rewind" 2026 Escape Room. 
 
 This board runs on an ESP32-WROOM-32UE and uses a CD74HC138QM96Q1 to select between different UART channels.
