@@ -1,8 +1,7 @@
 # TEA@CPP Escape Room 2026: The Holy Grail
 
-<img width="7400" height="3061" alt="Holy Grail2" src="https://github.com/user-attachments/assets/53cdbbcb-ab72-403f-9037-f6201b524167" />
+<img width="7400" height="3061" alt="update_noTB" src="https://github.com/user-attachments/assets/767ab534-400e-4e8f-8da8-90152007331e" />
 
-<br/> <br/>
 The _Holy Grail_ is a custom PCB, designed for the Indiana Jones puzzle as a part of TEA@CPP's "Retro Rewind" 2026 Escape Room. 
 
 This repository includes the KiCad schematic, as well as the code database for the board.
@@ -15,16 +14,16 @@ Major Components:
 - CD74HC138QM96Q1
 - SN74LVC1G125DBVT
 - CDCLVC1106PWR
-- 830072403
-- LM3940IMP-3.3_NOPB
+- 7447715003
+- LMR33640
 - AP63205WU-7
 - 5747842-2
 - W5500
 - USBLC6-2SC6
-- HR911105A
+- TMJ0026ABNL
 - MMBT3904
 - CP2102N-A02-GQFN24
-- MF-MSMF250_16X-2
+- 1812L150_24MR
 - LM393DR
 
 Design Requirements:
