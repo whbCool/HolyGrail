@@ -849,6 +849,220 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "7447715003:7447715003"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "L"
+				(at 16.51 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "7447715003"
+				(at 16.51 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "Inductor_SMD:L_12x12mm_H4.5mm"
+				(at 16.51 -96.19 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Datasheet" "https://www.we-online.com/catalog/datasheet/7447715003.pdf"
+				(at 16.51 -196.19 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Description" "WE-PD SMT Shielded Power Inductor Size 1245; L = 3.3 H +/-30%; IR = 5.9 A; Isat = 7.1 A; RDC = 13 m"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Height" "4.5"
+				(at 16.51 -396.19 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Mouser Part Number" "710-7447715003"
+				(at 16.51 -496.19 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Wurth-Elektronik/7447715003?qs=XJfXErqHgA7n%2FIvZfnta1w%3D%3D"
+				(at 16.51 -596.19 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Manufacturer_Name" "Wurth Elektronik"
+				(at 16.51 -696.19 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Manufacturer_Part_Number" "7447715003"
+				(at 16.51 -796.19 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(symbol "7447715003_1_1"
+				(arc
+					(start 5.08 0)
+					(mid 6.35 1.219)
+					(end 7.62 0)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 7.62 0)
+					(mid 8.89 1.219)
+					(end 10.16 0)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 10.16 0)
+					(mid 11.43 1.219)
+					(end 12.7 0)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 12.7 0)
+					(mid 13.97 1.219)
+					(end 15.24 0)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 0 0)
+					(length 5.08)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 20.32 0 180)
+					(length 5.08)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "ASE-14_7456MHZ-LC-T:ASE-14.7456MHZ-LC-T"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3439,220 +3653,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "SRN2010BTA-3R3M:SRN2010BTA-3R3M"
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "L"
-				(at 16.51 6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "SRN2010BTA-3R3M"
-				(at 16.51 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "SRN2010BTA3R3M"
-				(at 16.51 -96.19 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Datasheet" "https://www.bourns.com/docs/Product-Datasheets/SRN2010BTA.pdf"
-				(at 16.51 -196.19 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Description" "Ind,2x1.6x0.9mm,3.3uH+/-20%,1.7A,shd"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Height" "1"
-				(at 16.51 -396.19 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Mouser Part Number" "652-SRN2010BTA-3R3M"
-				(at 16.51 -496.19 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Bourns/SRN2010BTA-3R3M?qs=Imq1NPwxi76daIHRGbS00Q%3D%3D"
-				(at 16.51 -596.19 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Manufacturer_Name" "Bourns"
-				(at 16.51 -696.19 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Manufacturer_Part_Number" "SRN2010BTA-3R3M"
-				(at 16.51 -796.19 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(symbol "SRN2010BTA-3R3M_1_1"
-				(arc
-					(start 5.08 0)
-					(mid 6.35 1.219)
-					(end 7.62 0)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 7.62 0)
-					(mid 8.89 1.219)
-					(end 10.16 0)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 10.16 0)
-					(mid 11.43 1.219)
-					(end 12.7 0)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 12.7 0)
-					(mid 13.97 1.219)
-					(end 15.24 0)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at 0 0 0)
-					(length 5.08)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 20.32 0 180)
-					(length 5.08)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Si2323DDS-T1-GE3:Si2323DDS-T1-GE3"
 			(pin_names
 				(hide yes)
@@ -4797,7 +4797,7 @@
 	)
 	(text "Power \nProtection"
 		(exclude_from_sim no)
-		(at 146.05 111.252 0)
+		(at 140.716 123.952 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4892,6 +4892,12 @@
 		(uuid "2ecf5cfa-ca4c-4ce7-aba3-dcedf1fd112b")
 	)
 	(junction
+		(at 245.11 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "30a3350b-47a3-4a65-8f1f-fc234a5608df")
+	)
+	(junction
 		(at 167.64 90.17)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4902,6 +4908,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3a2fdae5-edfc-4560-825d-3301eb825b98")
+	)
+	(junction
+		(at 147.32 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3b035d93-1577-4f54-93e2-02029816bb46")
 	)
 	(junction
 		(at 19.05 144.78)
@@ -4916,10 +4928,10 @@
 		(uuid "3d1ab963-cc35-4d1d-a818-181f95aa12da")
 	)
 	(junction
-		(at 207.01 124.46)
+		(at 219.71 142.24)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "3fbf6b06-5fcf-445c-971b-69bce3f3e802")
+		(uuid "42c3bd6e-378b-44ec-b053-1cbecf1edb44")
 	)
 	(junction
 		(at 232.41 152.4)
@@ -4944,12 +4956,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "56807182-f065-44a3-b41f-154e00b1a419")
-	)
-	(junction
-		(at 207.01 134.62)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5aa6cb4f-73ba-4cb7-8c12-d8c085684f7d")
 	)
 	(junction
 		(at 207.01 162.56)
@@ -4988,6 +4994,12 @@
 		(uuid "78f5bfc1-7a34-4759-ba51-43a8d93fd773")
 	)
 	(junction
+		(at 207.01 124.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "84f97c8f-6afc-4149-84ee-f9d7e6f40224")
+	)
+	(junction
 		(at 19.05 134.62)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5012,12 +5024,6 @@
 		(uuid "961bb31d-1904-4668-b32d-c24e76a5b2bf")
 	)
 	(junction
-		(at 219.71 142.24)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a1396a6c-0423-4198-8342-15d783897b8e")
-	)
-	(junction
 		(at 219.71 152.4)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5040,12 +5046,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c538f67e-1cbe-440d-96ae-0b5c6c0dd993")
-	)
-	(junction
-		(at 245.11 142.24)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c831e41e-d05d-4f57-b762-9fd7f40a8ecb")
 	)
 	(junction
 		(at 167.64 69.85)
@@ -5152,6 +5152,16 @@
 			(type default)
 		)
 		(uuid "030bbef9-1a5a-4dff-bcab-c3d8c42e7090")
+	)
+	(wire
+		(pts
+			(xy 147.32 119.38) (xy 148.59 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "039656a0-0fb7-4bad-9e03-d741a934a1c8")
 	)
 	(wire
 		(pts
@@ -5736,7 +5746,7 @@
 	)
 	(wire
 		(pts
-			(xy 245.11 142.24) (xy 251.46 142.24)
+			(xy 245.11 142.24) (xy 248.92 142.24)
 		)
 		(stroke
 			(width 0)
@@ -5803,6 +5813,16 @@
 			(type default)
 		)
 		(uuid "43171e59-87bd-470b-91a9-f935e37a68da")
+	)
+	(wire
+		(pts
+			(xy 242.57 142.24) (xy 245.11 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43b00548-ecd6-4f51-9df5-831bb1362269")
 	)
 	(wire
 		(pts
@@ -6057,6 +6077,16 @@
 	)
 	(wire
 		(pts
+			(xy 219.71 142.24) (xy 222.25 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5bb2ccf1-668b-4f34-885c-57bcc1431ca8")
+	)
+	(wire
+		(pts
 			(xy 114.3 86.36) (xy 118.11 86.36)
 		)
 		(stroke
@@ -6127,16 +6157,6 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 124.46) (xy 156.21 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "60fcb670-9646-459c-bc63-8de4ec41d9c7")
-	)
-	(wire
-		(pts
 			(xy 25.4 39.37) (xy 30.48 39.37)
 		)
 		(stroke
@@ -6157,7 +6177,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 119.38) (xy 138.43 119.38)
+			(xy 135.89 119.38) (xy 137.16 119.38)
 		)
 		(stroke
 			(width 0)
@@ -6214,16 +6234,6 @@
 			(type default)
 		)
 		(uuid "63e70c78-294f-48e7-a129-07d4907d571b")
-	)
-	(wire
-		(pts
-			(xy 148.59 125.73) (xy 156.21 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "63e9db1b-10fc-4171-b564-79fbe2c3207d")
 	)
 	(wire
 		(pts
@@ -6347,7 +6357,7 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 134.62) (xy 207.01 134.62)
+			(xy 194.31 134.62) (xy 219.71 134.62)
 		)
 		(stroke
 			(width 0)
@@ -6367,7 +6377,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 124.46) (xy 219.71 124.46)
+			(xy 194.31 124.46) (xy 207.01 124.46)
 		)
 		(stroke
 			(width 0)
@@ -6538,16 +6548,6 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 119.38) (xy 148.59 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "87e1a7de-eb76-482b-96e2-84d411252d94")
-	)
-	(wire
-		(pts
 			(xy 127 86.36) (xy 134.62 86.36)
 		)
 		(stroke
@@ -6628,13 +6628,13 @@
 	)
 	(wire
 		(pts
-			(xy 219.71 142.24) (xy 222.25 142.24)
+			(xy 143.51 118.11) (xy 147.32 118.11)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8e33cdbc-7417-49fd-a998-8f5d92f0d98a")
+		(uuid "8d87bc3b-2475-4406-a1ec-99c7dd86b673")
 	)
 	(wire
 		(pts
@@ -6768,16 +6768,6 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 124.46) (xy 207.01 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9dcf4769-edb0-47dc-a2a2-7ef6b90baca2")
-	)
-	(wire
-		(pts
 			(xy 119.38 35.56) (xy 119.38 31.75)
 		)
 		(stroke
@@ -6898,6 +6888,16 @@
 	)
 	(wire
 		(pts
+			(xy 207.01 133.35) (xy 207.01 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae490335-b898-4578-9ea4-127b424f6931")
+	)
+	(wire
+		(pts
 			(xy 144.78 177.8) (xy 144.78 179.07)
 		)
 		(stroke
@@ -6988,6 +6988,16 @@
 	)
 	(wire
 		(pts
+			(xy 207.01 124.46) (xy 219.71 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b672cfec-fa62-4ed7-85b3-691b5d4e8dba")
+	)
+	(wire
+		(pts
 			(xy 116.84 118.11) (xy 123.19 118.11)
 		)
 		(stroke
@@ -7005,6 +7015,16 @@
 			(type default)
 		)
 		(uuid "b9f8ca22-aed9-46aa-9324-9610e5d54f36")
+	)
+	(wire
+		(pts
+			(xy 144.78 119.38) (xy 147.32 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba6ee588-5423-4177-b6f9-2e435d4333f3")
 	)
 	(wire
 		(pts
@@ -7168,6 +7188,16 @@
 	)
 	(wire
 		(pts
+			(xy 148.59 125.73) (xy 156.21 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c766af12-7435-4ce4-9bcf-f2b992acec85")
+	)
+	(wire
+		(pts
 			(xy 102.87 148.59) (xy 109.22 148.59)
 		)
 		(stroke
@@ -7268,16 +7298,6 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 133.35) (xy 207.01 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d18d3cdf-dad6-4ced-82cb-ea8e7a4109af")
-	)
-	(wire
-		(pts
 			(xy 219.71 142.24) (xy 219.71 152.4)
 		)
 		(stroke
@@ -7325,6 +7345,16 @@
 			(type default)
 		)
 		(uuid "d5acc97c-1aa3-4a47-a698-d892305617ba")
+	)
+	(wire
+		(pts
+			(xy 156.21 125.73) (xy 156.21 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5db947e-2fdb-4f44-b3dd-6629cbb728ef")
 	)
 	(wire
 		(pts
@@ -7438,6 +7468,16 @@
 	)
 	(wire
 		(pts
+			(xy 147.32 118.11) (xy 147.32 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e30c0719-20ec-4590-8ce2-c4f8b3e6242c")
+	)
+	(wire
+		(pts
 			(xy 87.63 125.73) (xy 93.98 125.73)
 		)
 		(stroke
@@ -7519,16 +7559,6 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 142.24) (xy 245.11 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e9c3e429-21c6-4733-91cb-9ce46061d8cf")
-	)
-	(wire
-		(pts
 			(xy 38.1 39.37) (xy 48.26 39.37)
 		)
 		(stroke
@@ -7596,16 +7626,6 @@
 			(type default)
 		)
 		(uuid "ec1ffc79-76db-474a-b8ba-1e0073b9998d")
-	)
-	(wire
-		(pts
-			(xy 194.31 124.46) (xy 207.01 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ece668b9-e377-4413-b9ae-c31224f35d90")
 	)
 	(wire
 		(pts
@@ -7740,16 +7760,6 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 134.62) (xy 219.71 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f82e1c67-c5d6-4fc6-9d5d-93974ea161d9")
-	)
-	(wire
-		(pts
 			(xy 260.35 142.24) (xy 260.35 146.05)
 		)
 		(stroke
@@ -7777,6 +7787,16 @@
 			(type default)
 		)
 		(uuid "f9da9667-8d0f-470f-b868-e2348a743626")
+	)
+	(wire
+		(pts
+			(xy 207.01 133.35) (xy 212.09 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fa7586dc-16c2-448d-97b7-7c30734f68ac")
 	)
 	(wire
 		(pts
@@ -8250,6 +8270,16 @@
 		)
 		(uuid "24e760db-06cb-4787-90b0-9a9f4e3537d4")
 	)
+	(label "Q1G"
+		(at 212.09 133.35 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "25c2b9eb-0d68-4596-a42b-f18847f59439")
+	)
 	(label "DGND"
 		(at 213.36 93.98 180)
 		(effects
@@ -8451,7 +8481,7 @@
 		(uuid "613ab348-6651-4a65-84db-d5f96ba09cbd")
 	)
 	(label "SW"
-		(at 251.46 142.24 180)
+		(at 248.92 142.24 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8789,6 +8819,16 @@
 			(justify left bottom)
 		)
 		(uuid "9ae769dd-f8e1-4f09-9f8a-e80788bc0ba1")
+	)
+	(label "Q1G"
+		(at 143.51 118.11 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9bae47cc-c693-445e-9f6b-534a8bd1ec4c")
 	)
 	(label "RXB3"
 		(at 93.98 140.97 180)
@@ -15217,7 +15257,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 207.01 129.54 180)
+		(at 207.01 128.27 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15227,7 +15267,7 @@
 		(dnp no)
 		(uuid "4f761606-41fd-47e1-9862-e494fa2b2d50")
 		(property "Reference" "R88"
-			(at 211.074 128.524 0)
+			(at 202.946 129.286 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15237,7 +15277,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 210.82 130.81 0)
+			(at 203.2 127 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15247,7 +15287,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 205.994 129.286 90)
+			(at 208.026 128.524 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15258,7 +15298,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 207.01 129.54 0)
+			(at 207.01 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15269,7 +15309,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 207.01 129.54 0)
+			(at 207.01 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15280,7 +15320,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "ERA-6AEB103V "
-			(at 207.01 129.54 90)
+			(at 207.01 128.27 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15291,7 +15331,7 @@
 			)
 		)
 		(property "Mouser Part Number" "667-ERA-6AEB103V "
-			(at 207.01 129.54 90)
+			(at 207.01 128.27 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15302,7 +15342,7 @@
 			)
 		)
 		(property "Maunfacturer Part Number" ""
-			(at 207.01 129.54 90)
+			(at 207.01 128.27 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15313,7 +15353,7 @@
 			)
 		)
 		(property "AVAILABILITY" ""
-			(at 207.01 129.54 90)
+			(at 207.01 128.27 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15324,7 +15364,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 207.01 129.54 90)
+			(at 207.01 128.27 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15335,7 +15375,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 207.01 129.54 90)
+			(at 207.01 128.27 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15346,7 +15386,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 207.01 129.54 90)
+			(at 207.01 128.27 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15357,7 +15397,7 @@
 			)
 		)
 		(property "Maunfacturer_Part_Number" ""
-			(at 207.01 129.54 90)
+			(at 207.01 128.27 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15368,7 +15408,7 @@
 			)
 		)
 		(property "PACKAGE" ""
-			(at 207.01 129.54 90)
+			(at 207.01 128.27 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15379,7 +15419,7 @@
 			)
 		)
 		(property "PARTREV" ""
-			(at 207.01 129.54 90)
+			(at 207.01 128.27 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15390,7 +15430,7 @@
 			)
 		)
 		(property "PRICE" ""
-			(at 207.01 129.54 90)
+			(at 207.01 128.27 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15401,7 +15441,7 @@
 			)
 		)
 		(property "STANDARD" ""
-			(at 207.01 129.54 90)
+			(at 207.01 128.27 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15412,7 +15452,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 207.01 129.54 90)
+			(at 207.01 128.27 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22583,6 +22623,147 @@
 		)
 	)
 	(symbol
+		(lib_id "7447715003:7447715003")
+		(at 242.57 142.24 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b6169fef-e33c-4297-9628-5d3526496559")
+		(property "Reference" "L1"
+			(at 232.41 145.034 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "7447715003"
+			(at 232.41 147.574 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Inductor_SMD:L_12x12mm_H4.5mm"
+			(at 226.06 46.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Datasheet" "https://www.we-online.com/catalog/datasheet/7447715003.pdf"
+			(at 226.06 -53.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Description" "WE-PD SMT Shielded Power Inductor Size 1245; L = 3.3 H +/-30%; IR = 5.9 A; Isat = 7.1 A; RDC = 13 m"
+			(at 242.57 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" "4.5"
+			(at 226.06 -253.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Part Number" "710-7447715003"
+			(at 226.06 -353.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Wurth-Elektronik/7447715003?qs=XJfXErqHgA7n%2FIvZfnta1w%3D%3D"
+			(at 226.06 -453.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Name" "Wurth Elektronik"
+			(at 226.06 -553.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Part_Number" "7447715003"
+			(at 226.06 -653.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "2"
+			(uuid "25cc9fd5-0915-4b7c-8c4e-e6a2fcff3729")
+		)
+		(pin "1"
+			(uuid "9136a116-39dd-4656-bf87-7d8852b22e6f")
+		)
+		(instances
+			(project "DarkMagic"
+				(path "/937333f5-c77e-4739-b275-548fd599a1f4"
+					(reference "L1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 119.38 24.13 180)
 		(unit 1)
@@ -23798,147 +23979,6 @@
 			(project "DarkMagic"
 				(path "/937333f5-c77e-4739-b275-548fd599a1f4"
 					(reference "IC8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "SRN2010BTA-3R3M:SRN2010BTA-3R3M")
-		(at 242.57 142.24 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c887368c-4c96-4208-8c04-a479d17020f5")
-		(property "Reference" "L1"
-			(at 232.156 148.082 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SRN2010BTA-3R3M"
-			(at 232.156 145.542 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "SRN2010BTA3R3M"
-			(at 226.06 46.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Datasheet" "https://www.bourns.com/docs/Product-Datasheets/SRN2010BTA.pdf"
-			(at 226.06 -53.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Description" "Ind,2x1.6x0.9mm,3.3uH+/-20%,1.7A,shd"
-			(at 242.57 142.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Height" "1"
-			(at 226.06 -253.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Part Number" "652-SRN2010BTA-3R3M"
-			(at 226.06 -353.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Bourns/SRN2010BTA-3R3M?qs=Imq1NPwxi76daIHRGbS00Q%3D%3D"
-			(at 226.06 -453.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Name" "Bourns"
-			(at 226.06 -553.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Part_Number" "SRN2010BTA-3R3M"
-			(at 226.06 -653.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "2"
-			(uuid "3f7aece5-cc1d-49d3-b15b-86ca8cf6f60c")
-		)
-		(pin "1"
-			(uuid "9353e15b-7fd2-4ab9-ac32-fc32f7be362f")
-		)
-		(instances
-			(project "DarkMagic"
-				(path "/937333f5-c77e-4739-b275-548fd599a1f4"
-					(reference "L1")
 					(unit 1)
 				)
 			)
@@ -25862,7 +25902,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 142.24 119.38 90)
+		(at 140.97 119.38 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -25872,7 +25912,7 @@
 		(dnp no)
 		(uuid "e41b9560-9446-40e9-8ebd-48fa37c6e5ae")
 		(property "Reference" "R51"
-			(at 142.24 114.808 90)
+			(at 140.97 114.808 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25882,7 +25922,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 141.986 117.094 90)
+			(at 140.716 117.094 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25892,7 +25932,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 142.494 118.364 90)
+			(at 141.224 118.364 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25903,7 +25943,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 142.24 119.38 0)
+			(at 140.97 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25914,7 +25954,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 142.24 119.38 0)
+			(at 140.97 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25925,7 +25965,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "ERA-6AEB103V "
-			(at 142.24 119.38 90)
+			(at 140.97 119.38 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25936,7 +25976,7 @@
 			)
 		)
 		(property "Mouser Part Number" "667-ERA-6AEB103V "
-			(at 142.24 119.38 90)
+			(at 140.97 119.38 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25947,7 +25987,7 @@
 			)
 		)
 		(property "Maunfacturer Part Number" ""
-			(at 142.24 119.38 90)
+			(at 140.97 119.38 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25958,7 +25998,7 @@
 			)
 		)
 		(property "AVAILABILITY" ""
-			(at 142.24 119.38 90)
+			(at 140.97 119.38 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25969,7 +26009,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 142.24 119.38 90)
+			(at 140.97 119.38 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25980,7 +26020,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 142.24 119.38 90)
+			(at 140.97 119.38 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25991,7 +26031,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 142.24 119.38 90)
+			(at 140.97 119.38 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26002,7 +26042,7 @@
 			)
 		)
 		(property "Maunfacturer_Part_Number" ""
-			(at 142.24 119.38 90)
+			(at 140.97 119.38 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26013,7 +26053,7 @@
 			)
 		)
 		(property "PACKAGE" ""
-			(at 142.24 119.38 90)
+			(at 140.97 119.38 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26024,7 +26064,7 @@
 			)
 		)
 		(property "PARTREV" ""
-			(at 142.24 119.38 90)
+			(at 140.97 119.38 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26035,7 +26075,7 @@
 			)
 		)
 		(property "PRICE" ""
-			(at 142.24 119.38 90)
+			(at 140.97 119.38 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26046,7 +26086,7 @@
 			)
 		)
 		(property "STANDARD" ""
-			(at 142.24 119.38 90)
+			(at 140.97 119.38 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26057,7 +26097,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 142.24 119.38 90)
+			(at 140.97 119.38 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
