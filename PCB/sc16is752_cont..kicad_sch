@@ -4773,12 +4773,12 @@
 		)
 		(uuid "b94b4748-0067-49d5-ba75-4ad93dffd6e1")
 	)
-	(text "CONNECTORS\n\nWe need to connect 24 high frequency sensors\nto one PCB.\n\nWe'll need a wiring and connector solution \nthat can take that kind of chaos.\n\nThis sheet will represent what we need to connect 12 of\nthese sensors to one board."
+	(text "CONNECTORS\n\nWe need to connect 24 high frequency sensors\nto one PCB.\n\nWe'll need a wiring and connector solution \nthat can take that kind of chaos."
 		(exclude_from_sim no)
-		(at 165.1 30.226 0)
+		(at 165.1 28.702 0)
 		(effects
 			(font
-				(size 2.032 2.032)
+				(size 2.54 2.54)
 			)
 			(justify left)
 		)
@@ -4807,7 +4807,7 @@
 	)
 	(text "Power Status LEDs"
 		(exclude_from_sim no)
-		(at 180.848 163.068 0)
+		(at 177.546 163.068 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -13396,7 +13396,7 @@
 				)
 			)
 		)
-		(property "Manufacturer_Part_Number" "CL21A106KAYNNNF "
+		(property "Manufacturer_Part_Number" "CL21A106KBYQNNE"
 			(at 118.11 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -13407,7 +13407,7 @@
 				)
 			)
 		)
-		(property "Mouser Part Number" "187-CL21A106KAYNNNF "
+		(property "Mouser Part Number" "187-CL21A106KBYQNNE "
 			(at 118.11 91.44 0)
 			(hide yes)
 			(show_name no)

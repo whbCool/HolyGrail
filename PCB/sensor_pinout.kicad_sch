@@ -21,6 +21,19 @@
 		)
 		(uuid "40cabc15-567f-465c-9758-47ceef0d568a")
 	)
+	(text "Print this page out and have an\ninstaller sign here to verify\nconnections:"
+		(exclude_from_sim no)
+		(at 177.038 159.512 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "e1b69055-96ea-40e1-9743-9cc01377ea5b")
+	)
 	(text_box "This is the pinout for a custom female DB25 cable. This board requires a custom cable to connect to its sensors. Use this guide when making a new cable. Cable RX goes to Board TX, same for TX to RX. \n\n\n\n\n\n\nUse a multimeter set to continuity mode to ensure connections. Have a team member verify when finished."
 		(exclude_from_sim no)
 		(at 12.7 140.716 0)
