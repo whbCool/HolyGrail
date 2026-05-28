@@ -2301,7 +2301,7 @@
 		)
 		(uuid "222df85d-2908-4801-8d00-b15dd1a5b3e7")
 	)
-	(text "Fan Controller\n\nSet to turn on a fan when temperatures reach ~65° C.\n\nThermistors measure the temperature of the LM3460 \nand the AP63205. LM393DR follows OR Logic.\n\nIncorporates a ~0.5 second soft-start.\n\nC41 is an ALUMINUM capacitor!"
+	(text "Fan Controller\n\nSet to turn on a fan when temperatures reach ~65° C.\n\nThermistors measure the temperature of the LMR33640 \nand the AP63205. LM393DR follows OR Logic.\n\nIncorporates a ~0.5 second soft-start.\n\nC41 is an ALUMINUM capacitor!"
 		(exclude_from_sim no)
 		(at 166.116 29.972 0)
 		(effects
