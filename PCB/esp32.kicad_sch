@@ -151533,7 +151533,7 @@
 		)
 		(uuid "17d7dac1-b355-4208-9f0a-b938763e711d")
 	)
-	(text_box "Status LEDs:\n\nSCLK - Lights up when there are active SPI bus transactions between the ESP and the SC16IS752 bridge array.\n\nIRQ - Lights up when a hardware interrupt request is triggered by incoming sensor data."
+	(text_box "Blue Status LEDs:\n\nSCLK - Lights up when there are active SPI bus transactions between the ESP and the SC16IS752 bridge array.\n\nIRQ - Lights up when a hardware interrupt request is triggered by incoming sensor data."
 		(exclude_from_sim no)
 		(at 105.41 95.758 0)
 		(size 28.956 28.194)
@@ -152776,7 +152776,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 86.36) (xy 52.07 86.36)
+			(xy 49.53 85.09) (xy 53.34 85.09)
 		)
 		(stroke
 			(width 0)
@@ -156897,7 +156897,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 86.36) (xy 40.64 86.36)
+			(xy 38.1 85.09) (xy 41.91 85.09)
 		)
 		(stroke
 			(width 0)
@@ -158447,7 +158447,7 @@
 	)
 	(wire
 		(pts
-			(xy 15.24 86.36) (xy 21.59 86.36)
+			(xy 16.51 85.09) (xy 22.86 85.09)
 		)
 		(stroke
 			(width 0)
@@ -160496,7 +160496,7 @@
 		(uuid "ca1840bb-670c-4a42-a62b-e13a7e93b318")
 	)
 	(label "IO21"
-		(at 15.24 86.36 0)
+		(at 16.51 85.09 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -162348,7 +162348,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 44.45 86.36 90)
+		(at 45.72 85.09 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -162358,7 +162358,7 @@
 		(dnp no)
 		(uuid "22a684e9-6a30-4087-a329-0f9160b53336")
 		(property "Reference" "R3"
-			(at 44.196 88.646 90)
+			(at 45.466 87.376 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -162368,7 +162368,7 @@
 			)
 		)
 		(property "Value" "330"
-			(at 44.196 91.186 90)
+			(at 45.466 89.916 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -162378,7 +162378,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 44.704 85.344 90)
+			(at 45.974 84.074 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -162389,7 +162389,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 44.45 86.36 0)
+			(at 45.72 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -162400,7 +162400,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 44.45 86.36 0)
+			(at 45.72 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -162411,7 +162411,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "ERJ-PC6B3300V"
-			(at 44.45 86.36 90)
+			(at 45.72 85.09 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -162422,7 +162422,7 @@
 			)
 		)
 		(property "Mouser Part Number" "667-ERJ-PC6B3300V "
-			(at 44.45 86.36 90)
+			(at 45.72 85.09 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -162433,7 +162433,7 @@
 			)
 		)
 		(property "Maunfacturer Part Number" ""
-			(at 44.45 86.36 90)
+			(at 45.72 85.09 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -162444,7 +162444,7 @@
 			)
 		)
 		(property "AVAILABILITY" ""
-			(at 44.45 86.36 90)
+			(at 45.72 85.09 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -162455,7 +162455,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 44.45 86.36 90)
+			(at 45.72 85.09 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -162466,7 +162466,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 44.45 86.36 90)
+			(at 45.72 85.09 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -162477,7 +162477,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 44.45 86.36 90)
+			(at 45.72 85.09 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -162488,7 +162488,7 @@
 			)
 		)
 		(property "Maunfacturer_Part_Number" ""
-			(at 44.45 86.36 90)
+			(at 45.72 85.09 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -162499,7 +162499,7 @@
 			)
 		)
 		(property "PACKAGE" ""
-			(at 44.45 86.36 90)
+			(at 45.72 85.09 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -162510,7 +162510,7 @@
 			)
 		)
 		(property "PARTREV" ""
-			(at 44.45 86.36 90)
+			(at 45.72 85.09 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -162521,7 +162521,7 @@
 			)
 		)
 		(property "PRICE" ""
-			(at 44.45 86.36 90)
+			(at 45.72 85.09 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -162532,7 +162532,7 @@
 			)
 		)
 		(property "STANDARD" ""
-			(at 44.45 86.36 90)
+			(at 45.72 85.09 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -162543,7 +162543,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 44.45 86.36 90)
+			(at 45.72 85.09 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -165195,7 +165195,7 @@
 	)
 	(symbol
 		(lib_id "HSMG-C170:HSMG-C170")
-		(at 21.59 86.36 0)
+		(at 22.86 85.09 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -165205,7 +165205,7 @@
 		(dnp no)
 		(uuid "90d9527d-1c9f-45b9-b374-c58495164c0a")
 		(property "Reference" "STATUS1"
-			(at 35.56 82.55 0)
+			(at 36.83 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -165215,7 +165215,7 @@
 			)
 		)
 		(property "Value" "HSMG-C170"
-			(at 21.59 90.17 0)
+			(at 22.86 88.9 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -165225,7 +165225,7 @@
 			)
 		)
 		(property "Footprint" "DarkMagic:LEDC2012X80N"
-			(at 34.29 180.01 0)
+			(at 35.56 178.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -165237,7 +165237,7 @@
 			)
 		)
 		(property "Datasheet" "https://datasheet.datasheetarchive.com/originals/distributors/SFDatasheet-4/sf-00083853.pdf"
-			(at 34.29 280.01 0)
+			(at 35.56 278.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -165249,7 +165249,7 @@
 			)
 		)
 		(property "Description" "Green LED, 15 mcd 170 , 2-pin 0805 SMD Package"
-			(at 21.59 86.36 0)
+			(at 22.86 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -165260,7 +165260,7 @@
 			)
 		)
 		(property "Height" "0.8"
-			(at 34.29 480.01 0)
+			(at 35.56 478.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -165272,7 +165272,7 @@
 			)
 		)
 		(property "Mouser Part Number" "630-HSMG-C170"
-			(at 34.29 580.01 0)
+			(at 35.56 578.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -165284,7 +165284,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Broadcom-Avago/HSMG-C170?qs=YDL0qNrpDT4lm8ArMPkMEA%3D%3D"
-			(at 34.29 680.01 0)
+			(at 35.56 678.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -165296,7 +165296,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "Avago Technologies"
-			(at 34.29 780.01 0)
+			(at 35.56 778.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -165308,7 +165308,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "HSMG-C170"
-			(at 34.29 880.01 0)
+			(at 35.56 878.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -165320,7 +165320,7 @@
 			)
 		)
 		(property "Maunfacturer Part Number" ""
-			(at 21.59 86.36 0)
+			(at 22.86 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -165331,7 +165331,7 @@
 			)
 		)
 		(property "AVAILABILITY" ""
-			(at 21.59 86.36 0)
+			(at 22.86 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -165342,7 +165342,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 21.59 86.36 0)
+			(at 22.86 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -165353,7 +165353,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 21.59 86.36 0)
+			(at 22.86 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -165364,7 +165364,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 21.59 86.36 0)
+			(at 22.86 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -165375,7 +165375,7 @@
 			)
 		)
 		(property "Maunfacturer_Part_Number" ""
-			(at 21.59 86.36 0)
+			(at 22.86 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -165386,7 +165386,7 @@
 			)
 		)
 		(property "PACKAGE" ""
-			(at 21.59 86.36 0)
+			(at 22.86 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -165397,7 +165397,7 @@
 			)
 		)
 		(property "PARTREV" ""
-			(at 21.59 86.36 0)
+			(at 22.86 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -165408,7 +165408,7 @@
 			)
 		)
 		(property "PRICE" ""
-			(at 21.59 86.36 0)
+			(at 22.86 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -165419,7 +165419,7 @@
 			)
 		)
 		(property "STANDARD" ""
-			(at 21.59 86.36 0)
+			(at 22.86 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -165430,7 +165430,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 21.59 86.36 0)
+			(at 22.86 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -167476,7 +167476,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 52.07 86.36 90)
+		(at 53.34 85.09 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -167487,7 +167487,7 @@
 		(fields_autoplaced yes)
 		(uuid "f85b3a5b-d2b6-46ab-b3bc-334ba3087763")
 		(property "Reference" "#PWR06"
-			(at 58.42 86.36 0)
+			(at 59.69 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -167498,7 +167498,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 55.88 86.3599 90)
+			(at 57.15 85.0899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -167509,7 +167509,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 52.07 86.36 0)
+			(at 53.34 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -167520,7 +167520,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 52.07 86.36 0)
+			(at 53.34 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -167531,7 +167531,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 52.07 86.36 0)
+			(at 53.34 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
