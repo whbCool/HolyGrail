@@ -5294,7 +5294,7 @@
 	)
 	(rectangle
 		(start 192.786 121.92)
-		(end 284.226 134.62)
+		(end 237.236 134.62)
 		(stroke
 			(width 0)
 			(type solid)
@@ -5303,6 +5303,20 @@
 			(type none)
 		)
 		(uuid "31b4fddf-df14-4e5f-acee-b9cedc952e36")
+	)
+	(rectangle
+		(start 238.506 121.92)
+		(end 284.226 134.62)
+		(stroke
+			(width 0)
+			(type solid)
+			(color 0 0 0 1)
+		)
+		(fill
+			(type cross_hatch)
+			(color 0 0 0 1)
+		)
+		(uuid "3a6edaad-84f7-4911-a92c-6b2daf6944f5")
 	)
 	(rectangle
 		(start 102.87 121.92)

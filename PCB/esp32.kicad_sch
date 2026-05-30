@@ -162116,7 +162116,7 @@
 		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "0eb51f0b-8774-4d89-aedd-93dec8e14bce")
 		(property "Reference" "V1"
 			(at 22.7302 180.34 0)
