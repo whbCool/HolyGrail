@@ -5135,7 +5135,7 @@
 		(uuid "262f3672-d933-4d82-926e-0589cb079c5b")
 	)
 	(rectangle
-		(start 190.5 13.462)
+		(start 201.676 13.462)
 		(end 283.464 107.95)
 		(stroke
 			(width 0)
@@ -5162,7 +5162,7 @@
 	)
 	(rectangle
 		(start 13.208 13.462)
-		(end 189.23 107.95)
+		(end 200.152 107.95)
 		(stroke
 			(width 0)
 			(type default)
@@ -5186,7 +5186,7 @@
 	)
 	(text "Ethernet Interface and RJ45 Port\n\nR18 is a precision resistor, with a tolerance of 1%.\n\nC19 and C44 are on the bottom of the board."
 		(exclude_from_sim no)
-		(at 112.776 60.706 0)
+		(at 152.654 59.944 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5327,16 +5327,16 @@
 		(uuid "4afb8df6-13b6-4848-9d50-7a22b602167e")
 	)
 	(junction
+		(at 85.09 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4f709c15-309e-4774-86c2-a2db2f00355d")
+	)
+	(junction
 		(at 31.75 160.02)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "527d7804-770b-4702-bbdb-d94575c7fb51")
-	)
-	(junction
-		(at 85.09 67.31)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "57e45032-d112-482d-96a9-b29124155a05")
 	)
 	(junction
 		(at 146.05 38.1)
@@ -5349,6 +5349,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5b93b129-dbf6-4e3d-9d2e-67ca0c1ed18d")
+	)
+	(junction
+		(at 182.88 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5de158d5-af6f-4938-af69-de6053a70b73")
 	)
 	(junction
 		(at 135.89 193.04)
@@ -5483,10 +5489,28 @@
 		(uuid "d90bcd4e-ef66-41c0-bc0f-e234a5eb8ef7")
 	)
 	(junction
+		(at 85.09 67.31)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d9b84c5d-7d3e-4c3e-90c9-24d6e39f365c")
+	)
+	(junction
+		(at 182.88 33.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e1966924-8182-463d-82ac-bf9f7e713d30")
+	)
+	(junction
 		(at 55.88 154.94)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e324b5fc-ca28-456e-aaf2-a601a06b3ed8")
+	)
+	(junction
+		(at 182.88 41.91)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e3486521-164e-4577-b33e-4011e8da14c5")
 	)
 	(junction
 		(at 44.45 29.21)
@@ -5922,6 +5946,16 @@
 	)
 	(wire
 		(pts
+			(xy 182.88 24.13) (xy 185.42 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2202bd73-311e-4e4b-b763-bfc408b28eeb")
+	)
+	(wire
+		(pts
 			(xy 90.17 181.61) (xy 90.17 191.77)
 		)
 		(stroke
@@ -6132,6 +6166,16 @@
 	)
 	(wire
 		(pts
+			(xy 182.88 33.02) (xy 185.42 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "371793ed-cbb6-482f-a5b9-dee5d9d7e65b")
+	)
+	(wire
+		(pts
 			(xy 172.72 81.28) (xy 163.83 81.28)
 		)
 		(stroke
@@ -6202,6 +6246,16 @@
 	)
 	(wire
 		(pts
+			(xy 193.04 41.91) (xy 198.12 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b1c93bc-0504-4bb5-a90f-a086a7eb30a1")
+	)
+	(wire
+		(pts
 			(xy 54.61 26.67) (xy 54.61 29.21)
 		)
 		(stroke
@@ -6262,6 +6316,16 @@
 	)
 	(wire
 		(pts
+			(xy 182.88 50.8) (xy 182.88 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d638eea-f65e-4b11-9926-fde83ff5a319")
+	)
+	(wire
+		(pts
 			(xy 102.87 111.76) (xy 102.87 120.65)
 		)
 		(stroke
@@ -6319,6 +6383,16 @@
 			(type default)
 		)
 		(uuid "3f348f42-50ff-4422-9d89-d8977c975b88")
+	)
+	(wire
+		(pts
+			(xy 193.04 50.8) (xy 198.12 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40399e97-eef0-4448-9b86-0ab2609b253f")
 	)
 	(wire
 		(pts
@@ -6752,6 +6826,16 @@
 	)
 	(wire
 		(pts
+			(xy 182.88 50.8) (xy 185.42 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6bb4fa2d-721c-4a22-8fca-5c27ccc55545")
+	)
+	(wire
+		(pts
 			(xy 59.69 26.67) (xy 54.61 26.67)
 		)
 		(stroke
@@ -6759,6 +6843,16 @@
 			(type default)
 		)
 		(uuid "6cae0416-6616-4b5e-8998-9ec4e5bf4fba")
+	)
+	(wire
+		(pts
+			(xy 182.88 41.91) (xy 182.88 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6cbfcb07-9042-4c0a-93d3-e305a4cd7ddc")
 	)
 	(wire
 		(pts
@@ -7072,6 +7166,16 @@
 	)
 	(wire
 		(pts
+			(xy 87.63 87.63) (xy 85.09 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "876d3009-6333-4b61-a57e-6c3b96ad4624")
+	)
+	(wire
+		(pts
 			(xy 46.99 132.08) (xy 52.07 132.08)
 		)
 		(stroke
@@ -7179,6 +7283,26 @@
 			(type default)
 		)
 		(uuid "9276918e-adcb-4856-b8d9-afaf1df61231")
+	)
+	(wire
+		(pts
+			(xy 119.38 76.2) (xy 123.19 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9503172a-88d1-4f06-84c6-5c984a7b3f34")
+	)
+	(wire
+		(pts
+			(xy 182.88 33.02) (xy 182.88 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "98c3dd0b-56a3-492e-a927-a9ddaf12b87b")
 	)
 	(wire
 		(pts
@@ -7322,6 +7446,16 @@
 	)
 	(wire
 		(pts
+			(xy 182.88 41.91) (xy 185.42 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a359a801-f3ba-47f2-b617-5809af38cdbd")
+	)
+	(wire
+		(pts
 			(xy 158.75 38.1) (xy 171.45 38.1)
 		)
 		(stroke
@@ -7382,7 +7516,7 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 67.31) (xy 85.09 80.01)
+			(xy 85.09 67.31) (xy 85.09 87.63)
 		)
 		(stroke
 			(width 0)
@@ -7392,7 +7526,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 24.13) (xy 182.88 52.07)
+			(xy 182.88 24.13) (xy 182.88 33.02)
 		)
 		(stroke
 			(width 0)
@@ -7499,6 +7633,16 @@
 			(type default)
 		)
 		(uuid "b62963e2-4858-493d-859d-2cc652df0a9e")
+	)
+	(wire
+		(pts
+			(xy 193.04 33.02) (xy 198.12 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6aaca5c-53bf-4920-92cc-076cf5534fd8")
 	)
 	(wire
 		(pts
@@ -7642,6 +7786,16 @@
 	)
 	(wire
 		(pts
+			(xy 78.74 87.63) (xy 85.09 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c20fc85c-c1fc-4115-ab45-29a6e164471d")
+	)
+	(wire
+		(pts
 			(xy 85.09 46.99) (xy 87.63 46.99)
 		)
 		(stroke
@@ -7662,7 +7816,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 73.66) (xy 123.19 73.66)
+			(xy 119.38 73.66) (xy 123.19 73.66)
 		)
 		(stroke
 			(width 0)
@@ -7712,7 +7866,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 88.9) (xy 123.19 88.9)
+			(xy 119.38 88.9) (xy 123.19 88.9)
 		)
 		(stroke
 			(width 0)
@@ -8052,16 +8206,6 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 76.2) (xy 123.19 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ee2c3827-9afe-4cf7-a0b3-9e268cc02021")
-	)
-	(wire
-		(pts
 			(xy 20.32 67.31) (xy 29.21 67.31)
 		)
 		(stroke
@@ -8109,6 +8253,16 @@
 			(type default)
 		)
 		(uuid "f7042e94-a61e-4088-a18a-b7227daa6f16")
+	)
+	(wire
+		(pts
+			(xy 193.04 24.13) (xy 198.12 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f75d23ad-c463-414c-95bb-db4164d79260")
 	)
 	(wire
 		(pts
@@ -8239,6 +8393,16 @@
 			(justify left bottom)
 		)
 		(uuid "06532b9e-15a7-4053-935f-726e71cd3012")
+	)
+	(label "RXN"
+		(at 198.12 50.8 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "06a38773-e44a-46a6-baa7-b16ee869c938")
 	)
 	(label "1V20"
 		(at 222.25 163.83 0)
@@ -8540,6 +8704,16 @@
 		)
 		(uuid "69714e42-4ea4-4f00-902d-6f18ca48ff3e")
 	)
+	(label "RXP"
+		(at 198.12 41.91 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "6bd596b1-62e7-4a46-8efe-649c83759a82")
+	)
 	(label "1V20"
 		(at 59.69 104.14 90)
 		(effects
@@ -8621,7 +8795,7 @@
 		(uuid "81535825-b9db-4a4d-bd2f-a876de91b595")
 	)
 	(label "RXP"
-		(at 115.57 88.9 0)
+		(at 119.38 88.9 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8641,7 +8815,7 @@
 		(uuid "85cf2e1d-d951-451e-948a-5214815acfc6")
 	)
 	(label "TXN"
-		(at 115.57 76.2 0)
+		(at 119.38 76.2 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8800,6 +8974,16 @@
 		)
 		(uuid "a864c8f9-b0e0-45f1-9aa5-910f60b7728c")
 	)
+	(label "TXP"
+		(at 198.12 24.13 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a960673d-3869-4eb2-b2ed-259610523947")
+	)
 	(label "RSTB"
 		(at 71.12 154.94 180)
 		(effects
@@ -8829,6 +9013,16 @@
 			(justify right bottom)
 		)
 		(uuid "b06dc8e4-d1a0-4ac3-9b21-d4f3243ab51f")
+	)
+	(label "TXN"
+		(at 198.12 33.02 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b1c14445-6f4f-41b4-b4df-c6e8f91cb21c")
 	)
 	(label "CC1"
 		(at 15.24 173.99 0)
@@ -8941,7 +9135,7 @@
 		(uuid "d0fe5a40-e854-4b60-b74c-75e683a66b69")
 	)
 	(label "TXP"
-		(at 115.57 73.66 0)
+		(at 119.38 73.66 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9474,6 +9668,228 @@
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "R22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 189.23 33.02 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0860abab-7c81-42a2-9693-c550e19fe2eb")
+		(property "Reference" "R89"
+			(at 189.23 27.686 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "49.9"
+			(at 189.23 30.226 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 189.484 32.004 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 189.23 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 189.23 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "ERJ-P06F49R9V"
+			(at 189.23 33.02 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" "667-ERJ-P06F49R9V"
+			(at 189.23 33.02 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Maunfacturer Part Number" ""
+			(at 189.23 33.02 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AVAILABILITY" ""
+			(at 189.23 33.02 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Check_prices" ""
+			(at 189.23 33.02 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 189.23 33.02 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 189.23 33.02 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Maunfacturer_Part_Number" ""
+			(at 189.23 33.02 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PACKAGE" ""
+			(at 189.23 33.02 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 189.23 33.02 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PRICE" ""
+			(at 189.23 33.02 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 189.23 33.02 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 189.23 33.02 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d09bcf57-103d-4b37-a551-b130e1a1a07e")
+		)
+		(pin "2"
+			(uuid "14d7afd9-5876-4598-bb83-d32893e29665")
+		)
+		(instances
+			(project "DarkMagic"
+				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
+					(reference "R89")
 					(unit 1)
 				)
 			)
@@ -11675,6 +12091,228 @@
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "R23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 189.23 50.8 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "48ad61a5-a415-4501-bd72-6499d7799b01")
+		(property "Reference" "R90"
+			(at 189.23 45.466 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "49.9"
+			(at 189.23 48.006 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 189.484 49.784 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 189.23 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 189.23 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "ERJ-P06F49R9V"
+			(at 189.23 50.8 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" "667-ERJ-P06F49R9V"
+			(at 189.23 50.8 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Maunfacturer Part Number" ""
+			(at 189.23 50.8 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AVAILABILITY" ""
+			(at 189.23 50.8 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Check_prices" ""
+			(at 189.23 50.8 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 189.23 50.8 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 189.23 50.8 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Maunfacturer_Part_Number" ""
+			(at 189.23 50.8 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PACKAGE" ""
+			(at 189.23 50.8 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 189.23 50.8 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PRICE" ""
+			(at 189.23 50.8 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 189.23 50.8 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 189.23 50.8 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bb4c883f-e27d-4f6e-b7ef-fe1f5df6d10d")
+		)
+		(pin "2"
+			(uuid "f246f587-1ded-4fe6-b7ff-6419f04b30b6")
+		)
+		(instances
+			(project "DarkMagic"
+				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
+					(reference "R90")
 					(unit 1)
 				)
 			)
@@ -16108,6 +16746,228 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_US")
+		(at 189.23 41.91 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7382b888-5c58-4eb5-a810-06b2bf615649")
+		(property "Reference" "R91"
+			(at 189.23 36.576 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "49.9"
+			(at 189.23 39.116 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 189.484 40.894 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 189.23 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 189.23 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "ERJ-P06F49R9V"
+			(at 189.23 41.91 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" "667-ERJ-P06F49R9V"
+			(at 189.23 41.91 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Maunfacturer Part Number" ""
+			(at 189.23 41.91 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AVAILABILITY" ""
+			(at 189.23 41.91 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Check_prices" ""
+			(at 189.23 41.91 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 189.23 41.91 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 189.23 41.91 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Maunfacturer_Part_Number" ""
+			(at 189.23 41.91 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PACKAGE" ""
+			(at 189.23 41.91 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 189.23 41.91 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PRICE" ""
+			(at 189.23 41.91 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 189.23 41.91 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 189.23 41.91 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "11d1dc91-ac69-41b0-bbf6-e14da75443b4")
+		)
+		(pin "2"
+			(uuid "65c9739b-e5f4-40ea-8357-ece31a63e6a6")
+		)
+		(instances
+			(project "DarkMagic"
+				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
+					(reference "R91")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 121.92 186.69 180)
 		(unit 1)
@@ -16591,85 +17451,6 @@
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "IC10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 78.74 87.63 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "79dff3a2-1b8e-4ff4-b3c9-f7581189d987")
-		(property "Reference" "#PWR014"
-			(at 78.74 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 81.28 86.3599 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 78.74 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 78.74 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 78.74 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "10dd0b69-1984-442b-986f-81351a447760")
-		)
-		(instances
-			(project "DarkMagic"
-				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
-					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -17220,7 +18001,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 85.09 80.01 0)
+		(at 87.63 87.63 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17231,7 +18012,7 @@
 		(fields_autoplaced yes)
 		(uuid "860e4f74-57ab-477a-ad1c-bbeeeb2e8405")
 		(property "Reference" "#PWR025"
-			(at 85.09 86.36 0)
+			(at 93.98 87.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17242,18 +18023,18 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 87.63 81.2799 0)
+			(at 91.44 87.6299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" ""
-			(at 85.09 80.01 0)
+			(at 87.63 87.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17264,7 +18045,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 85.09 80.01 0)
+			(at 87.63 87.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17275,7 +18056,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 85.09 80.01 0)
+			(at 87.63 87.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22271,6 +23052,228 @@
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "R15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 189.23 24.13 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "eb0edaa3-644c-446f-9375-e718e5f85aad")
+		(property "Reference" "R92"
+			(at 189.23 18.796 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "49.9"
+			(at 189.23 21.336 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 189.484 23.114 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 189.23 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 189.23 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "ERJ-P06F49R9V"
+			(at 189.23 24.13 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" "667-ERJ-P06F49R9V"
+			(at 189.23 24.13 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Maunfacturer Part Number" ""
+			(at 189.23 24.13 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AVAILABILITY" ""
+			(at 189.23 24.13 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Check_prices" ""
+			(at 189.23 24.13 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 189.23 24.13 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 189.23 24.13 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Maunfacturer_Part_Number" ""
+			(at 189.23 24.13 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PACKAGE" ""
+			(at 189.23 24.13 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 189.23 24.13 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PRICE" ""
+			(at 189.23 24.13 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 189.23 24.13 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 189.23 24.13 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e5af9c37-19ff-45bc-9ece-b6df99af3d7c")
+		)
+		(pin "2"
+			(uuid "76a718d0-0c19-4dd3-aa93-d1d260a9e759")
+		)
+		(instances
+			(project "DarkMagic"
+				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
+					(reference "R92")
 					(unit 1)
 				)
 			)
