@@ -4797,7 +4797,7 @@
 	)
 	(text "Power \nProtection"
 		(exclude_from_sim no)
-		(at 140.716 123.952 0)
+		(at 139.954 123.698 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4886,6 +4886,12 @@
 		(uuid "1bc26885-f0f5-4c33-ba69-16006ad24425")
 	)
 	(junction
+		(at 147.32 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1cbec635-f923-48af-874e-37c20ef5819c")
+	)
+	(junction
 		(at 245.11 152.4)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4908,12 +4914,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3a2fdae5-edfc-4560-825d-3301eb825b98")
-	)
-	(junction
-		(at 147.32 119.38)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3b035d93-1577-4f54-93e2-02029816bb46")
 	)
 	(junction
 		(at 19.05 144.78)
@@ -5155,13 +5155,13 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 119.38) (xy 148.59 119.38)
+			(xy 134.62 118.11) (xy 134.62 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "039656a0-0fb7-4bad-9e03-d741a934a1c8")
+		(uuid "039d9089-d382-4d31-86e6-d5aeca266395")
 	)
 	(wire
 		(pts
@@ -5292,6 +5292,16 @@
 			(type default)
 		)
 		(uuid "0e24cb04-808d-45de-9f6d-31cc555f9208")
+	)
+	(wire
+		(pts
+			(xy 147.32 119.38) (xy 148.59 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e4635f0-31e2-44b8-9be1-fe0a2644f70a")
 	)
 	(wire
 		(pts
@@ -6177,16 +6187,6 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 119.38) (xy 137.16 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "621c8b71-e3a8-4b5b-baeb-77eed10815b9")
-	)
-	(wire
-		(pts
 			(xy 207.01 153.67) (xy 207.01 152.4)
 		)
 		(stroke
@@ -6628,7 +6628,7 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 118.11) (xy 147.32 118.11)
+			(xy 143.51 115.57) (xy 147.32 115.57)
 		)
 		(stroke
 			(width 0)
@@ -7018,7 +7018,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 119.38) (xy 147.32 119.38)
+			(xy 143.51 119.38) (xy 147.32 119.38)
 		)
 		(stroke
 			(width 0)
@@ -7135,6 +7135,16 @@
 			(type default)
 		)
 		(uuid "c1491ce7-c145-4d22-a74e-d7220ed2174c")
+	)
+	(wire
+		(pts
+			(xy 134.62 119.38) (xy 135.89 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c21f89f5-c57d-4cc8-81d8-bc3df79872bf")
 	)
 	(wire
 		(pts
@@ -7468,7 +7478,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 118.11) (xy 147.32 119.38)
+			(xy 147.32 115.57) (xy 147.32 119.38)
 		)
 		(stroke
 			(width 0)
@@ -8821,7 +8831,7 @@
 		(uuid "9ae769dd-f8e1-4f09-9f8a-e80788bc0ba1")
 	)
 	(label "Q1G"
-		(at 143.51 118.11 0)
+		(at 143.51 115.57 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -19337,7 +19347,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 135.89 119.38 270)
+		(at 134.62 118.11 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -19347,7 +19357,7 @@
 		(dnp no)
 		(uuid "97a1457d-3b19-4045-ae36-fc6dfb17ae02")
 		(property "Reference" "#PWR050"
-			(at 129.54 119.38 0)
+			(at 134.62 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19358,7 +19368,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 135.89 116.84 90)
+			(at 134.62 114.046 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19368,7 +19378,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 135.89 119.38 0)
+			(at 134.62 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19379,7 +19389,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 135.89 119.38 0)
+			(at 134.62 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19390,7 +19400,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 135.89 119.38 0)
+			(at 134.62 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25902,7 +25912,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 140.97 119.38 90)
+		(at 139.7 119.38 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -25912,7 +25922,7 @@
 		(dnp no)
 		(uuid "e41b9560-9446-40e9-8ebd-48fa37c6e5ae")
 		(property "Reference" "R51"
-			(at 140.97 114.808 90)
+			(at 139.7 114.808 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25922,7 +25932,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 140.716 117.094 90)
+			(at 139.7 117.094 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25932,7 +25942,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 141.224 118.364 90)
+			(at 139.954 118.364 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25943,7 +25953,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 140.97 119.38 0)
+			(at 139.7 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25954,7 +25964,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 140.97 119.38 0)
+			(at 139.7 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25965,7 +25975,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "ERA-6AEB103V "
-			(at 140.97 119.38 90)
+			(at 139.7 119.38 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25976,7 +25986,7 @@
 			)
 		)
 		(property "Mouser Part Number" "667-ERA-6AEB103V "
-			(at 140.97 119.38 90)
+			(at 139.7 119.38 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25987,7 +25997,7 @@
 			)
 		)
 		(property "Maunfacturer Part Number" ""
-			(at 140.97 119.38 90)
+			(at 139.7 119.38 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25998,7 +26008,7 @@
 			)
 		)
 		(property "AVAILABILITY" ""
-			(at 140.97 119.38 90)
+			(at 139.7 119.38 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26009,7 +26019,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 140.97 119.38 90)
+			(at 139.7 119.38 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26020,7 +26030,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 140.97 119.38 90)
+			(at 139.7 119.38 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26031,7 +26041,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 140.97 119.38 90)
+			(at 139.7 119.38 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26042,7 +26052,7 @@
 			)
 		)
 		(property "Maunfacturer_Part_Number" ""
-			(at 140.97 119.38 90)
+			(at 139.7 119.38 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26053,7 +26063,7 @@
 			)
 		)
 		(property "PACKAGE" ""
-			(at 140.97 119.38 90)
+			(at 139.7 119.38 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26064,7 +26074,7 @@
 			)
 		)
 		(property "PARTREV" ""
-			(at 140.97 119.38 90)
+			(at 139.7 119.38 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26075,7 +26085,7 @@
 			)
 		)
 		(property "PRICE" ""
-			(at 140.97 119.38 90)
+			(at 139.7 119.38 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26086,7 +26096,7 @@
 			)
 		)
 		(property "STANDARD" ""
-			(at 140.97 119.38 90)
+			(at 139.7 119.38 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26097,7 +26107,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 140.97 119.38 90)
+			(at 139.7 119.38 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
