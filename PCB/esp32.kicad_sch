@@ -151799,6 +151799,12 @@
 		(uuid "00eeff0c-ffe4-48cc-a110-416874dcea9a")
 	)
 	(junction
+		(at 20.32 138.43)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "05b020e8-a694-40ef-b117-1b0f16a0fc1c")
+	)
+	(junction
 		(at 118.11 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -151835,12 +151841,6 @@
 		(uuid "54262a69-18ff-42c5-8979-a9a753ead30b")
 	)
 	(junction
-		(at 22.352 146.05)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7b9e7781-f05c-486b-bd65-b15f3d729907")
-	)
-	(junction
 		(at 118.11 67.31)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -151875,6 +151875,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "aa6c7852-744a-4325-85e1-b7cae5f3e0d6")
+	)
+	(junction
+		(at 20.32 146.05)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c01ab41a-c7b5-49e9-aec4-a6b840a48f1b")
 	)
 	(junction
 		(at 49.53 64.77)
@@ -151962,7 +151968,7 @@
 	)
 	(wire
 		(pts
-			(xy 19.812 146.05) (xy 19.812 143.51)
+			(xy 20.32 146.05) (xy 20.32 138.43)
 		)
 		(stroke
 			(width 0)
@@ -152549,16 +152555,6 @@
 			(type solid)
 		)
 		(uuid "137bdc43-a5f1-4436-8927-7048f36f5af7")
-	)
-	(wire
-		(pts
-			(xy 22.352 146.05) (xy 36.322 146.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "13a28e84-5818-4539-8baf-5ced33ba28f3")
 	)
 	(polyline
 		(pts
@@ -154993,7 +154989,7 @@
 	)
 	(wire
 		(pts
-			(xy 22.352 146.05) (xy 22.352 148.59)
+			(xy 20.32 146.05) (xy 20.32 148.59)
 		)
 		(stroke
 			(width 0)
@@ -155233,7 +155229,7 @@
 	)
 	(wire
 		(pts
-			(xy 22.352 157.48) (xy 27.432 157.48)
+			(xy 20.32 157.48) (xy 27.432 157.48)
 		)
 		(stroke
 			(width 0)
@@ -158361,6 +158357,16 @@
 		)
 		(uuid "c0a0fd73-9238-4d59-a8b9-95fbe1c02f0e")
 	)
+	(wire
+		(pts
+			(xy 20.32 138.43) (xy 20.32 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c15ec95f-e935-48ac-b71d-969e12ce91f5")
+	)
 	(polyline
 		(pts
 			(xy -151848.5687 -151848.5687) (xy -151848.5687 -151848.5687)
@@ -158463,7 +158469,7 @@
 	)
 	(wire
 		(pts
-			(xy 22.352 156.21) (xy 22.352 157.48)
+			(xy 20.32 156.21) (xy 20.32 157.48)
 		)
 		(stroke
 			(width 0)
@@ -158613,7 +158619,7 @@
 	)
 	(wire
 		(pts
-			(xy 27.432 138.43) (xy 36.322 138.43)
+			(xy 20.32 138.43) (xy 36.322 138.43)
 		)
 		(stroke
 			(width 0)
@@ -159863,7 +159869,7 @@
 	)
 	(wire
 		(pts
-			(xy 19.812 146.05) (xy 22.352 146.05)
+			(xy 20.32 146.05) (xy 36.322 146.05)
 		)
 		(stroke
 			(width 0)
@@ -160740,16 +160746,6 @@
 			(justify right bottom)
 		)
 		(uuid "b850dd1d-2300-453b-bdf5-97d4556fb93d")
-	)
-	(label "GND"
-		(at 27.432 138.43 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ba54421f-7fdd-4408-95bd-c45afc8069de")
 	)
 	(label "IO14"
 		(at 63.5 59.69 0)
@@ -164364,7 +164360,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 22.352 152.4 180)
+		(at 20.32 152.4 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -164374,7 +164370,7 @@
 		(dnp no)
 		(uuid "632c5a31-fe44-45c6-8d66-27ac2a6b2ae3")
 		(property "Reference" "C1"
-			(at 16.256 152.4 0)
+			(at 14.224 152.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -164385,7 +164381,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 16.002 154.94 0)
+			(at 13.97 154.94 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -164396,7 +164392,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 21.3868 148.59 0)
+			(at 19.3548 148.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -164407,7 +164403,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 22.352 152.4 0)
+			(at 20.32 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -164418,7 +164414,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 22.352 152.4 0)
+			(at 20.32 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -164429,7 +164425,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "CL21B104KCC5PNC "
-			(at 22.352 152.4 0)
+			(at 20.32 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -164440,7 +164436,7 @@
 			)
 		)
 		(property "Mouser Part Number" "187-CL21B104KCC5PNC "
-			(at 22.352 152.4 0)
+			(at 20.32 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -164451,7 +164447,7 @@
 			)
 		)
 		(property "Maunfacturer Part Number" ""
-			(at 22.352 152.4 0)
+			(at 20.32 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -164462,7 +164458,7 @@
 			)
 		)
 		(property "AVAILABILITY" ""
-			(at 22.352 152.4 0)
+			(at 20.32 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -164473,7 +164469,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 22.352 152.4 0)
+			(at 20.32 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -164484,7 +164480,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 22.352 152.4 0)
+			(at 20.32 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -164495,7 +164491,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 22.352 152.4 0)
+			(at 20.32 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -164506,7 +164502,7 @@
 			)
 		)
 		(property "Maunfacturer_Part_Number" ""
-			(at 22.352 152.4 0)
+			(at 20.32 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -164517,7 +164513,7 @@
 			)
 		)
 		(property "PACKAGE" ""
-			(at 22.352 152.4 0)
+			(at 20.32 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -164528,7 +164524,7 @@
 			)
 		)
 		(property "PARTREV" ""
-			(at 22.352 152.4 0)
+			(at 20.32 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -164539,7 +164535,7 @@
 			)
 		)
 		(property "PRICE" ""
-			(at 22.352 152.4 0)
+			(at 20.32 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -164550,7 +164546,7 @@
 			)
 		)
 		(property "STANDARD" ""
-			(at 22.352 152.4 0)
+			(at 20.32 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -164561,7 +164557,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 22.352 152.4 0)
+			(at 20.32 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -165220,7 +165216,7 @@
 				)
 			)
 		)
-		(property "Value" "CDCLVC1106PWR"
+		(property "Value" "5PB1106PGGI8"
 			(at 51.562 130.81 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -165242,7 +165238,7 @@
 				(justify left top)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/cdclvc1108.pdf"
+		(property "Datasheet" "https://www.renesas.com/en/document/dst/5pb11xx-family-datasheet"
 			(at 62.992 330.81 0)
 			(hide yes)
 			(show_name no)
@@ -165277,7 +165273,7 @@
 				(justify left top)
 			)
 		)
-		(property "Mouser Part Number" "595-CDCLVC1106PWR"
+		(property "Mouser Part Number" "972-5PB1106PGGI8 "
 			(at 62.992 630.81 0)
 			(hide yes)
 			(show_name no)
@@ -165289,7 +165285,7 @@
 				(justify left top)
 			)
 		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/CDCLVC1106PWR?qs=CLImetaeaXVZfWEl0J7gng%3D%3D"
+		(property "Mouser Price/Stock" "https://www.mouser.com/ProductDetail/Renesas-Electronics/5PB1106PGGI8?qs=3FEoAYHLzoCwnPaY3KQFFw%3D%3D"
 			(at 62.992 730.81 0)
 			(hide yes)
 			(show_name no)
@@ -165301,7 +165297,7 @@
 				(justify left top)
 			)
 		)
-		(property "Manufacturer_Name" "Texas Instruments"
+		(property "Manufacturer_Name" "Renesas Electronics"
 			(at 62.992 830.81 0)
 			(hide yes)
 			(show_name no)
@@ -165313,7 +165309,7 @@
 				(justify left top)
 			)
 		)
-		(property "Manufacturer_Part_Number" "CDCLVC1106PWR"
+		(property "Manufacturer_Part_Number" "5PB1106PGGI8 "
 			(at 62.992 930.81 0)
 			(hide yes)
 			(show_name no)
@@ -165325,7 +165321,7 @@
 				(justify left top)
 			)
 		)
-		(property "Maunfacturer Part Number" ""
+		(property "Maunfacturer Part Number" "5PB1106PGGI8 "
 			(at 36.322 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -165380,7 +165376,7 @@
 				)
 			)
 		)
-		(property "Maunfacturer_Part_Number" ""
+		(property "Maunfacturer_Part_Number" "972-5PB1106PGGI8 "
 			(at 36.322 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -168095,7 +168091,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 19.812 143.51 0)
+		(at 20.32 135.89 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -168106,7 +168102,7 @@
 		(fields_autoplaced yes)
 		(uuid "fc810451-e4eb-4961-ab3c-a4e36f0d02cd")
 		(property "Reference" "#PWR01"
-			(at 19.812 147.32 0)
+			(at 20.32 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -168117,7 +168113,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 19.812 138.43 0)
+			(at 20.32 130.81 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -168127,7 +168123,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 19.812 143.51 0)
+			(at 20.32 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -168138,7 +168134,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 19.812 143.51 0)
+			(at 20.32 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -168149,7 +168145,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 19.812 143.51 0)
+			(at 20.32 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
