@@ -5294,7 +5294,7 @@
 	)
 	(rectangle
 		(start 192.786 121.92)
-		(end 237.236 134.62)
+		(end 249.555 134.62)
 		(stroke
 			(width 0)
 			(type solid)
@@ -5305,7 +5305,7 @@
 		(uuid "31b4fddf-df14-4e5f-acee-b9cedc952e36")
 	)
 	(rectangle
-		(start 238.506 121.92)
+		(start 250.825 121.92)
 		(end 284.226 134.62)
 		(stroke
 			(width 0)
@@ -5425,6 +5425,12 @@
 		(uuid "1ab45af7-6589-4dd6-b54f-99aa8296622f")
 	)
 	(junction
+		(at 226.06 132.08)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "20701d81-f80d-4c2f-9890-b37493bdf2a8")
+	)
+	(junction
 		(at 146.05 142.24)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5519,6 +5525,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e1a6e47a-2fa4-40a5-9358-00a14bb6c569")
+	)
+	(junction
+		(at 226.06 124.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "eabe0bc8-dda3-47c0-bdbc-7e81a3a4088e")
 	)
 	(junction
 		(at 119.38 142.24)
@@ -6147,6 +6159,16 @@
 			(type default)
 		)
 		(uuid "26c7d1e2-1f3a-4e75-9dcf-269213342e91")
+	)
+	(wire
+		(pts
+			(xy 226.06 124.46) (xy 238.76 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28438ce1-482a-45c3-ba8c-9ccc9d5a4e89")
 	)
 	(wire
 		(pts
@@ -7617,6 +7639,16 @@
 			(type default)
 		)
 		(uuid "cbaee905-127f-42ad-9831-c7f8d2850a46")
+	)
+	(wire
+		(pts
+			(xy 226.06 132.08) (xy 238.76 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf1f80af-9b4c-4903-8cea-fd70acf1d8fa")
 	)
 	(wire
 		(pts
@@ -13899,6 +13931,230 @@
 			(project "DarkMagic"
 				(path "/25b04190-af24-4f9a-9f52-f81d447f9584"
 					(reference "R25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 238.76 128.27 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "86f13bcf-d100-41e9-9dd6-35b6bc394882")
+		(property "Reference" "C50"
+			(at 242.57 126.9999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 242.57 129.5399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 237.7948 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 238.76 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 238.76 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "CL21B104KCC5PNC "
+			(at 238.76 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" "187-CL21B104KCC5PNC "
+			(at 238.76 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Maunfacturer Part Number" ""
+			(at 238.76 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "AVAILABILITY" ""
+			(at 238.76 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Check_prices" ""
+			(at 238.76 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 238.76 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 238.76 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Maunfacturer_Part_Number" ""
+			(at 238.76 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PACKAGE" ""
+			(at 238.76 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PARTREV" ""
+			(at 238.76 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PRICE" ""
+			(at 238.76 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "STANDARD" ""
+			(at 238.76 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 238.76 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "0f393260-e5db-4cb9-b89b-abc289ef47c1")
+		)
+		(pin "1"
+			(uuid "9a046fb0-677f-4360-a4d0-5b4dc2e924c2")
+		)
+		(instances
+			(project "DarkMagic"
+				(path "/25b04190-af24-4f9a-9f52-f81d447f9584"
+					(reference "C50")
 					(unit 1)
 				)
 			)
