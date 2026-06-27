@@ -436,36 +436,36 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "B3U-1000P:B3U-1000P"
+		(symbol "B3U-1000P-B:B3U-1000P-B"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "S1"
-				(at 16.51 0.0001 0)
+			(property "Reference" "S"
+				(at 19.05 7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify left top)
 				)
 			)
-			(property "Value" "B3U-1000P"
-				(at 16.51 -2.5399 0)
+			(property "Value" "B3U-1000P-B"
+				(at 19.05 5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify left top)
 				)
 			)
-			(property "Footprint" "B3U-1000P"
-				(at 16.51 -94.92 0)
+			(property "Footprint" "B3U1000PB"
+				(at 19.05 -94.92 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -476,8 +476,8 @@
 					(justify left top)
 				)
 			)
-			(property "Datasheet" "https://www.omron.com/ecb/products/pdf/en-b3u.pdf"
-				(at 16.51 -194.92 0)
+			(property "Datasheet" "http://omronfs.omron.com/en_US/ecb/products/pdf/en-b3u.pdf"
+				(at 19.05 -194.92 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -488,7 +488,7 @@
 					(justify left top)
 				)
 			)
-			(property "Description" "OMRON ELECTRONIC COMPONENTS - B3U-1000P - SWITCH, SPST-NO, 0.05A, 12V, SMD"
+			(property "Description" "OMRON ELECTRONIC COMPONENTS - B3U-1000P-B - SWITCH, SPST-NO, 0.05A, 12V, SMD, BOSS"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -499,8 +499,8 @@
 					)
 				)
 			)
-			(property "Height" ""
-				(at 16.51 -394.92 0)
+			(property "Height" "1"
+				(at 19.05 -394.92 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -511,8 +511,8 @@
 					(justify left top)
 				)
 			)
-			(property "Mouser Part Number" "653-B3U-1000P"
-				(at 16.51 -494.92 0)
+			(property "Mouser Part Number" "653-B3U-1000P-B"
+				(at 19.05 -494.92 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -523,8 +523,8 @@
 					(justify left top)
 				)
 			)
-			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Omron-Electronics/B3U-1000P?qs=AO7BQMcsEu4ip80xyf2FwA%3D%3D"
-				(at 16.51 -594.92 0)
+			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Omron-Electronics/B3U-1000P-B?qs=AO7BQMcsEu6QxhKppRpaJA%3D%3D"
+				(at 19.05 -594.92 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -536,7 +536,7 @@
 				)
 			)
 			(property "Manufacturer_Name" "OMRON Electronics"
-				(at 16.51 -694.92 0)
+				(at 19.05 -694.92 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -547,8 +547,8 @@
 					(justify left top)
 				)
 			)
-			(property "Manufacturer_Part_Number" "B3U-1000P"
-				(at 16.51 -794.92 0)
+			(property "Manufacturer_Part_Number" "B3U-1000P-B"
+				(at 19.05 -794.92 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -559,10 +559,10 @@
 					(justify left top)
 				)
 			)
-			(symbol "B3U-1000P_1_1"
+			(symbol "B3U-1000P-B_1_1"
 				(rectangle
 					(start 5.08 2.54)
-					(end 15.24 -5.08)
+					(end 17.78 -7.62)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -572,9 +572,9 @@
 					)
 				)
 				(pin passive line
-					(at 0 -2.54 0)
+					(at 0 -5.08 0)
 					(length 5.08)
-					(name "1"
+					(name "COM"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -592,7 +592,7 @@
 				(pin passive line
 					(at 0 0 0)
 					(length 5.08)
-					(name "2"
+					(name "NO"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -600,162 +600,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "B3U-1000P_1"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "S2"
-				(at 16.51 0.0001 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "B3U-1000P"
-				(at 16.51 -2.5399 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "B3U-1000P"
-				(at 16.51 -94.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Datasheet" "https://www.omron.com/ecb/products/pdf/en-b3u.pdf"
-				(at 16.51 -194.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Description" "OMRON ELECTRONIC COMPONENTS - B3U-1000P - SWITCH, SPST-NO, 0.05A, 12V, SMD"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Height" ""
-				(at 16.51 -394.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Mouser Part Number" "653-B3U-1000P"
-				(at 16.51 -494.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Omron-Electronics/B3U-1000P?qs=AO7BQMcsEu4ip80xyf2FwA%3D%3D"
-				(at 16.51 -594.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Manufacturer_Name" "OMRON Electronics"
-				(at 16.51 -694.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Manufacturer_Part_Number" "B3U-1000P"
-				(at 16.51 -794.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(symbol "B3U-1000P_1_1_1"
-				(rectangle
-					(start 5.08 2.54)
-					(end 15.24 -5.08)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 0)
-					(length 5.08)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -764,16 +608,16 @@
 					)
 				)
 				(pin passive line
-					(at 0 0 0)
+					(at 0 -2.54 0)
 					(length 5.08)
-					(name "2"
+					(name "3"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "2"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5231,7 +5075,7 @@
 		(uuid "0b7385d3-1f76-4ad9-8e9f-90efed8b378d")
 	)
 	(junction
-		(at 196.85 119.38)
+		(at 191.77 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1173559f-beef-4993-ad49-2099d40c542b")
@@ -5277,6 +5121,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3226ceda-0a7d-4025-acf3-f6e4b55431cb")
+	)
+	(junction
+		(at 195.58 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "34b02a4b-452b-44ff-b4ca-d0c0043f3730")
 	)
 	(junction
 		(at 72.39 151.13)
@@ -5381,6 +5231,12 @@
 		(uuid "777616c5-ca08-477e-9e7e-8def80b76fa1")
 	)
 	(junction
+		(at 209.55 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7ac1ecd1-71bd-4ee7-b7b8-38f7f9176aa4")
+	)
+	(junction
 		(at 120.65 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5417,10 +5273,16 @@
 		(uuid "8eb239d0-70e1-41fb-a254-cca3a8241ee0")
 	)
 	(junction
-		(at 204.47 139.7)
+		(at 209.55 137.16)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "acc6d33d-d813-4d80-9673-bc3c3a4cd45b")
+		(uuid "98917600-cc28-4973-9447-184c23011f60")
+	)
+	(junction
+		(at 199.39 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9d8a9e1a-aa08-4b2e-b5f8-a69e544e6b04")
 	)
 	(junction
 		(at 31.75 163.83)
@@ -5481,12 +5343,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d8c142e2-ddd9-45eb-8026-adda26d2700a")
-	)
-	(junction
-		(at 200.66 119.38)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d90bcd4e-ef66-41c0-bc0f-e234a5eb8ef7")
 	)
 	(junction
 		(at 85.09 67.31)
@@ -5676,7 +5532,17 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 137.16) (xy 213.36 137.16)
+			(xy 209.55 137.16) (xy 212.09 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "030cb930-d3c1-4407-8a67-90178605a469")
+	)
+	(wire
+		(pts
+			(xy 195.58 137.16) (xy 209.55 137.16)
 		)
 		(stroke
 			(width 0)
@@ -5726,7 +5592,7 @@
 	)
 	(wire
 		(pts
-			(xy 213.36 121.92) (xy 204.47 121.92)
+			(xy 199.39 124.46) (xy 212.09 124.46)
 		)
 		(stroke
 			(width 0)
@@ -5876,7 +5742,7 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 139.7) (xy 204.47 139.7)
+			(xy 191.77 142.24) (xy 199.39 142.24)
 		)
 		(stroke
 			(width 0)
@@ -5916,13 +5782,23 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 130.81) (xy 204.47 132.08)
+			(xy 199.39 133.35) (xy 199.39 134.62)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "1bf88d36-c76b-4b3b-a2cc-9c1d9ec41765")
+	)
+	(wire
+		(pts
+			(xy 209.55 121.92) (xy 209.55 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c2ca333-8665-418e-936f-30260206b95d")
 	)
 	(wire
 		(pts
@@ -5953,6 +5829,16 @@
 			(type default)
 		)
 		(uuid "2202bd73-311e-4e4b-b763-bfc408b28eeb")
+	)
+	(wire
+		(pts
+			(xy 199.39 142.24) (xy 212.09 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22fc22e7-6e54-4175-8e87-55c7b0dc6496")
 	)
 	(wire
 		(pts
@@ -6056,7 +5942,7 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 139.7) (xy 204.47 142.24)
+			(xy 199.39 142.24) (xy 199.39 143.51)
 		)
 		(stroke
 			(width 0)
@@ -6276,7 +6162,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 119.38) (xy 196.85 119.38)
+			(xy 185.42 119.38) (xy 191.77 119.38)
 		)
 		(stroke
 			(width 0)
@@ -6396,7 +6282,7 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 132.08) (xy 209.55 132.08)
+			(xy 199.39 134.62) (xy 201.93 134.62)
 		)
 		(stroke
 			(width 0)
@@ -6496,7 +6382,7 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 119.38) (xy 196.85 125.73)
+			(xy 191.77 119.38) (xy 191.77 125.73)
 		)
 		(stroke
 			(width 0)
@@ -6526,7 +6412,7 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 149.86) (xy 204.47 151.13)
+			(xy 199.39 151.13) (xy 199.39 152.4)
 		)
 		(stroke
 			(width 0)
@@ -6766,7 +6652,7 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 121.92) (xy 204.47 123.19)
+			(xy 199.39 124.46) (xy 199.39 125.73)
 		)
 		(stroke
 			(width 0)
@@ -6813,6 +6699,16 @@
 			(type default)
 		)
 		(uuid "6ad08396-735e-42a6-88d6-76ee1d4c951d")
+	)
+	(wire
+		(pts
+			(xy 212.09 121.92) (xy 209.55 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6af59621-b858-4943-a6e8-300fc3f0c44b")
 	)
 	(wire
 		(pts
@@ -7086,7 +6982,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 119.38) (xy 213.36 119.38)
+			(xy 195.58 119.38) (xy 209.55 119.38)
 		)
 		(stroke
 			(width 0)
@@ -7596,7 +7492,7 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 151.13) (xy 209.55 151.13)
+			(xy 199.39 152.4) (xy 201.93 152.4)
 		)
 		(stroke
 			(width 0)
@@ -7706,6 +7602,16 @@
 	)
 	(wire
 		(pts
+			(xy 209.55 119.38) (xy 212.09 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bbe33b3d-ef46-4da9-90a4-e964afc86ac8")
+	)
+	(wire
+		(pts
 			(xy 46.99 134.62) (xy 52.07 134.62)
 		)
 		(stroke
@@ -7776,7 +7682,7 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 119.38) (xy 200.66 119.38)
+			(xy 191.77 119.38) (xy 195.58 119.38)
 		)
 		(stroke
 			(width 0)
@@ -7836,16 +7742,6 @@
 	)
 	(wire
 		(pts
-			(xy 213.36 139.7) (xy 204.47 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c63252c2-a444-459c-b9e2-dde97678714b")
-	)
-	(wire
-		(pts
 			(xy 74.93 148.59) (xy 72.39 148.59)
 		)
 		(stroke
@@ -7873,6 +7769,16 @@
 			(type default)
 		)
 		(uuid "caca28aa-93f3-4574-9b40-3b05d021ea03")
+	)
+	(wire
+		(pts
+			(xy 209.55 139.7) (xy 209.55 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb627daa-60bc-4ec5-b61f-2a85db09d98a")
 	)
 	(wire
 		(pts
@@ -7923,6 +7829,26 @@
 			(type default)
 		)
 		(uuid "d1ad1926-e3e9-4251-9a92-6be443edb329")
+	)
+	(wire
+		(pts
+			(xy 212.09 139.7) (xy 209.55 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d337a00b-da29-47f0-aef6-060cb2d94489")
+	)
+	(wire
+		(pts
+			(xy 195.58 119.38) (xy 195.58 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d394e831-938a-4f8b-bd6a-8cf933ce4581")
 	)
 	(wire
 		(pts
@@ -8096,16 +8022,6 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 119.38) (xy 200.66 137.16)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e4e8bc2b-d0e5-4128-809f-e94e24e03945")
-	)
-	(wire
-		(pts
 			(xy 95.25 46.99) (xy 102.87 46.99)
 		)
 		(stroke
@@ -8276,7 +8192,7 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 133.35) (xy 196.85 139.7)
+			(xy 191.77 133.35) (xy 191.77 142.24)
 		)
 		(stroke
 			(width 0)
@@ -8365,7 +8281,7 @@
 		(uuid "03ba60f8-f51a-4f3f-8b4a-cddd90bff36f")
 	)
 	(label "ESP_IO0"
-		(at 204.47 139.7 0)
+		(at 199.39 142.24 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9075,7 +8991,7 @@
 		(uuid "c38010f0-c4b8-40f9-b6d6-9010168fabc8")
 	)
 	(label "ESP_EN"
-		(at 204.47 121.92 0)
+		(at 199.39 124.46 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9365,6 +9281,12 @@
 			(uuid "4c401eb6-d435-4ea8-9606-8be966e85bb7")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "#PWR013")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "#PWR013")
@@ -9443,6 +9365,12 @@
 			(uuid "0729d96c-5032-4c77-9342-3e8a8ee23dd6")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "#PWR022")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "#PWR022")
@@ -9665,6 +9593,12 @@
 			(uuid "f33dd74f-5d81-4bae-944e-3cda24f09901")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "R22")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "R22")
@@ -9887,6 +9821,12 @@
 			(uuid "14d7afd9-5876-4598-bb83-d32893e29665")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "R89")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "R89")
@@ -9965,6 +9905,12 @@
 			(uuid "1303c30c-86cf-456c-88df-d51b9964d96d")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "#PWR094")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "#PWR094")
@@ -10163,6 +10109,12 @@
 			(uuid "041c0bf0-65b6-4a4e-8353-a8361da902e8")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "H3")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "H3")
@@ -10388,6 +10340,12 @@
 			(uuid "fba788fd-f239-452e-90fe-04fbec0c09d5")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "C11")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "C11")
@@ -10466,6 +10424,12 @@
 			(uuid "1aa468fd-5609-4532-ae74-28ed8cbe7418")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "#PWR091")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "#PWR091")
@@ -10545,6 +10509,12 @@
 			(uuid "11845eb9-ea45-42d3-94bc-bb263be429ff")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "#PWR017")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "#PWR017")
@@ -10623,6 +10593,12 @@
 			(uuid "b711803d-4f28-4650-82b4-56b80ae73460")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "#PWR012")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "#PWR012")
@@ -10847,6 +10823,12 @@
 			(uuid "53565873-7c2e-4701-8da1-a31590c86045")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "C5")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "C5")
@@ -11069,9 +11051,168 @@
 			(uuid "e3cac8cd-44ad-4093-b76c-35d89c6bc2e6")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "C44")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "C44")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "B3U-1000P-B:B3U-1000P-B")
+		(at 212.09 137.16 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "31648d4f-1476-46f3-a7ad-092307162043")
+		(property "Reference" "S2"
+			(at 231.14 138.4299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "B3U-1000P-B"
+			(at 231.14 140.9699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "B3U1000PB"
+			(at 231.14 232.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Datasheet" "http://omronfs.omron.com/en_US/ecb/products/pdf/en-b3u.pdf"
+			(at 231.14 332.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Description" "OMRON ELECTRONIC COMPONENTS - B3U-1000P-B - SWITCH, SPST-NO, 0.05A, 12V, SMD, BOSS"
+			(at 212.09 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" "1"
+			(at 231.14 532.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Part Number" "653-B3U-1000P-B"
+			(at 231.14 632.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Omron-Electronics/B3U-1000P-B?qs=AO7BQMcsEu6QxhKppRpaJA%3D%3D"
+			(at 231.14 732.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Name" "OMRON Electronics"
+			(at 231.14 832.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Part_Number" "B3U-1000P-B"
+			(at 231.14 932.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "1"
+			(uuid "2de8b78c-076b-46d4-9043-85c937f6ecfc")
+		)
+		(pin "3"
+			(uuid "e66af884-e454-4b98-b8c3-9bea691d60dc")
+		)
+		(pin "2"
+			(uuid "37f4432c-dcfa-4a35-b291-8187d181f15c")
+		)
+		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "S2")
+					(unit 1)
+				)
+			)
+			(project "DarkMagic"
+				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
+					(reference "S2")
 					(unit 1)
 				)
 			)
@@ -11337,6 +11478,12 @@
 			(uuid "25476238-04e1-4d11-b6c7-a97639dfe5c2")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "J1")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "J1")
@@ -11416,6 +11563,12 @@
 			(uuid "86544135-44e8-495b-b1ef-81ef14e1203e")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "#PWR093")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "#PWR093")
@@ -11639,6 +11792,12 @@
 			(uuid "5eec7bf0-b3bc-4040-9145-1e3e29f19a58")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "R16")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "R16")
@@ -11863,6 +12022,12 @@
 			(uuid "cc45ad85-ffeb-4646-8b88-f25dd0aa8167")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "C16")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "C16")
@@ -11873,7 +12038,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 204.47 127 180)
+		(at 199.39 129.54 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11884,7 +12049,7 @@
 		(fields_autoplaced yes)
 		(uuid "45ea4504-5bf5-4adc-9e22-9f41cc58d140")
 		(property "Reference" "R23"
-			(at 207.01 125.7299 0)
+			(at 201.93 128.2699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11895,7 +12060,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 207.01 128.2699 0)
+			(at 201.93 130.8099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11906,7 +12071,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 203.454 126.746 90)
+			(at 198.374 129.286 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11917,7 +12082,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 204.47 127 0)
+			(at 199.39 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11928,7 +12093,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 204.47 127 0)
+			(at 199.39 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11939,7 +12104,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "ERA-6AEB103V "
-			(at 204.47 127 0)
+			(at 199.39 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11950,7 +12115,7 @@
 			)
 		)
 		(property "Mouser Part Number" "667-ERA-6AEB103V "
-			(at 204.47 127 0)
+			(at 199.39 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11961,7 +12126,7 @@
 			)
 		)
 		(property "Maunfacturer Part Number" ""
-			(at 204.47 127 0)
+			(at 199.39 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11972,7 +12137,7 @@
 			)
 		)
 		(property "AVAILABILITY" ""
-			(at 204.47 127 0)
+			(at 199.39 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11983,7 +12148,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 204.47 127 0)
+			(at 199.39 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11994,7 +12159,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 204.47 127 0)
+			(at 199.39 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12005,7 +12170,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 204.47 127 0)
+			(at 199.39 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12016,7 +12181,7 @@
 			)
 		)
 		(property "Maunfacturer_Part_Number" ""
-			(at 204.47 127 0)
+			(at 199.39 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12027,7 +12192,7 @@
 			)
 		)
 		(property "PACKAGE" ""
-			(at 204.47 127 0)
+			(at 199.39 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12038,7 +12203,7 @@
 			)
 		)
 		(property "PARTREV" ""
-			(at 204.47 127 0)
+			(at 199.39 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12049,7 +12214,7 @@
 			)
 		)
 		(property "PRICE" ""
-			(at 204.47 127 0)
+			(at 199.39 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12060,7 +12225,7 @@
 			)
 		)
 		(property "STANDARD" ""
-			(at 204.47 127 0)
+			(at 199.39 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12071,7 +12236,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 204.47 127 0)
+			(at 199.39 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12088,6 +12253,12 @@
 			(uuid "c7e647f3-e3b7-49fd-9c84-70fcb0e5e0d4")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "R23")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "R23")
@@ -12310,6 +12481,12 @@
 			(uuid "f246f587-1ded-4fe6-b7ff-6419f04b30b6")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "R90")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "R90")
@@ -12389,6 +12566,12 @@
 			(uuid "eecb1d6e-ac63-4e59-973d-2e00b7d908c0")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "#PWR019")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "#PWR019")
@@ -12399,7 +12582,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 209.55 151.13 270)
+		(at 201.93 152.4 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12410,7 +12593,7 @@
 		(fields_autoplaced yes)
 		(uuid "4a404360-5bac-4464-a6df-bfc6baf15599")
 		(property "Reference" "#PWR082"
-			(at 205.74 151.13 0)
+			(at 198.12 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12421,7 +12604,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 213.36 151.1299 90)
+			(at 205.74 152.3999 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12432,7 +12615,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 209.55 151.13 0)
+			(at 201.93 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12443,7 +12626,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 209.55 151.13 0)
+			(at 201.93 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12454,7 +12637,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 209.55 151.13 0)
+			(at 201.93 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12468,6 +12651,12 @@
 			(uuid "15865541-2b69-4e33-ba9e-42b3675c5de8")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "#PWR082")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "#PWR082")
@@ -12693,6 +12882,12 @@
 			(uuid "165ed731-6e45-4b6c-a660-2b2a9c4c6da6")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "C12")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "C12")
@@ -12918,6 +13113,12 @@
 			(uuid "62146a9e-91b3-469c-9e83-cedc4f64f215")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "C17")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "C17")
@@ -13117,6 +13318,12 @@
 			(uuid "85f2084b-a4a7-448e-83c1-607a631dd6f2")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "TP7")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "TP7")
@@ -13195,275 +13402,15 @@
 			(uuid "787ae4b8-e52a-4494-98a9-eed7211e4b53")
 		)
 		(instances
-			(project "DarkMagic"
-				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
 					(reference "#PWR016")
 					(unit 1)
 				)
 			)
-		)
-	)
-	(symbol
-		(lib_name "B3U-1000P_1")
-		(lib_id "B3U-1000P:B3U-1000P")
-		(at 213.36 137.16 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "56b82f56-9702-43a1-aff5-1c1483b3b3d0")
-		(property "Reference" "S2"
-			(at 229.87 137.1599 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "B3U-1000P"
-			(at 229.87 139.6999 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "DarkMagic:B3U-1000P"
-			(at 229.87 232.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Datasheet" "https://www.omron.com/ecb/products/pdf/en-b3u.pdf"
-			(at 229.87 332.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Description" "OMRON ELECTRONIC COMPONENTS - B3U-1000P - SWITCH, SPST-NO, 0.05A, 12V, SMD"
-			(at 213.36 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Height" ""
-			(at 229.87 532.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Part Number" "653-B3U-1000P"
-			(at 229.87 632.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Omron-Electronics/B3U-1000P?qs=AO7BQMcsEu4ip80xyf2FwA%3D%3D"
-			(at 229.87 732.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Name" "OMRON Electronics"
-			(at 229.87 832.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Part_Number" "B3U-1000P"
-			(at 229.87 932.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Maunfacturer Part Number" ""
-			(at 213.36 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "AVAILABILITY" ""
-			(at 213.36 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Check_prices" ""
-			(at 213.36 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MF" ""
-			(at 213.36 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MP" ""
-			(at 213.36 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Maunfacturer_Part_Number" ""
-			(at 213.36 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PACKAGE" ""
-			(at 213.36 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PARTREV" ""
-			(at 213.36 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PRICE" ""
-			(at 213.36 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "STANDARD" ""
-			(at 213.36 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "SnapEDA_Link" ""
-			(at 213.36 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "1d773b6b-515b-4d78-9aad-c50ba89b46c8")
-		)
-		(pin "1"
-			(uuid "3f5f670a-fa4b-4733-bbcc-71df45cc2b84")
-		)
-		(instances
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
-					(reference "S2")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -13686,6 +13633,12 @@
 			(uuid "17d59a6e-56e5-44ef-8a06-47d9832b6143")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "C15")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "C15")
@@ -13696,7 +13649,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 190.5 119.38 270)
+		(at 185.42 119.38 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13707,7 +13660,7 @@
 		(fields_autoplaced yes)
 		(uuid "5d3cafda-3e68-4dcf-8aca-f2e20fbc4ee9")
 		(property "Reference" "#PWR018"
-			(at 184.15 119.38 0)
+			(at 179.07 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13718,7 +13671,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 186.69 119.3799 90)
+			(at 181.61 119.3799 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13729,7 +13682,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 190.5 119.38 0)
+			(at 185.42 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13740,7 +13693,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 190.5 119.38 0)
+			(at 185.42 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13751,7 +13704,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 190.5 119.38 0)
+			(at 185.42 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13765,6 +13718,12 @@
 			(uuid "a1c7cc22-e461-4b9e-b121-c51ec7b987aa")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "#PWR018")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "#PWR018")
@@ -13963,6 +13922,12 @@
 			(uuid "b32c2c52-a5b5-4a93-b3c0-de02dce9b7d8")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "H6")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "H6")
@@ -14187,6 +14152,12 @@
 			(uuid "ecf5e2da-e8a6-4303-a837-10ab3faf7433")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "C45")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "C45")
@@ -14410,6 +14381,12 @@
 			(uuid "e79c322a-bfab-4f3d-9fa4-76b10a3bbcb7")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "R20")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "R20")
@@ -14635,6 +14612,12 @@
 			(uuid "06919069-6d75-415a-99d8-a0fe0f3c25b7")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "C8")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "C8")
@@ -14904,6 +14887,12 @@
 			(uuid "8c8a9b72-6c3d-4b1e-a8af-fcbd52c131d5")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "Y3")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "Y3")
@@ -15305,6 +15294,12 @@
 			(uuid "9ee70050-6b4f-46d9-9838-0a2b70da48d0")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "IC5")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "IC5")
@@ -15567,6 +15562,12 @@
 			(uuid "ea8bab34-44d0-462c-8f53-3f7582a44abd")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "D1")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "D1")
@@ -15789,6 +15790,12 @@
 			(uuid "71ff8113-62cd-470e-b3c1-82338476ebc8")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "C19")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "C19")
@@ -16012,6 +16019,12 @@
 			(uuid "e57afc10-ca38-497b-917c-8ec1080c87c7")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "R82")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "R82")
@@ -16236,6 +16249,12 @@
 			(uuid "ba3613d5-713b-4822-9662-17ab3b65efbb")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "C7")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "C7")
@@ -16458,6 +16477,12 @@
 			(uuid "854d93b8-3d6b-4e01-88c7-dcf9bdd5e237")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "R21")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "R21")
@@ -16658,6 +16683,12 @@
 			(uuid "65306b8a-fd08-4336-906c-e3bf9b1f6a07")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "TP6")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "TP6")
@@ -16737,6 +16768,12 @@
 			(uuid "dd6514b5-9492-46e1-bb39-9f002ba13356")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "#PWR089")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "#PWR089")
@@ -16959,6 +16996,12 @@
 			(uuid "65c9739b-e5f4-40ea-8357-ece31a63e6a6")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "R91")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "R91")
@@ -17183,6 +17226,12 @@
 			(uuid "452f8c18-6d66-48f5-a03a-0a9c2677654b")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "C10")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "C10")
@@ -17448,6 +17497,12 @@
 			(uuid "fce19202-b614-45f9-9228-c29c3cd0583e")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "IC10")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "IC10")
@@ -17458,7 +17513,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 209.55 132.08 270)
+		(at 201.93 134.62 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17469,7 +17524,7 @@
 		(fields_autoplaced yes)
 		(uuid "7cbbb841-1844-486f-acfb-d9dbd69a6df7")
 		(property "Reference" "#PWR081"
-			(at 205.74 132.08 0)
+			(at 198.12 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17480,7 +17535,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 213.36 132.0799 90)
+			(at 205.74 134.6199 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17491,7 +17546,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 209.55 132.08 0)
+			(at 201.93 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17502,7 +17557,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 209.55 132.08 0)
+			(at 201.93 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17513,7 +17568,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 209.55 132.08 0)
+			(at 201.93 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17527,6 +17582,12 @@
 			(uuid "21250849-9c3a-4b77-966c-1a528ef9bfaf")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "#PWR081")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "#PWR081")
@@ -17793,6 +17854,12 @@
 			(uuid "955c1526-f6e7-48cb-9e4b-47730d903458")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "IC11")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "IC11")
@@ -17991,6 +18058,12 @@
 			(uuid "c89c63bc-95b2-4d83-b9ff-dd2056e288ae")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "H1")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "H1")
@@ -18070,9 +18143,168 @@
 			(uuid "723795a4-9eef-4954-b54c-3a2031b36821")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "#PWR025")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "#PWR025")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "B3U-1000P-B:B3U-1000P-B")
+		(at 212.09 119.38 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8fd491fc-b73e-49f9-afb0-b1606191c114")
+		(property "Reference" "S1"
+			(at 231.14 120.6499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "B3U-1000P-B"
+			(at 231.14 123.1899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "DarkMagic:B3U1000PB"
+			(at 231.14 214.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Datasheet" "http://omronfs.omron.com/en_US/ecb/products/pdf/en-b3u.pdf"
+			(at 231.14 314.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Description" "OMRON ELECTRONIC COMPONENTS - B3U-1000P-B - SWITCH, SPST-NO, 0.05A, 12V, SMD, BOSS"
+			(at 212.09 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" "1"
+			(at 231.14 514.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Part Number" "653-B3U-1000P-B"
+			(at 231.14 614.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Omron-Electronics/B3U-1000P-B?qs=AO7BQMcsEu6QxhKppRpaJA%3D%3D"
+			(at 231.14 714.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Name" "OMRON Electronics"
+			(at 231.14 814.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Part_Number" "B3U-1000P-B"
+			(at 231.14 914.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "1"
+			(uuid "1d0afb60-577f-4d29-8feb-c5c465045e67")
+		)
+		(pin "3"
+			(uuid "0f962082-f6ef-4407-adc6-9a107f128532")
+		)
+		(pin "2"
+			(uuid "e7a7b036-1982-46f9-9fd1-23779cd97058")
+		)
+		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "S1")
+					(unit 1)
+				)
+			)
+			(project "DarkMagic"
+				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
+					(reference "S1")
 					(unit 1)
 				)
 			)
@@ -18270,6 +18502,12 @@
 			(uuid "7d8a1c70-2426-424a-aca2-f0cbd49abe95")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "TP3")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "TP3")
@@ -18493,6 +18731,12 @@
 			(uuid "524acf7a-7933-45c9-a0aa-d4fbde43b8bb")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "R83")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "R83")
@@ -18717,6 +18961,12 @@
 			(uuid "b424a155-c2e9-4215-8a0e-4f6c698ac337")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "C14")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "C14")
@@ -19005,6 +19255,12 @@
 			(uuid "806d32c5-cc8e-4bc9-a08e-a06466e0c95b")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "J2")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "J2")
@@ -19228,6 +19484,12 @@
 			(uuid "3e47bf5f-e88e-475b-be44-938a6df51f4a")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "R19")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "R19")
@@ -19306,6 +19568,12 @@
 			(uuid "761b0814-3b3e-4644-bb6c-c5edbd73262d")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "#PWR092")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "#PWR092")
@@ -19384,6 +19652,12 @@
 			(uuid "d6c0e7be-3408-47fd-8d65-89c19c7aa7c3")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "#PWR088")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "#PWR088")
@@ -19394,7 +19668,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 196.85 129.54 180)
+		(at 191.77 129.54 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -19404,7 +19678,7 @@
 		(dnp no)
 		(uuid "af01ad09-a6d1-48ea-93c2-bfc7d899a2ec")
 		(property "Reference" "C20"
-			(at 188.976 128.016 0)
+			(at 183.896 128.016 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19415,7 +19689,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 188.722 131.064 0)
+			(at 183.642 131.064 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19426,7 +19700,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 195.8848 125.73 0)
+			(at 190.8048 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19437,7 +19711,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 196.85 129.54 0)
+			(at 191.77 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19448,7 +19722,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 196.85 129.54 0)
+			(at 191.77 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19459,7 +19733,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "CL21B104KCC5PNC "
-			(at 196.85 129.54 0)
+			(at 191.77 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19470,7 +19744,7 @@
 			)
 		)
 		(property "Mouser Part Number" "187-CL21B104KCC5PNC "
-			(at 196.85 129.54 0)
+			(at 191.77 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19481,7 +19755,7 @@
 			)
 		)
 		(property "Maunfacturer Part Number" ""
-			(at 196.85 129.54 0)
+			(at 191.77 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19492,7 +19766,7 @@
 			)
 		)
 		(property "AVAILABILITY" ""
-			(at 196.85 129.54 0)
+			(at 191.77 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19503,7 +19777,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 196.85 129.54 0)
+			(at 191.77 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19514,7 +19788,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 196.85 129.54 0)
+			(at 191.77 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19525,7 +19799,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 196.85 129.54 0)
+			(at 191.77 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19536,7 +19810,7 @@
 			)
 		)
 		(property "Maunfacturer_Part_Number" ""
-			(at 196.85 129.54 0)
+			(at 191.77 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19547,7 +19821,7 @@
 			)
 		)
 		(property "PACKAGE" ""
-			(at 196.85 129.54 0)
+			(at 191.77 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19558,7 +19832,7 @@
 			)
 		)
 		(property "PARTREV" ""
-			(at 196.85 129.54 0)
+			(at 191.77 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19569,7 +19843,7 @@
 			)
 		)
 		(property "PRICE" ""
-			(at 196.85 129.54 0)
+			(at 191.77 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19580,7 +19854,7 @@
 			)
 		)
 		(property "STANDARD" ""
-			(at 196.85 129.54 0)
+			(at 191.77 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19591,7 +19865,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 196.85 129.54 0)
+			(at 191.77 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19608,6 +19882,12 @@
 			(uuid "117b85a4-8091-4b86-9c40-000148fb55e1")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "C20")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "C20")
@@ -19686,6 +19966,12 @@
 			(uuid "6a90005f-a3b2-4e18-8b72-1b76c5b31dee")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "#PWR021")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "#PWR021")
@@ -19962,6 +20248,12 @@
 			(uuid "78b6587d-75f7-44f7-9706-ea51bfd84701")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "IC7")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "IC7")
@@ -19972,7 +20264,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 204.47 146.05 180)
+		(at 199.39 147.32 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -19983,7 +20275,7 @@
 		(fields_autoplaced yes)
 		(uuid "c2b994c9-cd6c-4480-b4fe-77200c07646d")
 		(property "Reference" "R24"
-			(at 207.01 144.7799 0)
+			(at 201.93 146.0499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19994,7 +20286,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 207.01 147.3199 0)
+			(at 201.93 148.5899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20005,7 +20297,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 203.454 145.796 90)
+			(at 198.374 147.066 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20016,7 +20308,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 204.47 146.05 0)
+			(at 199.39 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20027,7 +20319,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 204.47 146.05 0)
+			(at 199.39 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20038,7 +20330,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "ERA-6AEB103V "
-			(at 204.47 146.05 0)
+			(at 199.39 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20049,7 +20341,7 @@
 			)
 		)
 		(property "Mouser Part Number" "667-ERA-6AEB103V "
-			(at 204.47 146.05 0)
+			(at 199.39 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20060,7 +20352,7 @@
 			)
 		)
 		(property "Maunfacturer Part Number" ""
-			(at 204.47 146.05 0)
+			(at 199.39 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20071,7 +20363,7 @@
 			)
 		)
 		(property "AVAILABILITY" ""
-			(at 204.47 146.05 0)
+			(at 199.39 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20082,7 +20374,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 204.47 146.05 0)
+			(at 199.39 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20093,7 +20385,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 204.47 146.05 0)
+			(at 199.39 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20104,7 +20396,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 204.47 146.05 0)
+			(at 199.39 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20115,7 +20407,7 @@
 			)
 		)
 		(property "Maunfacturer_Part_Number" ""
-			(at 204.47 146.05 0)
+			(at 199.39 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20126,7 +20418,7 @@
 			)
 		)
 		(property "PACKAGE" ""
-			(at 204.47 146.05 0)
+			(at 199.39 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20137,7 +20429,7 @@
 			)
 		)
 		(property "PARTREV" ""
-			(at 204.47 146.05 0)
+			(at 199.39 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20148,7 +20440,7 @@
 			)
 		)
 		(property "PRICE" ""
-			(at 204.47 146.05 0)
+			(at 199.39 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20159,7 +20451,7 @@
 			)
 		)
 		(property "STANDARD" ""
-			(at 204.47 146.05 0)
+			(at 199.39 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20170,7 +20462,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 204.47 146.05 0)
+			(at 199.39 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20187,6 +20479,12 @@
 			(uuid "31a0cc26-2bbe-4390-8b6f-c7f301692885")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "R24")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "R24")
@@ -20385,6 +20683,12 @@
 			(uuid "d0e0bcef-70c7-4eb7-b581-3c34e3a7a693")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "H5")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "H5")
@@ -20585,6 +20889,12 @@
 			(uuid "a9175d20-2009-4846-9d20-33f9f5c98d7e")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "TP2")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "TP2")
@@ -20807,6 +21117,12 @@
 			(uuid "4419dc23-5469-4df3-9d56-5afdbf658c38")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "R17")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "R17")
@@ -20884,6 +21200,12 @@
 			(uuid "f459e6de-a7aa-4099-88b6-dadc236353fd")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "#PWR020")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "#PWR020")
@@ -21106,6 +21428,12 @@
 			(uuid "8195b119-c93d-4415-9ea4-89bc93826de7")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "R18")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "R18")
@@ -21330,6 +21658,12 @@
 			(uuid "18d9156d-a14f-41b0-964b-214c97f6c6a9")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "C18")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "C18")
@@ -21554,6 +21888,12 @@
 			(uuid "9625c130-f874-4e00-b475-dd17f302be73")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "C6")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "C6")
@@ -21779,6 +22119,12 @@
 			(uuid "66d5a411-296d-4f29-a8af-24b54d41840a")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "C9")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "C9")
@@ -21979,274 +22325,15 @@
 			(uuid "d321692f-fe07-4014-ac37-abd62e621340")
 		)
 		(instances
-			(project "DarkMagic"
-				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
 					(reference "TP5")
 					(unit 1)
 				)
 			)
-		)
-	)
-	(symbol
-		(lib_id "B3U-1000P:B3U-1000P")
-		(at 213.36 119.38 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "dbf2bc96-6d3f-4d2a-93e8-0cf47901a840")
-		(property "Reference" "S1"
-			(at 229.87 119.3799 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "B3U-1000P"
-			(at 229.87 121.9199 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "DarkMagic:B3U-1000P"
-			(at 229.87 214.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Datasheet" "https://www.omron.com/ecb/products/pdf/en-b3u.pdf"
-			(at 229.87 314.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Description" "OMRON ELECTRONIC COMPONENTS - B3U-1000P - SWITCH, SPST-NO, 0.05A, 12V, SMD"
-			(at 213.36 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Height" ""
-			(at 229.87 514.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Part Number" "653-B3U-1000P"
-			(at 229.87 614.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Omron-Electronics/B3U-1000P?qs=AO7BQMcsEu4ip80xyf2FwA%3D%3D"
-			(at 229.87 714.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Name" "OMRON Electronics"
-			(at 229.87 814.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Part_Number" "B3U-1000P"
-			(at 229.87 914.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Maunfacturer Part Number" ""
-			(at 213.36 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "AVAILABILITY" ""
-			(at 213.36 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Check_prices" ""
-			(at 213.36 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MF" ""
-			(at 213.36 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MP" ""
-			(at 213.36 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Maunfacturer_Part_Number" ""
-			(at 213.36 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PACKAGE" ""
-			(at 213.36 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PARTREV" ""
-			(at 213.36 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PRICE" ""
-			(at 213.36 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "STANDARD" ""
-			(at 213.36 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "SnapEDA_Link" ""
-			(at 213.36 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "d779551d-0fff-4594-b592-3d8112162f29")
-		)
-		(pin "1"
-			(uuid "bfcbe0a8-42e3-4179-9086-4e62c4ad74af")
-		)
-		(instances
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
-					(reference "S1")
+					(reference "TP5")
 					(unit 1)
 				)
 			)
@@ -22444,6 +22531,12 @@
 			(uuid "46b21286-2396-4ef1-8325-f0a67d69a490")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "TP4")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "TP4")
@@ -22522,6 +22615,12 @@
 			(uuid "c2bb54c3-6adb-410e-8578-890d12570fb2")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "#PWR080")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "#PWR080")
@@ -22747,6 +22846,12 @@
 			(uuid "faef1f36-8910-4993-a9d7-6f50fa2d8811")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "C13")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "C13")
@@ -22826,6 +22931,12 @@
 			(uuid "892cda03-afab-49eb-8e8a-527a1329f79a")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "#PWR087")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "#PWR087")
@@ -23049,6 +23160,12 @@
 			(uuid "1d34e02b-0e9b-4c24-bb97-80fd3d832f71")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "R15")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "R15")
@@ -23271,6 +23388,12 @@
 			(uuid "76a718d0-0c19-4dd3-aa93-d1d260a9e759")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "R92")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "R92")
@@ -23471,6 +23594,12 @@
 			(uuid "497b0034-5363-4cd8-9fdb-bd2291831407")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "TP1")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "TP1")
@@ -23695,6 +23824,12 @@
 			(uuid "d06df5e6-cfee-4ca6-8611-f02a24766c5e")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "C42")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "C42")
@@ -23774,6 +23909,12 @@
 			(uuid "71797cac-34ad-45b5-9291-add6134b5f99")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "#PWR015")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "#PWR015")
@@ -24105,6 +24246,12 @@
 			(uuid "079fb55a-9bb0-4e9d-9576-d7e607e157d1")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "IC6")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "IC6")
@@ -24368,6 +24515,12 @@
 			(uuid "067f1f58-9cff-46e1-8469-4a4c52ebf64b")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "F1")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "F1")
@@ -24566,6 +24719,12 @@
 			(uuid "db00f1fb-3242-4d97-8c62-0a12952e19c5")
 		)
 		(instances
+			(project "ethernet_port"
+				(path "/0f51b3fa-f66f-4b46-ba35-7167eb4a96f2"
+					(reference "H4")
+					(unit 1)
+				)
+			)
 			(project "DarkMagic"
 				(path "/a56e5a4d-a458-4415-ac98-e2a94f5ef798"
 					(reference "H4")
