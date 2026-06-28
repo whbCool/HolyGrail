@@ -35,7 +35,7 @@ static const char *TAG = "HolyGrail_Main";
 
 /* W5500 Ethernet Pins */
 #define PIN_W5500_CS 5   /**< Active-Low Chip Select */
-#define PIN_W5500_RST 15 /**< W5500 Hardware Reset (IO15) */
+#define PIN_W5500_RST 2 /**< W5500 Hardware Reset (IO2) */
 
 /* Dynamic MISO Buffer Isolation Pin (Tied to IC12 OE) */
 #define PIN_MISO_OE 27 /**< Active-Low OE control */
