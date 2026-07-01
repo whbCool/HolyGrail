@@ -115,13 +115,17 @@ esp_err_t ethernet_init(const ethernet_config_t *config) {
       .address_bits = 8,
       .mode = 0,
       .clock_speed_hz =
-          16 * 1000 * 1000, // 16 MHz as recommended in block diagram
+          1 * 1000 * 1000, // 1 MHz for testing and timing margin
       .spics_io_num = config->pin_cs,
       .queue_size = 20};
 
   // Instantiate MAC and PHY handles
   eth_w5500_config_t w5500_config =
       ETH_W5500_DEFAULT_CONFIG(config->spi_host, &spi_devcfg);
+  w5500_config.int_gpio_num = config->pin_intr;
+  if (config->pin_intr < 0) {
+    w5500_config.poll_period_ms = 2; // Poll every 2ms if interrupt pin is disabled (-1)
+  }
   esp_eth_mac_t *mac = esp_eth_mac_new_w5500(&w5500_config, &mac_config);
   if (mac == NULL) {
     ESP_LOGE(TAG, "Failed to create W5500 MAC!");

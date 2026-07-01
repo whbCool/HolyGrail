@@ -6207,7 +6207,7 @@
 	)
 	(wire
 		(pts
-			(xy 271.78 132.08) (xy 271.78 137.16)
+			(xy 273.05 132.08) (xy 273.05 137.16)
 		)
 		(stroke
 			(width 0)
@@ -6457,7 +6457,7 @@
 	)
 	(wire
 		(pts
-			(xy 271.78 144.78) (xy 271.78 146.05)
+			(xy 273.05 144.78) (xy 273.05 146.05)
 		)
 		(stroke
 			(width 0)
@@ -6748,7 +6748,7 @@
 	)
 	(wire
 		(pts
-			(xy 271.78 132.08) (xy 281.94 132.08)
+			(xy 273.05 132.08) (xy 281.94 132.08)
 		)
 		(stroke
 			(width 0)
@@ -7048,7 +7048,7 @@
 	)
 	(wire
 		(pts
-			(xy 260.35 146.05) (xy 271.78 146.05)
+			(xy 260.35 146.05) (xy 273.05 146.05)
 		)
 		(stroke
 			(width 0)
@@ -18031,7 +18031,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 271.78 140.97 180)
+		(at 273.05 140.97 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -18041,7 +18041,7 @@
 		(dnp no)
 		(uuid "81204cd3-051b-40d2-9cb2-1fec75df8281")
 		(property "Reference" "C48"
-			(at 265.176 139.7 0)
+			(at 266.446 139.7 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18052,7 +18052,7 @@
 			)
 		)
 		(property "Value" "1uF"
-			(at 265.176 142.24 0)
+			(at 266.446 142.24 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18063,7 +18063,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 270.8148 137.16 0)
+			(at 272.0848 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18074,7 +18074,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 271.78 140.97 0)
+			(at 273.05 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18085,7 +18085,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 271.78 140.97 0)
+			(at 273.05 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18096,7 +18096,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "CL21B105KOFNNWE"
-			(at 271.78 140.97 0)
+			(at 273.05 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18107,7 +18107,7 @@
 			)
 		)
 		(property "Mouser Part Number" "187-CL21B105KOFNNWE"
-			(at 271.78 140.97 0)
+			(at 273.05 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18118,7 +18118,7 @@
 			)
 		)
 		(property "Maunfacturer Part Number" ""
-			(at 271.78 140.97 0)
+			(at 273.05 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18129,7 +18129,7 @@
 			)
 		)
 		(property "AVAILABILITY" ""
-			(at 271.78 140.97 0)
+			(at 273.05 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18140,7 +18140,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 271.78 140.97 0)
+			(at 273.05 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18151,7 +18151,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 271.78 140.97 0)
+			(at 273.05 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18162,7 +18162,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 271.78 140.97 0)
+			(at 273.05 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18173,7 +18173,7 @@
 			)
 		)
 		(property "Maunfacturer_Part_Number" ""
-			(at 271.78 140.97 0)
+			(at 273.05 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18184,7 +18184,7 @@
 			)
 		)
 		(property "PACKAGE" ""
-			(at 271.78 140.97 0)
+			(at 273.05 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18195,7 +18195,7 @@
 			)
 		)
 		(property "PARTREV" ""
-			(at 271.78 140.97 0)
+			(at 273.05 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18206,7 +18206,7 @@
 			)
 		)
 		(property "PRICE" ""
-			(at 271.78 140.97 0)
+			(at 273.05 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18217,7 +18217,7 @@
 			)
 		)
 		(property "STANDARD" ""
-			(at 271.78 140.97 0)
+			(at 273.05 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18228,7 +18228,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 271.78 140.97 0)
+			(at 273.05 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

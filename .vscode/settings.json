@@ -11,5 +11,7 @@
     "--background-index",
     "--query-driver=**",
     "--compile-commands-dir=c:\\Users\\remas\\Desktop\\PCBs\\DarkMagic\\Code\\HolyGrail\\build"
-  ]
+  ],
+  "idf.flashType": "UART",
+  "idf.portWin": "COM4"
 }

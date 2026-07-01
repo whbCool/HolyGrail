@@ -41,29 +41,29 @@ esp_err_t sc16is752_init(const sc16is752_hw_config_t *config) {
       .mode = GPIO_MODE_OUTPUT,
       .pin_bit_mask =
           ((1ULL << s_hw_config.pin_a0) | (1ULL << s_hw_config.pin_a1) |
-           (1ULL << s_hw_config.pin_a2) | (1ULL << s_hw_config.pin_e3) |
-           (1ULL << s_hw_config.pin_miso_oe)),
+           (1ULL << s_hw_config.pin_a2) | (1ULL << s_hw_config.pin_miso_oe)),
       .pull_down_en = GPIO_PULLDOWN_DISABLE,
       .pull_up_en = GPIO_PULLUP_DISABLE};
   ESP_ERROR_CHECK(gpio_config(&io_conf));
 
-  // Keep CD74HC138 disabled (E3 LOW) and MISO buffer disabled (OE HIGH) by
-  // default
-  gpio_set_level(s_hw_config.pin_e3, 0);
-  gpio_set_level(s_hw_config.pin_miso_oe, 1);
+  // Keep CD74HC138 disabled (E3 LOW) and MISO buffer enabled (OE LOW) by
+  // default (allows W5500 MISO communication)
+  // Note: pin_e3 (GPIO33) is managed automatically by the SPI master peripheral below.
+  gpio_set_level(s_hw_config.pin_miso_oe, 0);
   gpio_set_level(s_hw_config.pin_a0, 0);
   gpio_set_level(s_hw_config.pin_a1, 0);
   gpio_set_level(s_hw_config.pin_a2, 0);
 
-  // 2. Add the SPI device to the shared SPI bus (CS managed manually)
+  // 2. Add the SPI device to the shared SPI bus (CS managed by hardware SPI)
   spi_device_interface_config_t devcfg = {
       .clock_speed_hz =
-          10 * 1000 *
-          1000,           // 10 MHz SPI clock (safe & compliant with both chips)
+          1 * 1000 *
+          1000,           // 1 MHz SPI clock for signal integrity margin
       .mode = 0,          // SPI Mode 0
-      .spics_io_num = -1, // Manually toggle CS using CD74HC138
+      .spics_io_num = s_hw_config.pin_e3, // Hardware SPI master controls decoder enable E3!
       .queue_size = 1,
-      .flags = SPI_DEVICE_NO_DUMMY};
+      .flags = SPI_DEVICE_POSITIVE_CS | SPI_DEVICE_NO_DUMMY // E3 is Active-High Enable
+  };
 
   esp_err_t ret =
       spi_bus_add_device(s_hw_config.spi_host, &devcfg, &s_spi_handle);
@@ -92,18 +92,12 @@ esp_err_t sc16is752_select_chip(uint8_t chip_idx) {
   // Enable MISO buffer (OE LOW)
   gpio_set_level(s_hw_config.pin_miso_oe, 0);
 
-  // Enable CD74HC138 (E3 HIGH) -> pulls the selected Chip Select active-low
-  gpio_set_level(s_hw_config.pin_e3, 1);
-
   return ESP_OK;
 }
 
 esp_err_t sc16is752_deselect_all(void) {
-  // Disable CD74HC138 (E3 LOW) -> drives all Chip Select lines HIGH
-  gpio_set_level(s_hw_config.pin_e3, 0);
-
-  // Disable MISO buffer (OE HIGH) -> tri-states the MISO trace for W5500
-  gpio_set_level(s_hw_config.pin_miso_oe, 1);
+  // Keep MISO buffer enabled (OE LOW) for W5500 compatibility
+  gpio_set_level(s_hw_config.pin_miso_oe, 0);
 
   return ESP_OK;
 }
