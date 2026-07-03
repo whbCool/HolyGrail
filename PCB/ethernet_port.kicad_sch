@@ -10248,7 +10248,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10nF"
+		(property "Value" "4.7uF"
 			(at 124.46 31.7499 0)
 			(show_name no)
 			(do_not_autoplace no)

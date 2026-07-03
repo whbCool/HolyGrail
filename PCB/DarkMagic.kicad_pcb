@@ -38543,7 +38543,7 @@
 		(descr "W5500(1.6mm)")
 		(tags "Integrated Circuit")
 		(property "Reference" "IC5"
-			(at -6.113232 0.011882 180)
+			(at -6.113232 0.011882 0)
 			(layer "F.SilkS")
 			(uuid "f89faebf-47b0-4369-9bcb-b39827a613a7")
 			(effects
@@ -40040,13 +40040,13 @@
 	(footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "9544d05f-d4de-4d7a-a726-ebce7812b532")
-		(at 198.602382 56.543232 180)
+		(at 198.58 56.55 180)
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)")
 		(tags "capacitor handsolder")
 		(property "Reference" "C8"
 			(at 2.299998 -0.019825 90)
 			(layer "F.SilkS")
-			(uuid "6677af9d-5843-4ddf-88ca-4b764f24a488")
+			(uuid "12b4574d-d5b0-42b4-9efc-1b8dbc785434")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -40056,7 +40056,7 @@
 		(property "Value" "0.1uF"
 			(at 0 1.68 0)
 			(layer "F.Fab")
-			(uuid "ebf61015-2d37-44da-bc4b-2ff7f142d833")
+			(uuid "70ccf583-e99e-411c-b6c3-78e7e63d7db8")
 			(effects
 				(font
 					(size 1 1)
@@ -40068,7 +40068,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "176d1615-e524-4f20-a37d-9ba2f07a1166")
+			(uuid "dc57452d-ae6d-4ae1-8f72-1a5a888de61b")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -40079,7 +40079,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "c46170df-e613-4e61-83b6-001da5c6fdcf")
+			(uuid "095105e8-d197-4fbb-8457-da9d66511f9e")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -113895,14 +113895,6 @@
 		(uuid "553c3cc2-274f-43c1-92f4-451d7a2d93b4")
 	)
 	(segment
-		(start 104.7 64.64)
-		(end 104.7 64.738177)
-		(width 0.2)
-		(layer "F.Cu")
-		(net "/W5500_RST")
-		(uuid "621b1a84-de17-4664-8c56-843237dd26ac")
-	)
-	(segment
 		(start 210.539882 58.119882)
 		(end 210.539882 57.343232)
 		(width 0.2)
@@ -113910,16 +113902,8 @@
 		(net "/W5500_RST")
 		(uuid "6c7b4db7-ecab-4aa9-900d-421cc03a6e1e")
 	)
-	(segment
-		(start 104.7 64.738177)
-		(end 104.700057 64.738234)
-		(width 0.2)
-		(layer "F.Cu")
-		(net "/W5500_RST")
-		(uuid "cf4be51c-3e02-4309-b823-7d33eac54353")
-	)
 	(via
-		(at 104.7 64.64)
+		(at 104.700057 64.738234)
 		(size 0.6)
 		(drill 0.3)
 		(layers "F.Cu" "B.Cu")
@@ -113983,20 +113967,12 @@
 		(uuid "f90b12ad-a532-488c-822b-d6ec965e6d57")
 	)
 	(segment
-		(start 104.7 64.64)
-		(end 104.7 87.058234)
+		(start 104.700057 64.738234)
+		(end 104.7 64.738291)
 		(width 0.2)
 		(layer "In2.Cu")
 		(net "/W5500_RST")
-		(uuid "2bbb76b3-91b2-4518-be39-fe574538153e")
-	)
-	(segment
-		(start 104.7 87.058234)
-		(end 104.71 87.068234)
-		(width 0.2)
-		(layer "In2.Cu")
-		(net "/W5500_RST")
-		(uuid "607284cd-5eee-462b-8a8e-a4254415715e")
+		(uuid "3244d226-a684-4d99-94a0-00c41b9b9078")
 	)
 	(segment
 		(start 216.19 58.49)
@@ -114013,6 +113989,22 @@
 		(layer "In2.Cu")
 		(net "/W5500_RST")
 		(uuid "aaab0c62-387f-4ad9-8299-7b83fe1b9298")
+	)
+	(segment
+		(start 104.7 64.738291)
+		(end 104.7 87.058234)
+		(width 0.2)
+		(layer "In2.Cu")
+		(net "/W5500_RST")
+		(uuid "c7087c75-c2a1-42dd-920d-e7fed91431ab")
+	)
+	(segment
+		(start 104.7 87.058234)
+		(end 104.71 87.068234)
+		(width 0.2)
+		(layer "In2.Cu")
+		(net "/W5500_RST")
+		(uuid "d149daac-af13-46e2-9be1-4f5fdb7a7986")
 	)
 	(segment
 		(start 172.599882 62.893232)
