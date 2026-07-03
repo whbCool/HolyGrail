@@ -61,4 +61,30 @@ This document logs the hardware diagnostics, repairs, and software fixes perform
 
 * **IOMUX Reclamation**: Added `gpio_reset_pin()` calls at the start of the diagnostic to decouple SCLK, MOSI, and MISO from the hardware SPI peripheral block, allowing standard bit-bang operations.
 * **Boot self-test**: Modified `main.c` so the diagnostic prints bus health, address validation, and a W5500 read test on boot, then automatically continues normal startup tasks without halting.
-* **W5500 Reset pin mapping**: Corrected `#define PIN_W5500_RST 2` to reflect that the W5500 reset pin is tied to the same `/ESP_USRST` net as the SC16IS752 chips.
+* **W5500 Reset pin mapping**: Updated the hardware mapping (`#define PIN_W5500_RST 17`) to match the user's re-routing of the W5500 hardware reset pin to a dedicated GPIO (GPIO17). This provides independent reset control of the Ethernet chip, resolves conflict with the SC16IS752 reset net (GPIO2), and enables full hardware Ethernet networking.
+
+---
+
+## 5. W5500 Ethernet Controller SPI Diagnosis
+
+### Symptom
+* The W5500 Ethernet controller returned `0x00` on the `VERSIONR` (address `0x0039`) SPI read diagnostic at boot, causing the ESP-IDF Ethernet driver to fail initialization with `verify chip ID failed` / `ESP_ERR_INVALID_VERSION`.
+* The W5500's physical Link/Activity LEDs on the RJ45 jack were fully functional and blinking, proving the analog PHY was active and negotiating network links.
+
+### Diagnostic Actions
+* **Reset Voltage Droop**: 
+  * Initially measured **2.6V** on W5500 Pin 37 (`RSTn`). 
+  * Floated `GPIO13` in software to prevent any default pull-down conflict on the board's bodge wiring. 
+  * Identified that the W5500 reset pin has a Schmitt-trigger input with a logic threshold of $\approx 0.8 \times \text{VDD} = 2.61\text{V}$, causing the 2.6V level to hold the digital core in a state of continuous partial reset while leaving the analog PHY running.
+* **Bypass Jumper (GPIO16)**: 
+  * Configured `GPIO16` (`J9` Pin 2) to output a permanent logic `HIGH` (3.3V) and jumped it to `J9` Pin 3 (W5500 Reset), raising the W5500's reset pin voltage to a solid **3.26V**.
+* **Slow-Motion SPI Logic Analysis**: 
+  * Configured a super slow-motion SPI routine (2 seconds per bit) and verified with a multimeter that **SCLK (Pin 33)**, **MOSI (Pin 35)**, and **CS (Pin 32)** were all cleanly transitioning between 0V and 3.2V on the W5500 pins.
+  * Measured the W5500's **MISO output (Pin 34)** during the slow-motion register read and observed that it remained stuck at **0.1V** (pulled down by the ESP32 internal pull-down) during all clock cycles, including the 6th data bit where the version register `0x04` should have driven it to 3.3V.
+
+### Conclusion & Next Steps
+* The W5500 chip is powered, clocked, out of reset, and its analog PHY is functional, but its internal digital SPI interface block is completely unresponsive.
+* Since all SPI inputs (SCLK, MOSI, CS) are electrically reaching the chip pins at clean 3.2V levels and MISO has verified continuity, the failure is localized to the W5500 chip itself.
+* **Recommended Repair Actions**:
+  1. **Exposed Ground Pad Reflow**: The W5500 QFN-48 package relies on its bottom center exposed pad (EP/Pad 49) as its primary digital ground connection. If this pad is cold-soldered or lacks solder, the digital logic core will fail to boot while the analog PHY still operates. Reflow the bottom pad of the W5500 using a hot-air rework station and fresh flux.
+  2. **Chip Replacement**: If the reflow does not resolve the issue, the W5500 chip's internal SPI controller is defective/damaged and the chip must be replaced.

@@ -60,7 +60,24 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "hole_clearance|118244882|28848232|91f8c63a-c198-46ee-959e-266b471943fd|a7da8d78-c7c4-4ae2-9a69-15035b3cfe24",
+          ""
+        ],
+        [
+          "hole_clearance|118244882|28848232|b07c1b94-8dd6-4fbd-9dbe-784e77c85a76|a7da8d78-c7c4-4ae2-9a69-15035b3cfe24",
+          ""
+        ],
+        [
+          "hole_clearance|124344882|28848232|950d9fdc-a4eb-45b0-92b5-5837d41c9eae|93a375e3-1879-4ee5-9071-e8ba78e3f885",
+          ""
+        ],
+        [
+          "hole_clearance|124344882|28848232|d611c802-1314-40d0-85ad-bc18bee9e904|93a375e3-1879-4ee5-9071-e8ba78e3f885",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -871,7 +888,7 @@
         "uuid": "421c50fe-5843-4045-a2db-1f35828fc50d"
       }
     ],
-    "used_designators": "R89-93,S1-2,C50,TP8-9,#PWR14,#PWR26",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [

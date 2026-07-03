@@ -44,13 +44,16 @@ static const char *TAG = "HolyGrail_Main";
 
 /* W5500 Ethernet Pins */
 #define PIN_W5500_CS 5   /**< Active-Low Chip Select */
-#define PIN_W5500_RST 13 /**< W5500 Hardware Reset (IO13, bodged) */
+#define PIN_W5500_RST 17 /**< W5500 Hardware Reset (IO17) */
 
 /* SC16IS752 UART Bridge Reset Pin */
 #define PIN_SC16IS752_RST 2 /**< SC16IS752 Hardware Reset (IO2, Active-Low) */
 
 /* Dynamic MISO Buffer Isolation Pin (Tied to IC12 OE) */
 #define PIN_MISO_OE 27 /**< Active-Low OE control */
+
+/* Temporary 3.3V power source pin for W5500 Reset jumper testing */
+#define PIN_W5500_RST_TEMP_3V3 16
 
 /* Status LED */
 #define PIN_STATUS_LED 21
@@ -105,6 +108,22 @@ static void init_board_hardware(void) {
 
   // 1. Install GPIO ISR service to prevent warning/error
   gpio_install_isr_service(0);
+
+  // Configure the old W5500 reset pin (GPIO13) as high-impedance input to avoid conflict
+  // with the new GPIO17 reset bodge (they are shorted together via the J9 jumper).
+  gpio_reset_pin(13);
+  gpio_config_t config_gpio13 = {
+      .intr_type = GPIO_INTR_DISABLE,
+      .mode = GPIO_MODE_INPUT,
+      .pin_bit_mask = (1ULL << 13),
+      .pull_down_en = GPIO_PULLDOWN_DISABLE,
+      .pull_up_en = GPIO_PULLUP_DISABLE};
+  gpio_config(&config_gpio13);
+
+  // Configure GPIO16 as output and drive it HIGH to act as 3.3V power source
+  gpio_reset_pin(PIN_W5500_RST_TEMP_3V3);
+  gpio_set_direction(PIN_W5500_RST_TEMP_3V3, GPIO_MODE_OUTPUT);
+  gpio_set_level(PIN_W5500_RST_TEMP_3V3, 1);
 
   // 2. Pre-configure CS, RST, and Decoder Enable pins as outputs and set to
   // inactive state. This prevents bus contention on the shared MISO line at
@@ -185,12 +204,11 @@ static void init_board_hardware(void) {
     }
   }
 
-  // 7. Initialize W5500 Ethernet Controller (pass pin_rst = -1 since manual
-  // reset is done)
+  // 7. Initialize W5500 Ethernet Controller
 #if !DISABLE_ETHERNET_FOR_TESTING
   ethernet_config_t eth_cfg = {.spi_host = ESP_SPI_HOST,
                                .pin_cs = PIN_W5500_CS,
-                               .pin_rst = -1,
+                               .pin_rst = PIN_W5500_RST,
                                .pin_intr = -1};
   ESP_ERROR_CHECK(ethernet_init(&eth_cfg));
 #else
@@ -467,6 +485,22 @@ static void bitbang_spi_read_spr(void) {
   gpio_reset_pin(PIN_MISO_OE);
   gpio_reset_pin(PIN_SC16IS752_RST);
   gpio_reset_pin(PIN_W5500_CS);
+  gpio_reset_pin(PIN_W5500_RST);
+  
+  // Configure GPIO16 as output and drive it HIGH to act as 3.3V power source
+  gpio_reset_pin(PIN_W5500_RST_TEMP_3V3);
+  gpio_set_direction(PIN_W5500_RST_TEMP_3V3, GPIO_MODE_OUTPUT);
+  gpio_set_level(PIN_W5500_RST_TEMP_3V3, 1);
+
+  // Clean up GPIO13 (old reset net) to prevent contention with GPIO17
+  gpio_reset_pin(13);
+  gpio_config_t config_gpio13 = {
+      .intr_type = GPIO_INTR_DISABLE,
+      .mode = GPIO_MODE_INPUT,
+      .pin_bit_mask = (1ULL << 13),
+      .pull_down_en = GPIO_PULLDOWN_DISABLE,
+      .pull_up_en = GPIO_PULLUP_DISABLE};
+  gpio_config(&config_gpio13);
 
   // Deinitialize RTC function for analog-capable pins to ensure digital GPIO
   // mode
@@ -540,8 +574,7 @@ static void bitbang_spi_read_spr(void) {
   // 4. Run write-then-read test for Chip 0 to 7 under SPI Mode 0
   ESP_LOGI(TAG, "--- Testing all 8 Decoder Address Configurations (0..7) ---");
 
-  // Re-configure decoder, control, and SPI pins as INPUT/OUTPUT to allow
-  // loopback readback
+  // Re-configure decoder, control, and SPI pins as INPUT/OUTPUT to allow loopback readback
   gpio_config_t loop_cfg = {
       .intr_type = GPIO_INTR_DISABLE,
       .mode = GPIO_MODE_INPUT_OUTPUT,
@@ -549,23 +582,35 @@ static void bitbang_spi_read_spr(void) {
                        (1ULL << PIN_DECODER_A2) | (1ULL << PIN_DECODER_E3) |
                        (1ULL << PIN_MISO_OE) | (1ULL << PIN_SC16IS752_RST) |
                        (1ULL << PIN_SPI_SCLK) | (1ULL << PIN_SPI_MOSI) |
-                       (1ULL << PIN_W5500_CS)),
+                       (1ULL << PIN_W5500_CS) | (1ULL << PIN_W5500_RST)),
       .pull_down_en = GPIO_PULLDOWN_DISABLE,
       .pull_up_en = GPIO_PULLUP_DISABLE};
   gpio_config(&loop_cfg);
 
-  // Quick SCLK/MOSI Pin Integrity Check
+  // Quick SCLK/MOSI/W5500_RST/W5500_CS Pin Integrity Check
   gpio_set_level(PIN_SPI_SCLK, 1);
   gpio_set_level(PIN_SPI_MOSI, 1);
+  gpio_set_level(PIN_W5500_RST, 1);
+  gpio_set_level(PIN_W5500_CS, 1);
   ets_delay_us(10);
   int sclk_high = gpio_get_level(PIN_SPI_SCLK);
   int mosi_high = gpio_get_level(PIN_SPI_MOSI);
+  int w5500_rst_high = gpio_get_level(PIN_W5500_RST);
+  int w5500_cs_high = gpio_get_level(PIN_W5500_CS);
 
   gpio_set_level(PIN_SPI_SCLK, 0);
   gpio_set_level(PIN_SPI_MOSI, 0);
+  gpio_set_level(PIN_W5500_RST, 0);
+  gpio_set_level(PIN_W5500_CS, 0);
   ets_delay_us(10);
   int sclk_low = gpio_get_level(PIN_SPI_SCLK);
   int mosi_low = gpio_get_level(PIN_SPI_MOSI);
+  int w5500_rst_low = gpio_get_level(PIN_W5500_RST);
+  int w5500_cs_low = gpio_get_level(PIN_W5500_CS);
+
+  // Restore initial safe state for W5500 pins (CS high, reset low)
+  gpio_set_level(PIN_W5500_CS, 1);
+  gpio_set_level(PIN_W5500_RST, 0);
 
   ESP_LOGI(TAG, "--- SPI Pin Driving Verification ---");
   ESP_LOGI(
@@ -576,11 +621,20 @@ static void bitbang_spi_read_spr(void) {
       TAG,
       "MOSI Pin: Set HIGH -> Read %d | Set LOW -> Read %d (expected 1 and 0)",
       mosi_high, mosi_low);
-  if (sclk_high != 1 || sclk_low != 0 || mosi_high != 1 || mosi_low != 0) {
-    ESP_LOGE(TAG, "!!! HARDWARE FAILURE: SCLK or MOSI pins are stuck/shorted "
-                  "on the ESP32 side !!!");
+  ESP_LOGI(
+      TAG,
+      "W5500 Reset Pin: Set HIGH -> Read %d | Set LOW -> Read %d (expected 1 and 0)",
+      w5500_rst_high, w5500_rst_low);
+  ESP_LOGI(
+      TAG,
+      "W5500 CS Pin:    Set HIGH -> Read %d | Set LOW -> Read %d (expected 1 and 0)",
+      w5500_cs_high, w5500_cs_low);
+
+  if (sclk_high != 1 || sclk_low != 0 || mosi_high != 1 || mosi_low != 0 || 
+      w5500_rst_high != 1 || w5500_rst_low != 0 || w5500_cs_high != 1 || w5500_cs_low != 0) {
+    ESP_LOGE(TAG, "!!! HARDWARE FAILURE: SCLK, MOSI, W5500 Reset, or W5500 CS pins are stuck/shorted !!!");
   } else {
-    ESP_LOGI(TAG, "ESP32 SCLK and MOSI pin drivers are electrically healthy.");
+    ESP_LOGI(TAG, "ESP32 SCLK, MOSI, W5500 Reset, and W5500 CS pin drivers are electrically healthy.");
   }
   ESP_LOGI(TAG, "------------------------------------");
 
@@ -672,12 +726,47 @@ static void bitbang_spi_read_spr(void) {
              chip, target_a2, target_a1, target_a0, rb_a2, rb_a1, rb_a0, rb_e3,
              read_val);
   }
-  ESP_LOGI(TAG, "-------------------------------------------");
-
   // 5. Test W5500 Version Register (address 0x0039, control 0x00)
   ESP_LOGI(TAG, "--- Testing W5500 SPI version register read ---");
 
-  // Release W5500 from reset (active-low reset)
+  // Sequential Pin-Toggle Multimeter Test (4 seconds per pin)
+  ESP_LOGI(TAG, ">>> Starting Multimeter Pin-Toggle Test (Probe W5500 Pins) <<<");
+  
+  // Set all to 0 first
+  gpio_set_level(PIN_SPI_SCLK, 0);
+  gpio_set_level(PIN_SPI_MOSI, 0);
+  gpio_set_level(PIN_W5500_CS, 0);
+  gpio_set_level(PIN_W5500_RST, 0);
+  vTaskDelay(pdMS_TO_TICKS(100));
+
+  // A. Toggle Reset HIGH (we keep it HIGH for the rest of the test)
+  gpio_set_level(PIN_W5500_RST, 1);
+
+  // B. Test SCLK Pin 33
+  ESP_LOGI(TAG, "[Multimeter Probe] SCLK (Pin 33) should now be 3.3V. Others (Pin 35, Pin 32) should be 0V. Waiting 4s...");
+  gpio_set_level(PIN_SPI_SCLK, 1);
+  vTaskDelay(pdMS_TO_TICKS(4000));
+  gpio_set_level(PIN_SPI_SCLK, 0);
+
+  // C. Test MOSI Pin 35
+  ESP_LOGI(TAG, "[Multimeter Probe] MOSI (Pin 35) should now be 3.3V. Others (Pin 33, Pin 32) should be 0V. Waiting 4s...");
+  gpio_set_level(PIN_SPI_MOSI, 1);
+  vTaskDelay(pdMS_TO_TICKS(4000));
+  gpio_set_level(PIN_SPI_MOSI, 0);
+
+  // D. Test CS Pin 32 (Active-High for this test only to measure 3.3V)
+  ESP_LOGI(TAG, "[Multimeter Probe] CS (Pin 32) should now be 3.3V. Others (Pin 33, Pin 35) should be 0V. Waiting 4s...");
+  gpio_set_level(PIN_W5500_CS, 1);
+  vTaskDelay(pdMS_TO_TICKS(4000));
+  gpio_set_level(PIN_W5500_CS, 0);
+
+  ESP_LOGI(TAG, ">>> Multimeter Pin-Toggle Test Finished. Proceeding to SPI Read... <<<");
+  
+  // 5. Test W5500 Version Register (address 0x0039, control 0x00)
+  ESP_LOGI(TAG, "--- Testing W5500 SPI version register read (Slow-Motion) ---");
+
+  // Prepare for real SPI read: CS high (idle), Reset high (active)
+  gpio_set_level(PIN_W5500_CS, 1);
   gpio_set_level(PIN_W5500_RST, 1);
   ets_delay_us(50000); // Wait 50ms for W5500 to boot
 
@@ -690,39 +779,43 @@ static void bitbang_spi_read_spr(void) {
   gpio_set_level(PIN_W5500_CS, 0);
   ets_delay_us(10);
 
-  // W5500 Read Command: Address High (0x00), Address Low (0x39), Control (0x00
-  // for Read Common Register)
+  // W5500 Read Command: Address High (0x00), Address Low (0x39), Control (0x00 for Read Common Register)
   uint8_t w5500_cmd[] = {0x00, 0x39, 0x00};
+  ESP_LOGI(TAG, ">>> Sending 24-bit Command header in slow-motion...");
   for (int b = 0; b < 3; b++) {
     uint8_t val = w5500_cmd[b];
     for (int i = 7; i >= 0; i--) {
       gpio_set_level(PIN_SPI_MOSI, (val >> i) & 1);
-      ets_delay_us(20);
+      vTaskDelay(pdMS_TO_TICKS(100)); // 100ms per phase for command to keep it relatively fast
       gpio_set_level(PIN_SPI_SCLK, 1);
-      ets_delay_us(20);
+      vTaskDelay(pdMS_TO_TICKS(100));
       gpio_set_level(PIN_SPI_SCLK, 0);
     }
   }
 
-  // Read 1 byte of version data
+  // Read 1 byte of version data in super slow-motion (2 seconds per bit)
+  ESP_LOGI(TAG, ">>> Reading 8-bit VERSIONR Register. Watch your multimeter on W5500 MISO (Pin 34)!");
   uint8_t version_val = 0;
   for (int i = 7; i >= 0; i--) {
     gpio_set_level(PIN_SPI_MOSI, 0);
-    ets_delay_us(20);
+    vTaskDelay(pdMS_TO_TICKS(500)); // 500ms SCLK LOW phase
+    
     gpio_set_level(PIN_SPI_SCLK, 1);
-    ets_delay_us(10);
+    vTaskDelay(pdMS_TO_TICKS(250)); // Wait for signal to stabilize
+    
     int bit = gpio_get_level(PIN_SPI_MISO);
     version_val |= (bit << i);
-    ets_delay_us(10);
+    ESP_LOGI(TAG, "Bit [%d] (Value Weight %d): SCLK = HIGH | ESP_MISO reads: %d (Voltage should match)", 
+             i, 1 << i, bit);
+             
+    vTaskDelay(pdMS_TO_TICKS(250)); // Remaining 500ms SCLK HIGH phase
     gpio_set_level(PIN_SPI_SCLK, 0);
   }
 
   // Deselect W5500
   gpio_set_level(PIN_W5500_CS, 1);
-  ets_delay_us(10);
 
-  ESP_LOGI(TAG, "W5500 VERSIONR (0x0039) Readback: 0x%02X (expected 0x04)",
-           version_val);
+  ESP_LOGI(TAG, "W5500 VERSIONR (0x0039) Readback: 0x%02X (expected 0x04)", version_val);
   ESP_LOGI(TAG, "------------------------------------------------");
   ESP_LOGI(TAG, "-------------------------------------------");
 }
@@ -734,7 +827,9 @@ void app_main(void) {
   ESP_LOGI(TAG, "================================================");
 
   // 1. Run boot-time bit-bang SPI self-test diagnostic
+#if RUN_CHIP_VALIDATION_DIAGNOSTIC
   bitbang_spi_read_spr();
+#endif
 
   // 2. Initialize all custom PCB components for normal operation
   init_board_hardware();
