@@ -25,7 +25,7 @@ static const char *TAG = "HolyGrail_Main";
 
 /* Set to 1 to bypass Ethernet and print radar sensor telemetry to serial
  * monitor for testing */
-#define DISABLE_ETHERNET_FOR_TESTING 1
+#define DISABLE_ETHERNET_FOR_TESTING 0
 
 /* Set to 1 to run SC16IS752 register validation diagnostic on boot */
 #define RUN_CHIP_VALIDATION_DIAGNOSTIC 0
@@ -120,10 +120,13 @@ static void init_board_hardware(void) {
       .pull_up_en = GPIO_PULLUP_DISABLE};
   gpio_config(&config_gpio13);
 
-  // Configure GPIO16 as output and drive it HIGH to act as 3.3V power source
+  // Configure GPIO16 as output and execute a proper hardware reset pulse (GPIO16 is jumped to W5500 Reset)
   gpio_reset_pin(PIN_W5500_RST_TEMP_3V3);
   gpio_set_direction(PIN_W5500_RST_TEMP_3V3, GPIO_MODE_OUTPUT);
-  gpio_set_level(PIN_W5500_RST_TEMP_3V3, 1);
+  gpio_set_level(PIN_W5500_RST_TEMP_3V3, 0); // Active-Low reset pulse
+  vTaskDelay(pdMS_TO_TICKS(50));
+  gpio_set_level(PIN_W5500_RST_TEMP_3V3, 1); // Release from reset
+  vTaskDelay(pdMS_TO_TICKS(150)); // Wait for W5500 PLL to lock
 
   // 2. Pre-configure CS, RST, and Decoder Enable pins as outputs and set to
   // inactive state. This prevents bus contention on the shared MISO line at
@@ -487,10 +490,13 @@ static void bitbang_spi_read_spr(void) {
   gpio_reset_pin(PIN_W5500_CS);
   gpio_reset_pin(PIN_W5500_RST);
   
-  // Configure GPIO16 as output and drive it HIGH to act as 3.3V power source
+  // Configure GPIO16 as output and execute a proper hardware reset pulse (GPIO16 is jumped to W5500 Reset)
   gpio_reset_pin(PIN_W5500_RST_TEMP_3V3);
   gpio_set_direction(PIN_W5500_RST_TEMP_3V3, GPIO_MODE_OUTPUT);
-  gpio_set_level(PIN_W5500_RST_TEMP_3V3, 1);
+  gpio_set_level(PIN_W5500_RST_TEMP_3V3, 0); // Active-Low reset pulse
+  vTaskDelay(pdMS_TO_TICKS(50));
+  gpio_set_level(PIN_W5500_RST_TEMP_3V3, 1); // Release from reset
+  vTaskDelay(pdMS_TO_TICKS(150)); // Wait for W5500 PLL to lock
 
   // Clean up GPIO13 (old reset net) to prevent contention with GPIO17
   gpio_reset_pin(13);

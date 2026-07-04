@@ -82,9 +82,14 @@ This document logs the hardware diagnostics, repairs, and software fixes perform
   * Configured a super slow-motion SPI routine (2 seconds per bit) and verified with a multimeter that **SCLK (Pin 33)**, **MOSI (Pin 35)**, and **CS (Pin 32)** were all cleanly transitioning between 0V and 3.2V on the W5500 pins.
   * Measured the W5500's **MISO output (Pin 34)** during the slow-motion register read and observed that it remained stuck at **0.1V** (pulled down by the ESP32 internal pull-down) during all clock cycles, including the 6th data bit where the version register `0x04` should have driven it to 3.3V.
 
-### Conclusion & Next Steps
-* The W5500 chip is powered, clocked, out of reset, and its analog PHY is functional, but its internal digital SPI interface block is completely unresponsive.
-* Since all SPI inputs (SCLK, MOSI, CS) are electrically reaching the chip pins at clean 3.2V levels and MISO has verified continuity, the failure is localized to the W5500 chip itself.
-* **Recommended Repair Actions**:
-  1. **Exposed Ground Pad Reflow**: The W5500 QFN-48 package relies on its bottom center exposed pad (EP/Pad 49) as its primary digital ground connection. If this pad is cold-soldered or lacks solder, the digital logic core will fail to boot while the analog PHY still operates. Reflow the bottom pad of the W5500 using a hot-air rework station and fresh flux.
-  2. **Chip Replacement**: If the reflow does not resolve the issue, the W5500 chip's internal SPI controller is defective/damaged and the chip must be replaced.
+### Final Resolution & Success
+* **Root Cause Identified**: 
+  * Inspected the KiCad schematic and PCB layout for W5500 pins 37 through 42.
+  * Discovered that **Pins 37 through 42** (which contain several reserved pins and strap inputs) were incorrectly tied to Ground or 3.3V on the PCB design, whereas the datasheet specified they should be left as No Connect (NC) or floated.
+  * These illegal connections forced the W5500's internal digital core into a test/debug boot halt state, disabling its digital SPI interface block and returning `0x00`.
+* **Physical Repair**: 
+  * Physically **lifted pins 37 through 42** of the W5500 chip off their PCB pads to isolate them completely.
+* **Result**: 
+  * The W5500 immediately booted its digital core, successfully completed the SPI register handshake, and returned **`0x04`** (the expected version ID) on the SPI bus.
+  * The netif stack successfully mounted, and the ESP32 established a solid TCP/IP connection to the MQTT broker to stream the 12-sensor telemetry.
+  * The diagnostic code has been disabled and production Ethernet configuration has been re-enabled in [main.c](file:///c:/Users/remas/Desktop/PCBs/DarkMagic/Code/HolyGrail/main/main.c).
