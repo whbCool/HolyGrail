@@ -2358,12 +2358,6 @@
 		(uuid "ab94ec41-585f-4551-ba29-fa7754c4b5ad")
 	)
 	(junction
-		(at 45.72 35.56)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "aed60b53-7da8-4546-aa8f-ab90fbed2d89")
-	)
-	(junction
 		(at 101.6 30.48)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2394,16 +2388,22 @@
 		(uuid "d17cc290-2fbb-482a-b09c-7df761dc8520")
 	)
 	(junction
-		(at 63.5 21.59)
+		(at 45.72 33.02)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "f2fe0b8b-878d-448e-b719-ae11b66bd08c")
+		(uuid "d4442ac0-a857-4222-a711-44e06701fec2")
 	)
 	(junction
 		(at 45.72 55.88)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "fd833a9c-feef-46f7-a94e-956984498c8d")
+		(uuid "d46748e4-d493-4966-a274-577d3df5b1c6")
+	)
+	(junction
+		(at 63.5 21.59)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f2fe0b8b-878d-448e-b719-ae11b66bd08c")
 	)
 	(wire
 		(pts
@@ -2547,7 +2547,7 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 35.56) (xy 45.72 45.72)
+			(xy 45.72 33.02) (xy 45.72 45.72)
 		)
 		(stroke
 			(width 0)
@@ -2577,7 +2577,7 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 66.04) (xy 59.69 66.04)
+			(xy 54.61 68.58) (xy 59.69 68.58)
 		)
 		(stroke
 			(width 0)
@@ -2657,7 +2657,7 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 55.88) (xy 45.72 66.04)
+			(xy 45.72 55.88) (xy 45.72 68.58)
 		)
 		(stroke
 			(width 0)
@@ -2757,7 +2757,7 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 35.56) (xy 41.91 35.56)
+			(xy 45.72 33.02) (xy 41.91 33.02)
 		)
 		(stroke
 			(width 0)
@@ -2767,7 +2767,7 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 66.04) (xy 34.29 66.04)
+			(xy 31.75 68.58) (xy 34.29 68.58)
 		)
 		(stroke
 			(width 0)
@@ -2897,7 +2897,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 66.04) (xy 45.72 66.04)
+			(xy 41.91 68.58) (xy 45.72 68.58)
 		)
 		(stroke
 			(width 0)
@@ -3167,7 +3167,7 @@
 	)
 	(wire
 		(pts
-			(xy 17.78 35.56) (xy 24.13 35.56)
+			(xy 17.78 33.02) (xy 24.13 33.02)
 		)
 		(stroke
 			(width 0)
@@ -3267,7 +3267,7 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 35.56) (xy 52.07 35.56)
+			(xy 45.72 33.02) (xy 52.07 33.02)
 		)
 		(stroke
 			(width 0)
@@ -3317,7 +3317,7 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 66.04) (xy 69.85 66.04)
+			(xy 67.31 68.58) (xy 69.85 68.58)
 		)
 		(stroke
 			(width 0)
@@ -3377,7 +3377,7 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 55.88) (xy 69.85 66.04)
+			(xy 69.85 55.88) (xy 69.85 68.58)
 		)
 		(stroke
 			(width 0)
@@ -3682,7 +3682,7 @@
 		(uuid "22b983e5-8482-4179-85da-476f0234bc89")
 	)
 	(label "1IN+"
-		(at 52.07 35.56 180)
+		(at 52.07 33.02 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3742,7 +3742,7 @@
 		(uuid "3a6813e8-d9c4-4fa5-91fe-a98e62e79a17")
 	)
 	(label "12VIN"
-		(at 17.78 35.56 0)
+		(at 17.78 33.02 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3762,7 +3762,7 @@
 		(uuid "419d874d-c7e9-43dd-80b7-438fb77db1c8")
 	)
 	(label "1OUT"
-		(at 54.61 66.04 0)
+		(at 54.61 68.58 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4265,7 +4265,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 31.75 66.04 270)
+		(at 31.75 68.58 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4276,7 +4276,7 @@
 		(fields_autoplaced yes)
 		(uuid "18629044-38d1-47a9-a1da-250428b12583")
 		(property "Reference" "#PWR073"
-			(at 25.4 66.04 0)
+			(at 25.4 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4287,7 +4287,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 27.94 66.0399 90)
+			(at 27.94 68.5799 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4298,7 +4298,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 31.75 66.04 0)
+			(at 31.75 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4309,7 +4309,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 31.75 66.04 0)
+			(at 31.75 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4320,7 +4320,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 31.75 66.04 0)
+			(at 31.75 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6272,7 +6272,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 38.1 66.04 270)
+		(at 38.1 68.58 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6282,16 +6282,6 @@
 		(dnp no)
 		(uuid "740e37e3-e646-486e-8295-69ca34bc8682")
 		(property "Reference" "R68"
-			(at 38.1 60.96 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "2.55K"
 			(at 38.1 63.5 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6301,8 +6291,18 @@
 				)
 			)
 		)
+		(property "Value" "2.55K"
+			(at 38.1 66.04 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 37.846 67.056 90)
+			(at 37.846 69.596 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6313,7 +6313,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 38.1 66.04 0)
+			(at 38.1 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6324,7 +6324,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 38.1 66.04 0)
+			(at 38.1 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6335,7 +6335,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "ERA-6AEB2551V "
-			(at 38.1 66.04 90)
+			(at 38.1 68.58 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6346,7 +6346,7 @@
 			)
 		)
 		(property "Mouser Part Number" "667-ERA-6AEB2551V "
-			(at 38.1 66.04 90)
+			(at 38.1 68.58 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6357,7 +6357,7 @@
 			)
 		)
 		(property "Maunfacturer Part Number" ""
-			(at 38.1 66.04 90)
+			(at 38.1 68.58 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6368,7 +6368,7 @@
 			)
 		)
 		(property "AVAILABILITY" ""
-			(at 38.1 66.04 90)
+			(at 38.1 68.58 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6379,7 +6379,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 38.1 66.04 90)
+			(at 38.1 68.58 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6390,7 +6390,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 38.1 66.04 90)
+			(at 38.1 68.58 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6401,7 +6401,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 38.1 66.04 90)
+			(at 38.1 68.58 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6412,7 +6412,7 @@
 			)
 		)
 		(property "Maunfacturer_Part_Number" ""
-			(at 38.1 66.04 90)
+			(at 38.1 68.58 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6423,7 +6423,7 @@
 			)
 		)
 		(property "PACKAGE" ""
-			(at 38.1 66.04 90)
+			(at 38.1 68.58 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6434,7 +6434,7 @@
 			)
 		)
 		(property "PARTREV" ""
-			(at 38.1 66.04 90)
+			(at 38.1 68.58 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6445,7 +6445,7 @@
 			)
 		)
 		(property "PRICE" ""
-			(at 38.1 66.04 90)
+			(at 38.1 68.58 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6456,7 +6456,7 @@
 			)
 		)
 		(property "STANDARD" ""
-			(at 38.1 66.04 90)
+			(at 38.1 68.58 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6467,7 +6467,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 38.1 66.04 90)
+			(at 38.1 68.58 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9069,7 +9069,7 @@
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
-		(at 63.5 66.04 180)
+		(at 63.5 68.58 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9080,16 +9080,6 @@
 		(fields_autoplaced yes)
 		(uuid "d28a0a93-e016-408a-9e4b-8bd6d984b661")
 		(property "Reference" "D4"
-			(at 63.5 59.69 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4148W"
 			(at 63.5 62.23 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9099,8 +9089,18 @@
 				)
 			)
 		)
+		(property "Value" "1N4148W"
+			(at 63.5 64.77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Footprint" "Diode_SMD:D_SOD-123"
-			(at 63.5 61.595 0)
+			(at 63.5 64.135 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9111,7 +9111,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.vishay.com/docs/85748/1n4148w.pdf"
-			(at 63.5 66.04 0)
+			(at 63.5 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9122,7 +9122,7 @@
 			)
 		)
 		(property "Description" "75V 0.15A Fast Switching Diode, SOD-123"
-			(at 63.5 66.04 0)
+			(at 63.5 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9133,7 +9133,7 @@
 			)
 		)
 		(property "Sim.Device" "D"
-			(at 63.5 66.04 0)
+			(at 63.5 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9144,7 +9144,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 63.5 66.04 0)
+			(at 63.5 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9155,7 +9155,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "1N4148W-7-F "
-			(at 63.5 66.04 0)
+			(at 63.5 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9166,7 +9166,7 @@
 			)
 		)
 		(property "Mouser Part Number" "621-1N4148W-7-F"
-			(at 63.5 66.04 0)
+			(at 63.5 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9177,7 +9177,7 @@
 			)
 		)
 		(property "Maunfacturer Part Number" ""
-			(at 63.5 66.04 0)
+			(at 63.5 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9188,7 +9188,7 @@
 			)
 		)
 		(property "AVAILABILITY" ""
-			(at 63.5 66.04 0)
+			(at 63.5 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9199,7 +9199,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 63.5 66.04 0)
+			(at 63.5 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9210,7 +9210,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 63.5 66.04 0)
+			(at 63.5 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9221,7 +9221,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 63.5 66.04 0)
+			(at 63.5 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9232,7 +9232,7 @@
 			)
 		)
 		(property "Maunfacturer_Part_Number" ""
-			(at 63.5 66.04 0)
+			(at 63.5 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9243,7 +9243,7 @@
 			)
 		)
 		(property "PACKAGE" ""
-			(at 63.5 66.04 0)
+			(at 63.5 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9254,7 +9254,7 @@
 			)
 		)
 		(property "PARTREV" ""
-			(at 63.5 66.04 0)
+			(at 63.5 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9265,7 +9265,7 @@
 			)
 		)
 		(property "PRICE" ""
-			(at 63.5 66.04 0)
+			(at 63.5 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9276,7 +9276,7 @@
 			)
 		)
 		(property "STANDARD" ""
-			(at 63.5 66.04 0)
+			(at 63.5 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9287,7 +9287,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 63.5 66.04 0)
+			(at 63.5 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9536,7 +9536,7 @@
 	)
 	(symbol
 		(lib_id "B57442V5103J062:B57442V5103J062")
-		(at 24.13 35.56 0)
+		(at 24.13 33.02 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9546,7 +9546,7 @@
 		(dnp no)
 		(uuid "e2df006b-c059-43a2-9edb-c2467b21ea3e")
 		(property "Reference" "RT1"
-			(at 33.274 29.718 0)
+			(at 33.274 27.178 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9556,7 +9556,7 @@
 			)
 		)
 		(property "Value" "B57442V5103J062"
-			(at 33.274 32.258 0)
+			(at 33.274 29.718 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9566,7 +9566,7 @@
 			)
 		)
 		(property "Footprint" "THRMC2012X130N"
-			(at 38.1 131.75 0)
+			(at 38.1 129.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9578,7 +9578,7 @@
 			)
 		)
 		(property "Datasheet" "https://componentsearchengine.com/Datasheets/1/B57442V5103J062.pdf"
-			(at 38.1 231.75 0)
+			(at 38.1 229.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9590,7 +9590,7 @@
 			)
 		)
 		(property "Description" "Chip NTC Thermistors (Sensor), Resistance (at 25?C)=10k?, Resistance Tolerance (at 25?C)=?3%"
-			(at 24.13 35.56 0)
+			(at 24.13 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9601,7 +9601,7 @@
 			)
 		)
 		(property "Height" "1.3"
-			(at 38.1 431.75 0)
+			(at 38.1 429.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9613,7 +9613,7 @@
 			)
 		)
 		(property "Mouser Part Number" "871-B57442V5103J62"
-			(at 38.1 531.75 0)
+			(at 38.1 529.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9625,7 +9625,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.com/Search/Refine.aspx?Keyword=871-B57442V5103J62"
-			(at 38.1 631.75 0)
+			(at 38.1 629.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9637,7 +9637,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "TDK"
-			(at 38.1 731.75 0)
+			(at 38.1 729.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9649,7 +9649,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "B57442V5103J062"
-			(at 38.1 831.75 0)
+			(at 38.1 829.21 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9661,7 +9661,7 @@
 			)
 		)
 		(property "Maunfacturer Part Number" ""
-			(at 24.13 35.56 0)
+			(at 24.13 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9672,7 +9672,7 @@
 			)
 		)
 		(property "AVAILABILITY" ""
-			(at 24.13 35.56 0)
+			(at 24.13 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9683,7 +9683,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 24.13 35.56 0)
+			(at 24.13 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9694,7 +9694,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 24.13 35.56 0)
+			(at 24.13 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9705,7 +9705,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 24.13 35.56 0)
+			(at 24.13 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9716,7 +9716,7 @@
 			)
 		)
 		(property "Maunfacturer_Part_Number" ""
-			(at 24.13 35.56 0)
+			(at 24.13 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9727,7 +9727,7 @@
 			)
 		)
 		(property "PACKAGE" ""
-			(at 24.13 35.56 0)
+			(at 24.13 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9738,7 +9738,7 @@
 			)
 		)
 		(property "PARTREV" ""
-			(at 24.13 35.56 0)
+			(at 24.13 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9749,7 +9749,7 @@
 			)
 		)
 		(property "PRICE" ""
-			(at 24.13 35.56 0)
+			(at 24.13 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9760,7 +9760,7 @@
 			)
 		)
 		(property "STANDARD" ""
-			(at 24.13 35.56 0)
+			(at 24.13 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9771,7 +9771,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 24.13 35.56 0)
+			(at 24.13 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

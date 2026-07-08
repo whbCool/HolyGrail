@@ -4827,7 +4827,7 @@
 		)
 		(uuid "eadda2b1-75a9-476e-b6cc-fadb76871aa5")
 	)
-	(text "This oscillator module is used for timing of the SC16IS752.\n\nClock Speed: 14.7456 MHz\n"
+	(text "This oscillator module is used for timing the SC16IS752.\n\nClock Speed: 14.7456 MHz\n"
 		(exclude_from_sim no)
 		(at 72.644 66.802 0)
 		(effects
