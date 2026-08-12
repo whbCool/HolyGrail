@@ -25,7 +25,7 @@ static const char *TAG = "HolyGrail_Main";
 
 /* Set to 1 to bypass Ethernet and print radar sensor telemetry to serial
  * monitor for testing */
-#define DISABLE_ETHERNET_FOR_TESTING 0
+#define DISABLE_ETHERNET_FOR_TESTING 1
 
 /* ESP32 Hardware Pin Assignments based on Schematics */
 #define ESP_SPI_HOST SPI3_HOST /**< Standard VSPI/SPI3 on ESP32 */
@@ -70,6 +70,7 @@ typedef struct {
   uint8_t moving_energy;
   uint16_t stationary_distance_cm;
   uint8_t stationary_energy;
+  uint16_t detection_distance_cm;
   bool is_online;
 } aggregated_sensor_data_t;
 
@@ -106,6 +107,7 @@ static void init_board_hardware(void) {
   // 1. Install GPIO ISR service to prevent warning/error
   gpio_install_isr_service(0);
 
+#if !DISABLE_ETHERNET_FOR_TESTING
   // Configure the old W5500 reset pin (GPIO13) as high-impedance input to avoid conflict
   // with the new GPIO17 reset bodge (they are shorted together via the J9 jumper).
   gpio_reset_pin(13);
@@ -124,6 +126,7 @@ static void init_board_hardware(void) {
   vTaskDelay(pdMS_TO_TICKS(50));
   gpio_set_level(PIN_W5500_RST_TEMP_3V3, 1); // Release from reset
   vTaskDelay(pdMS_TO_TICKS(150)); // Wait for W5500 PLL to lock
+#endif
 
   // 2. Pre-configure CS, RST, and Decoder Enable pins as outputs and set to
   // inactive state. This prevents bus contention on the shared MISO line at
@@ -267,6 +270,7 @@ static void radar_aggregator_task(void *pvParameters) {
           s_sensor_telemetry[i].stationary_distance_cm =
               target.stationary_distance_cm;
           s_sensor_telemetry[i].stationary_energy = target.stationary_energy;
+          s_sensor_telemetry[i].detection_distance_cm = target.detection_distance_cm;
           xSemaphoreGive(s_sensor_table_mutex);
 
 #if DISABLE_ETHERNET_FOR_TESTING
@@ -311,47 +315,26 @@ static void telemetry_publish_task(void *pvParameters) {
     led_state = !led_state;
 
 #if DISABLE_ETHERNET_FOR_TESTING
-    // Print the JSON telemetry payload directly to the serial console every 2
-    // seconds
-    static int print_counter = 0;
-    print_counter++;
-    if (print_counter >= 20) { // 20 * 100ms = 2 seconds
-      print_counter = 0;
-
-      size_t offset = 0;
-      offset += snprintf(json_payload + offset, sizeof(json_payload) - offset,
-                         "{\n  \"sensors\": [\n");
-
-      xSemaphoreTake(s_sensor_table_mutex, portMAX_DELAY);
-      for (int i = 0; i < 12; i++) {
-        if (!s_sensor_telemetry[i].is_online)
-          continue;
-
-        offset += snprintf(
-            json_payload + offset, sizeof(json_payload) - offset,
-            "    {\n"
-            "      \"name\": \"%s\",\n"
-            "      \"state\": %d,\n"
-            "      \"moving_distance_cm\": %d,\n"
-            "      \"moving_energy\": %d,\n"
-            "      \"stationary_distance_cm\": %d,\n"
-            "      \"stationary_energy\": %d\n"
-            "    }%s\n",
-            s_sensor_telemetry[i].name, s_sensor_telemetry[i].state,
-            s_sensor_telemetry[i].moving_distance_cm,
-            s_sensor_telemetry[i].moving_energy,
-            s_sensor_telemetry[i].stationary_distance_cm,
-            s_sensor_telemetry[i].stationary_energy, (i == 11) ? "" : ",");
-      }
-      xSemaphoreGive(s_sensor_table_mutex);
-
-      offset += snprintf(json_payload + offset, sizeof(json_payload) - offset,
-                         "  ]\n}");
-
-      printf("\n--- Local Telemetry JSON Output "
-             "---\n%s\n-----------------------------------\n",
-             json_payload);
+    // Print custom formatted sensor data every 100ms
+    static uint32_t line_count = 1;
+    uint32_t timestamp = xTaskGetTickCount() * portTICK_PERIOD_MS;
+    
+    uint16_t readings[12];
+    xSemaphoreTake(s_sensor_table_mutex, portMAX_DELAY);
+    for (int i = 0; i < 12; i++) {
+        if (s_sensor_telemetry[i].is_online && s_sensor_telemetry[i].state != LD2410C_TARGET_NONE) {
+            readings[i] = s_sensor_telemetry[i].detection_distance_cm;
+        } else {
+            readings[i] = 0;
+        }
     }
+    xSemaphoreGive(s_sensor_table_mutex);
+
+    printf("[%lu] [%lu] %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d\n",
+           (unsigned long)timestamp,
+           (unsigned long)line_count++,
+           readings[0], readings[1], readings[2], readings[3], readings[4], readings[5],
+           readings[6], readings[7], readings[8], readings[9], readings[10], readings[11]);
 #else
     // Try to establish MQTT connection once Ethernet Link gets IP
     if (!mqtt_ready && ethernet_is_connected()) {
@@ -404,6 +387,11 @@ static void telemetry_publish_task(void *pvParameters) {
 
 
 void app_main(void) {
+  esp_log_level_set("esp_netif", ESP_LOG_DEBUG);
+  esp_log_level_set("lwip", ESP_LOG_DEBUG);
+  esp_log_level_set("dhcp", ESP_LOG_DEBUG);
+  esp_log_level_set("HolyGrail_MQTT", ESP_LOG_DEBUG);
+
   ESP_LOGI(TAG, "================================================");
   ESP_LOGI(TAG, "TEA@CPP Escape Room 2026: The Holy Grail");
   ESP_LOGI(TAG, "Custom Aggregator Board Firmware Booting...");

@@ -10,6 +10,7 @@
 #include "esp_err.h"
 
 // Suggested Default Network Configurations
+#define HOLYGRAIL_USE_DHCP 0
 #define HOLYGRAIL_STATIC_IP "192.168.1.150"
 #define HOLYGRAIL_GATEWAY "192.168.1.1"
 #define HOLYGRAIL_NETMASK "255.255.255.0"

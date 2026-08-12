@@ -10,6 +10,7 @@
 #include "esp_event.h"
 #include "esp_log.h"
 #include "esp_netif.h"
+#include "esp_mac.h"
 #include "lwip/ip_addr.h"
 #include <string.h>
 
@@ -26,6 +27,16 @@ static void eth_event_handler(void *arg, esp_event_base_t event_base,
   switch (event_id) {
   case ETHERNET_EVENT_CONNECTED:
     ESP_LOGI(TAG, "Ethernet Link Up");
+    eth_speed_t speed;
+    eth_duplex_t duplex;
+    if (esp_eth_ioctl(s_eth_handle, ETH_CMD_G_SPEED, &speed) == ESP_OK &&
+        esp_eth_ioctl(s_eth_handle, ETH_CMD_G_DUPLEX_MODE, &duplex) == ESP_OK) {
+      ESP_LOGI(TAG, "Link Speed: %d Mbps, Duplex: %s",
+               (speed == ETH_SPEED_100M) ? 100 : 10,
+               (duplex == ETH_DUPLEX_FULL) ? "Full" : "Half");
+    } else {
+      ESP_LOGW(TAG, "Failed to query Link Speed & Duplex!");
+    }
     break;
   case ETHERNET_EVENT_DISCONNECTED:
     ESP_LOGI(TAG, "Ethernet Link Down");
@@ -76,7 +87,8 @@ esp_err_t ethernet_init(const ethernet_config_t *config) {
     return ESP_FAIL;
   }
 
-  // 3. Configure static IP address parameters
+  // 3. Configure IP address parameters (DHCP or Static)
+#if !HOLYGRAIL_USE_DHCP
   // Stop DHCP client first to allow static IP assignment
   ESP_ERROR_CHECK(esp_netif_dhcpc_stop(s_eth_netif));
 
@@ -95,6 +107,9 @@ esp_err_t ethernet_init(const ethernet_config_t *config) {
   dns_info.ip.type = IPADDR_TYPE_V4;
   ESP_ERROR_CHECK(
       esp_netif_set_dns_info(s_eth_netif, ESP_NETIF_DNS_MAIN, &dns_info));
+#else
+  ESP_LOGI(TAG, "DHCP client enabled. Waiting for IP address allocation...");
+#endif
 
   // 4. Register event handlers
   ESP_ERROR_CHECK(esp_event_handler_register(ETH_EVENT, ESP_EVENT_ANY_ID,
@@ -115,7 +130,7 @@ esp_err_t ethernet_init(const ethernet_config_t *config) {
       .address_bits = 8,
       .mode = 0,
       .clock_speed_hz =
-          1 * 1000 * 1000, // 1 MHz for testing and timing margin
+          4 * 1000 * 1000, // 4 MHz for noise-tolerant W5500 SPI transfers
       .spics_io_num = config->pin_cs,
       .queue_size = 20};
 
@@ -131,6 +146,23 @@ esp_err_t ethernet_init(const ethernet_config_t *config) {
     ESP_LOGE(TAG, "Failed to create W5500 MAC!");
     return ESP_FAIL;
   }
+
+  // Set MAC address using the factory programmed MAC from ESP32 eFuse
+  uint8_t mac_addr[6] = {0};
+  esp_err_t mac_err = esp_read_mac(mac_addr, ESP_MAC_ETH);
+  if (mac_err != ESP_OK) {
+    // If ESP_MAC_ETH is not programmed, fallback to ESP_MAC_WIFI_STA
+    ESP_ERROR_CHECK(esp_read_mac(mac_addr, ESP_MAC_WIFI_STA));
+  }
+  ESP_ERROR_CHECK(mac->set_addr(mac, mac_addr));
+  ESP_LOGI(TAG, "Ethernet MAC Address set to: %02X:%02X:%02X:%02X:%02X:%02X",
+           mac_addr[0], mac_addr[1], mac_addr[2], mac_addr[3], mac_addr[4], mac_addr[5]);
+
+  // Read back and verify the MAC address from W5500 registers
+  uint8_t read_mac[6] = {0};
+  ESP_ERROR_CHECK(mac->get_addr(mac, read_mac));
+  ESP_LOGI(TAG, "Readback W5500 MAC Address: %02X:%02X:%02X:%02X:%02X:%02X",
+           read_mac[0], read_mac[1], read_mac[2], read_mac[3], read_mac[4], read_mac[5]);
 
   esp_eth_phy_t *phy = esp_eth_phy_new_w5500(&phy_config);
   if (phy == NULL) {
@@ -153,6 +185,15 @@ esp_err_t ethernet_init(const ethernet_config_t *config) {
   // 7. Attach Ethernet driver to TCPIP netif instance
   ESP_ERROR_CHECK(
       esp_netif_attach(s_eth_netif, esp_eth_new_netif_glue(s_eth_handle)));
+
+  // Force 100 Mbps Full Duplex mode (bypasses any PCB PMODE strapping pin errors)
+  ESP_LOGI(TAG, "Forcing Ethernet PHY to 100 Mbps Full Duplex...");
+  bool auto_nego = false;
+  ESP_ERROR_CHECK(esp_eth_ioctl(s_eth_handle, ETH_CMD_S_AUTONEGO, &auto_nego));
+  eth_speed_t speed = ETH_SPEED_100M;
+  ESP_ERROR_CHECK(esp_eth_ioctl(s_eth_handle, ETH_CMD_S_SPEED, &speed));
+  eth_duplex_t duplex = ETH_DUPLEX_FULL;
+  ESP_ERROR_CHECK(esp_eth_ioctl(s_eth_handle, ETH_CMD_S_DUPLEX_MODE, &duplex));
 
   // 8. Start Ethernet driver
   ESP_ERROR_CHECK(esp_eth_start(s_eth_handle));
