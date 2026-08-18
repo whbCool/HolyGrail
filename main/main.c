@@ -56,8 +56,7 @@ static const char *TAG = "HolyGrail_Main";
 #define PIN_STATUS_LED 21
 
 /* Sensor Target Baud Rate */
-#define SENSOR_BAUDRATE                                                        \
-  230400 /**< Configured for 0.00% clock error with 14.7456 MHz crystal */
+#define SENSOR_BAUDRATE 115200 /**< LD2410C factory default baud rate */
 
 /* Global Mutex for thread-safe access to sensor state table */
 static SemaphoreHandle_t s_sensor_table_mutex = NULL;
@@ -72,6 +71,8 @@ typedef struct {
   uint8_t stationary_energy;
   uint16_t detection_distance_cm;
   bool is_online;
+  uint8_t buffer[512];  /**< Accumulation buffer for fragmented UART frames */
+  size_t buffer_len;    /**< Current number of bytes in the buffer */
 } aggregated_sensor_data_t;
 
 static aggregated_sensor_data_t s_sensor_telemetry[12];
@@ -197,6 +198,7 @@ static void init_board_hardware(void) {
     if (ret == ESP_OK) {
       s_sensor_telemetry[i].is_online = true;
       strcpy(s_sensor_telemetry[i].name, sensor->name);
+      s_sensor_telemetry[i].buffer_len = 0;
       s_sensor_telemetry[i].state = LD2410C_TARGET_NONE;
       ESP_LOGI(TAG, "Port successfully initialized: %s (Chip: %d, Chan: %d)",
                sensor->name, sensor->chip_idx, sensor->channel);
@@ -243,48 +245,103 @@ static void radar_aggregator_task(void *pvParameters) {
       // Read pending serial bytes from the UART bridge
       int rx_len = sc16is752_read_bytes(sensor->chip_idx, sensor->channel,
                                         rx_buffer, sizeof(rx_buffer));
-
-      if (rx_len > 0) {
-        // Rate-limited debug log of raw RX data to see if we receive anything and what it is
-        static TickType_t last_rx_log_ticks[12] = {0};
+            if (rx_len > 0) {
         TickType_t now = xTaskGetTickCount();
+
+        // 1. DEBUG LOGGING (RESTORED)
+        static TickType_t last_rx_log_ticks[12] = {0};
         if (now - last_rx_log_ticks[i] >= pdMS_TO_TICKS(3000)) {
           last_rx_log_ticks[i] = now;
           char hex_str[128] = {0};
-          size_t hex_len = 0;
+          size_t hex_str_len = 0;
           for (int b = 0; b < (rx_len > 16 ? 16 : rx_len); b++) {
-            hex_len += snprintf(hex_str + hex_len, sizeof(hex_str) - hex_len, "%02X ", rx_buffer[b]);
+            hex_str_len += snprintf(hex_str + hex_str_len, sizeof(hex_str) - hex_str_len, "%02X ", rx_buffer[b]);
           }
-          ESP_LOGI(TAG, "Raw RX from [%s]: %d bytes: %s%s", 
+          ESP_LOGI(TAG, "Raw RX from [%s]: %d bytes: %s%s",
                    sensor->name, rx_len, hex_str, rx_len > 16 ? "..." : "");
         }
 
-        ld2410c_target_data_t target;
+        // 2. Append newly received bytes to the sensor's persistent buffer
+        if (s_sensor_telemetry[i].buffer_len + rx_len < sizeof(s_sensor_telemetry[i].buffer)) {
+          memcpy(&s_sensor_telemetry[i].buffer[s_sensor_telemetry[i].buffer_len],
+                 rx_buffer, rx_len);
+          s_sensor_telemetry[i].buffer_len += rx_len;
+        }
+          // If no tail is found, we do nothing. We keep the bytes in the
+          // buffer and wait for the next rx_len to provide the missing tail.
 
-        // Parse raw serial frame using LD2410C driver utility
-        if (ld2410c_parse_target_data(rx_buffer, rx_len, &target) == ESP_OK) {
+        // 3. Try to parse the accumulated buffer
+        ld2410c_target_data_t target;
+        if (ld2410c_parse_target_data(s_sensor_telemetry[i].buffer,
+                                      s_sensor_telemetry[i].buffer_len,
+                                      &target) == ESP_OK) {
+
           xSemaphoreTake(s_sensor_table_mutex, portMAX_DELAY);
           s_sensor_telemetry[i].state = target.state;
           s_sensor_telemetry[i].moving_distance_cm = target.moving_distance_cm;
           s_sensor_telemetry[i].moving_energy = target.moving_energy;
-          s_sensor_telemetry[i].stationary_distance_cm =
-              target.stationary_distance_cm;
+          s_sensor_telemetry[i].stationary_distance_cm = target.stationary_distance_cm;
           s_sensor_telemetry[i].stationary_energy = target.stationary_energy;
           s_sensor_telemetry[i].detection_distance_cm = target.detection_distance_cm;
           xSemaphoreGive(s_sensor_table_mutex);
 
+          // 4. Clean up the buffer: Find the end of the frame (tail: F8 F7 F6 F5)
+          // and remove everything up to that point to prepare for the next frame.
+          uint8_t *tail_ptr = NULL;
+          if (s_sensor_telemetry[i].buffer_len >= 4) {
+            for (size_t j = 0; j <= s_sensor_telemetry[i].buffer_len - 4; j++) {
+              if (s_sensor_telemetry[i].buffer[j] == 0xF8 &&
+                  s_sensor_telemetry[i].buffer[j+1] == 0xF7 &&
+                  s_sensor_telemetry[i].buffer[j+2] == 0xF6 &&
+                  s_sensor_telemetry[i].buffer[j+3] == 0xF5) {
+                tail_ptr = &s_sensor_telemetry[i].buffer[j + 4];
+                break;
+                        } else {
+            // SYNC LOGIC: The parser failed. Search the buffer for the next potential 0xF4 0xF3 0xF2 0xF1 header.
+            // If found, discard everything before it to "re-sync" the stream.
+            uint8_t *sync_ptr = NULL;
+            if (s_sensor_telemetry[i].buffer_len >= 4) {
+              for (size_t j = 0; j <= s_sensor_telemetry[i].buffer_len - 4; j++) {
+                if (s_sensor_telemetry[i].buffer[j] == 0xF4 &&
+                    s_sensor_telemetry[i].buffer[j+1] == 0xF3 &&
+                    s_sensor_telemetry[i].buffer[j+2] == 0xF2 &&
+                    s_sensor_telemetry[i].buffer[j+3] == 0xF1) {
+                  sync_ptr = &s_sensor_telemetry[i].buffer[j];
+                  break;
+                }
+              }
+            }
+
+            if (sync_ptr != NULL) {
+              size_t bytes_to_discard = sync_ptr - s_sensor_telemetry[i].buffer;
+              memmove(s_sensor_telemetry[i].buffer,
+                       s_sensor_telemetry[i].buffer + bytes_to_discard,
+                       s_sensor_telemetry[i].buffer_len - bytes_to_discard);
+              s_sensor_telemetry[i].buffer_len -= bytes_to_discard;
+            } else {
+              // If no header is found in the current buffer, clear it to prevent
+              // continuous accumulation of junk.
+              s_sensor_telemetry[i].buffer_len = 0;
+            }
+          }
+            }
+          }
+
+          if (tail_ptr != NULL) {
+            size_t bytes_to_remove = tail_ptr - s_sensor_telemetry[i].buffer;
+            memmove(s_sensor_telemetry[i].buffer,
+                     s_sensor_telemetry[i].buffer + bytes_to_remove,
+                     s_sensor_telemetry[i].buffer_len - bytes_to_remove);
+            s_sensor_telemetry[i].buffer_len -= bytes_to_remove;
+          } else {
+            // If no tail found, we reset the buffer to prevent stale data corruption
+            s_sensor_telemetry[i].buffer_len = 0;
+          }
+
 #if DISABLE_ETHERNET_FOR_TESTING
-          // Rate-limited print every 500ms per sensor to avoid spamming the
-          // console
           static TickType_t last_print_ticks[12] = {0};
           if (now - last_print_ticks[i] >= pdMS_TO_TICKS(500)) {
             last_print_ticks[i] = now;
-            ESP_LOGI(TAG,
-                     "Sensor [%s] -> State: %d, MovDist: %d cm, StatDist: %d "
-                     "cm, MovEnergy: %d, StatEnergy: %d",
-                     sensor->name, target.state, target.moving_distance_cm,
-                     target.stationary_distance_cm, target.moving_energy,
-                     target.stationary_energy);
           }
 #else
           ESP_LOGD(TAG, "[%s] State: %d, MovDist: %d cm, StatDist: %d cm",
@@ -305,8 +362,8 @@ static void radar_aggregator_task(void *pvParameters) {
  */
 static void telemetry_publish_task(void *pvParameters) {
   ESP_LOGI(TAG, "Telemetry publisher task started.");
-  char json_payload[2048];
-  bool mqtt_ready = false;
+  //char json_payload[2048];
+  //bool mqtt_ready = false;
 
   while (1) {
     // Toggle Status LED as heart-beat indicator
